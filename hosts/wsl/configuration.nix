@@ -1,9 +1,7 @@
-{ lib, pkgs, config, modulesPath, inputs, ... }:
+{ lib, pkgs, config, inputs, ... }:
 
 {
   imports = [
-    "${modulesPath}/profiles/minimal.nix"
-
     inputs.nixos-wsl.nixosModules.wsl
   ];
 
