@@ -1,12 +1,13 @@
-{ nixpkgs, inputs }:
+{ config, nixpkgs, inputs }:
 
-nixpkgs.lib.nixosSystem rec {
+nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
 
   modules = [
     inputs.nixos-wsl.nixosModules.wsl
 
     {
+      nixpkgs = { inherit config; };
       wsl = {
         enable = true;
         autoMountPath = "/mnt";

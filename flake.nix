@@ -23,7 +23,7 @@
   outputs = { nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       modules = [
-        ./hosts/wsl/configuration.nix
+        ./hosts/wsl
       ];
     };
 
