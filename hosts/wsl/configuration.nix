@@ -1,29 +1,17 @@
-{ lib, pkgs, config, inputs, ... }:
+{ lib, pkgs, config, modulesPath, ... }:
 
 {
   imports = [
-    inputs.nixos-wsl.nixosModules.wsl
+    "${modulesPath}/profiles/minimal.nix"
   ];
 
-  wsl = {
-    enable = true;
-    automountPath = "/mnt";
-    defaultUser = "nixos";
-    startMenuLaunchers = true;
-
-    # Enable native Docker support
-    # docker-native.enable = true;
-
-    # Enable integration with Docker Desktop (needs to be installed)
-    # docker-desktop.enable = true;
-
+  users.users.beleap = {
+    isNormalUser = true;
+    home = "/home/beleap";
+    extraGroups = [
+      "wheel"
+    ];
   };
-
-  # Enable nix flakes
-  nix.package = pkgs.nixFlakes;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
 
   system.stateVersion = "22.05";
 }
