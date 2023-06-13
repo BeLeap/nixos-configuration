@@ -2,7 +2,8 @@
   description = "BeLeap Personal NixOS Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/master";
+    master.url = "github:NixOS/nixpkgs/master";
+    nixpkgs.follows = "master";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -20,7 +21,8 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, ... }@inputs: 
+  {
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       modules = [
         ./hosts/wsl
