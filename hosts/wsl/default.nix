@@ -1,6 +1,6 @@
 { config, nixpkgs, inputs }:
 
-nixpkgs.lib.nixosSystem {
+nixpkgs.lib.nixosSystem rec {
   system = "x86_64-linux";
 
   modules = [
