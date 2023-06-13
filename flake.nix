@@ -12,6 +12,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
+    nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
     dotfiles = {
       url = "github:beleap/dotfiles";
