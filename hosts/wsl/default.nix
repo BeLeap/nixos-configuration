@@ -11,9 +11,12 @@ nixpkgs.lib.nixosSystem {
 
       wsl = {
         enable = true;
-        automountPath = "/mnt";
         defaultUser = "beleap";
         startMenuLaunchers = true;
+
+        wslConf = {
+          automount.root = "/mnt";
+        };
       };
     }
 
