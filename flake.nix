@@ -21,21 +21,13 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs: 
-  {
-    nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
-      modules = [
-        ./hosts/wsl
-      ];
-    };
-
-    homeConfigurations.beleap = home-manager.lib.homeManagerConfiguration {
-      modules = [
-        ./home.nix
-      ];
-
-      extraSpecialArgs = {
-        inherit (inputs) dotfiles;
+  outputs = { nixpkgs, flake-parts, ... }@inputs: 
+  flake-parts.lib.mkFlake { inherit inputs; } {
+    flake = {
+      nixosConfigurations = {
+        wsl = import ./hosts/wsl {
+          inherit nixpkgs inputs;
+        };
       };
     };
   };
