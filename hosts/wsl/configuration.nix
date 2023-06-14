@@ -8,6 +8,8 @@
   environment.systemPackages = with pkgs; [
     git
     home-manager
+    man-pages
+    man-pages-posix
   ];
 
   users.users.beleap = {
