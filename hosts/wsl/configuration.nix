@@ -21,8 +21,6 @@
   };
 
   nix = {
-    accept-flake-config = true;
-
     experimental-features = [
       "flakes"
       "nix-command"
