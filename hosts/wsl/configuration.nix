@@ -20,8 +20,12 @@
     ];
   };
 
-  nix.package = pkgs.nixFlakes;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    accept-flake-config = true;
+
+    experimental-features = [
+      "flakes"
+      "nix-command"
+    ];
+  };
 }
