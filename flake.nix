@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = { home, nixpkgs, flake-parts, ... }@inputs: 
+  outputs = { home-manager, nixpkgs, flake-parts, ... }@inputs: 
   flake-parts.lib.mkFlake { inherit inputs; } {
     flake = {
       nixosConfigurations = {
@@ -32,7 +32,7 @@
 
       homeConfigurations = {
         beleap = import ./users/beleap {
-          inherit home;
+          inherit home-manager;
         };
       };
     };
