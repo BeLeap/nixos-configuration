@@ -66,7 +66,7 @@
       shellAbbrs = {
         gst = "git status";
         gsw = "git switch";
-        gd = "git dft";
+        gd = "git diff";
         ga = "git add";
         gc = "git commit -v";
         gp = "git push";
