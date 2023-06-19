@@ -15,7 +15,7 @@
     git = {
       enable = true;
 
-      alias."dft" = "difftool";
+      aliases."dft" = "difftool";
 
       extraConf = {
         diff.tool = "difftastic";
