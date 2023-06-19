@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, dotfiles, ... }:
 
 {
   home = {
@@ -60,5 +60,15 @@
         gc = "git commit -v";
       };
     };
+
+    zoxide = {
+      enable = true;
+
+      enableFishIntegration = true;
+    };
+  };
+
+  xdg.configFile = {
+    nvim.source = "${dotfiles}/nvim/.config/nvim";
   };
 }
