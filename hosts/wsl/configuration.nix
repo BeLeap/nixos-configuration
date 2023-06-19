@@ -21,6 +21,8 @@
     ];
   };
 
+  programs.nushell.enable = true;
+
   nix = {
     package = pkgs.nixFlakes;
     extraOptions = ''
