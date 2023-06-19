@@ -1,6 +1,6 @@
 { home-manager }:
 
-home-manager.lib.homeManagerConfigurations {
+home-manager.lib.homeManagerConfiguration {
   modules = [
     {
       nixpkgs = {};
