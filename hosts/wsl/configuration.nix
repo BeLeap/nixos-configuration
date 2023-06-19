@@ -15,6 +15,7 @@
   users.users.beleap = {
     isNormalUser = true;
     home = "/home/beleap";
+    shell = pkgs.nushell;
     extraGroups = [
       "wheel"
     ];
