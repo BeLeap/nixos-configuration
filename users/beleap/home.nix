@@ -4,6 +4,7 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        azure-cli
         bat
         difftastic;
 
@@ -46,6 +47,10 @@
 
     fish = {
       enable = true;
+
+      shellAliases = {
+        sofish = "source ~/.config/fish/config.fish";
+      };
 
       shellAbbrs = {
         gst = "git status";
