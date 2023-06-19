@@ -38,6 +38,11 @@
       difftastic = {
         enable = true;
       };
+
+      ignores = [
+        "*.null_ls*"
+        "root.md"
+      ];
     };
 
     home-manager.enable = true;
