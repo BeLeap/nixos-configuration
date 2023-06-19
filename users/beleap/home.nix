@@ -38,6 +38,22 @@
 
       viAlias = true;
       vimAlias = true;
+
+      withNodeJs = true;
+      withRuby = true;
+      withPython3 = true;
+    };
+
+    fish = {
+      enable = true;
+
+      shellAbbrs = {
+        gst = "git status";
+        gsw = "git switch";
+        gd = "git dft";
+        ga = "git add";
+        gc = "git commit -v";
+      };
     };
   };
 }
