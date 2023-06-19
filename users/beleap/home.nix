@@ -36,5 +36,9 @@
       viAlias = true;
       vimAlias = true;
     };
+
+    nushell = {
+      enable = true;
+    };
   };
 }
