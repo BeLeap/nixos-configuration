@@ -6,6 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    gcc9
     git
     home-manager
     man-pages
