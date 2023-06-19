@@ -53,6 +53,8 @@
 
       shellAliases = {
         sofish = "source ~/.config/fish/config.fish";
+
+        v = "nvim";
       };
 
       shellAbbrs = {
