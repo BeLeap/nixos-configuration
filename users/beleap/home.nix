@@ -31,6 +31,8 @@
         difftool.prompt = false;
         difftool."difftastic".cmd = ''${lib.getExe pkgs.difftastic} "$LOCAL" "$REMOTE"'';
         pager.difftool = true;
+
+        push.autoSetupRemote = true;
       };
     };
 
@@ -63,6 +65,8 @@
         gd = "git dft";
         ga = "git add";
         gc = "git commit -v";
+        gp = "git push";
+        gf = "git fetch --prune --all";
       };
     };
 
