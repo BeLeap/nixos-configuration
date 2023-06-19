@@ -4,6 +4,7 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        go
         cargo
         azure-cli
         bat
