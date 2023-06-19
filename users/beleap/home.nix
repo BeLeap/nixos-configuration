@@ -12,6 +12,7 @@
 
         azure-cli
 
+        lsd
         fd
         ripgrep
         bat
@@ -80,6 +81,12 @@
       enable = true;
 
       enableFishIntegration = true;
+    };
+
+    lsd = {
+      enable = true;
+
+      enableAliases = true;
     };
   };
 
