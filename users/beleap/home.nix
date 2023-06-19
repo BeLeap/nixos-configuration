@@ -31,15 +31,12 @@
       userName = "BeLeap";
       userEmail = "beleap@beleap.dev";
 
-      aliases."dft" = "difftool";
-
       extraConfig = {
-        diff.tool = "difftastic";
-        difftool.prompt = false;
-        difftool."difftastic".cmd = ''${lib.getExe pkgs.difftastic} "$LOCAL" "$REMOTE"'';
-        pager.difftool = true;
-
         push.autoSetupRemote = true;
+      };
+
+      difftastic = {
+        enable = true;
       };
     };
 
