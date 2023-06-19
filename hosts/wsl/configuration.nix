@@ -14,11 +14,14 @@
 
   users.users.beleap = {
     isNormalUser = true;
+
+    shell = pkgs.fish;
     home = "/home/beleap";
     extraGroups = [
       "wheel"
     ];
   };
+  programs.fish.enable = true;
 
   nix = {
     package = pkgs.nixFlakes;
