@@ -15,13 +15,10 @@
   users.users.beleap = {
     isNormalUser = true;
     home = "/home/beleap";
-    shell = pkgs.nushell;
     extraGroups = [
       "wheel"
     ];
   };
-
-  programs.nushell.enable = true;
 
   nix = {
     package = pkgs.nixFlakes;
