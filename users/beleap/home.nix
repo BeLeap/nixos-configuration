@@ -88,6 +88,12 @@
 
       enableAliases = true;
     };
+
+    starship = {
+      enable = true;
+
+      settings = import ./config/starship.nix;
+    };
   };
 
   xdg.configFile = {
