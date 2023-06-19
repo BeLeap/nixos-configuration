@@ -94,6 +94,14 @@
 
       settings = import ./config/starship.nix;
     };
+
+    direnv = {
+      enable = true;
+
+      nix-direnv = {
+        enable = true;
+      };
+    };
   };
 
   xdg.configFile = {
