@@ -104,9 +104,16 @@
         enable = true;
       };
     };
+
+    zellij = {
+      enable = true;
+
+      enableFishIntegration = true;
+    };
   };
 
   xdg.configFile = {
     nvim.source = "${dotfiles}/nvim/.config/nvim";
+    zellij.source = "${dotfiles}/zellij/.config/zellij";
   };
 }
