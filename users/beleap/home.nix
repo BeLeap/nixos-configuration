@@ -4,6 +4,7 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        cargo
         azure-cli
         bat
         difftastic;
