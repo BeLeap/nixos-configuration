@@ -12,6 +12,8 @@
 
         azure-cli
 
+        kubernetes-helm
+
         lsd
         fd
         ripgrep
