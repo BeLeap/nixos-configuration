@@ -1,7 +1,7 @@
 { home-manager, nixpkgs }:
 
 let
-  system = "x86-64-linux";
+  system = "x86_64-linux";
   username = "beleap";
 in
 home-manager.lib.homeManagerConfiguration {
