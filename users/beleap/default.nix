@@ -1,4 +1,4 @@
-{ home-manager, nixpkgs, inputs }:
+{ home-manager, nixpkgs, inputs, overlays }:
 
 let
   system = "x86_64-linux";
@@ -7,7 +7,9 @@ in
 home-manager.lib.homeManagerConfiguration {
   modules = [
     {
-      nixpkgs = {};
+      nixpkgs = {
+        inherit overlays;
+      };
 
       home = {
         username = "${username}";

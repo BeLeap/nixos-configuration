@@ -4,6 +4,7 @@
   home = {
     packages = lib.attrValues {
       inherit (pkgs)
+        neovim-nightly
         go
         cargo
         azure-cli

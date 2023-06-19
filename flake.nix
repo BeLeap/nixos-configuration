@@ -19,24 +19,31 @@
       url = "github:beleap/dotfiles";
       flake = false;
     };
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { home-manager, nixpkgs, flake-parts, ... }@inputs: 
-  flake-parts.lib.mkFlake { inherit inputs; } {
-    flake = {
-      nixosConfigurations = {
-        wsl = import ./hosts/wsl {
-          inherit nixpkgs inputs;
+  outputs = { home-manager, nixpkgs, flake-parts, ... }@inputs:
+    let
+      overlays = [
+        inputs.neovim-nightly-overlay.overlay
+      ];
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      flake = {
+        nixosConfigurations = {
+          wsl = import ./hosts/wsl {
+            inherit nixpkgs inputs;
+          };
+        };
+
+        homeConfigurations = {
+          beleap = import ./users/beleap {
+            inherit home-manager nixpkgs inputs overlays;
+          };
         };
       };
 
-      homeConfigurations = {
-        beleap = import ./users/beleap {
-          inherit home-manager nixpkgs inputs;
-        };
-      };
+      systems = [ "x86_64-linux" ];
     };
-
-    systems = ["x86_64-linux"];
-  };
 }
