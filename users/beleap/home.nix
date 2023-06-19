@@ -17,7 +17,7 @@
 
       aliases."dft" = "difftool";
 
-      extraConf = {
+      extraConfig = {
         diff.tool = "difftastic";
         difftool.prompt = false;
         difftool."difftastic".cmd = ''${lib.getExe pkgs.difftastic} "$LOCAL" "$REMOTE"'';
