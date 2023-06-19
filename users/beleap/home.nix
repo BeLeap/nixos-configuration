@@ -17,6 +17,9 @@
     git = {
       enable = true;
 
+      userName = "BeLeap";
+      userEmail = "beleap@beleap.dev";
+
       aliases."dft" = "difftool";
 
       extraConfig = {
