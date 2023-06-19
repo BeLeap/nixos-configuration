@@ -5,9 +5,15 @@
     packages = lib.attrValues {
       inherit (pkgs)
         neovim-nightly
+
+        nodejs
         go
         cargo
+
         azure-cli
+
+        fd
+        ripgrep
         bat
         difftastic;
 
