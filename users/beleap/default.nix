@@ -1,16 +1,22 @@
-{ home-manager }:
+{ home-manager, nixpkgs }:
 
+let
+  system = "x86-64-linux";
+  username = "beleap";
+in
 home-manager.lib.homeManagerConfiguration {
   modules = [
     {
       nixpkgs = {};
 
       home = {
-        username = "beleap";
-        homeDirectory = "/home/beleap";
+        username = "${username}";
+        homeDirectory = "/home/${username}";
       };
     }
 
     ./home.nix
   ];
+
+  pkgs = nixpkgs.outputs.legacyPackages.${system};
 }

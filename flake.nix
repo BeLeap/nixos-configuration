@@ -32,7 +32,7 @@
 
       homeConfigurations = {
         beleap = import ./users/beleap {
-          inherit home-manager;
+          inherit home-manager nixpkgs;
         };
       };
     };
