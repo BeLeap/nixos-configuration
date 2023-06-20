@@ -24,6 +24,9 @@
     };
 
     stateVersion = "22.05";
+    sessionVariables = {
+      SHELL = "fish";
+    };
   };
 
   programs = {
