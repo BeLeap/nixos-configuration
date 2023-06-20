@@ -78,6 +78,7 @@
         gc = "git commit -v";
         gp = "git push";
         gf = "git fetch --prune --all";
+        gl = "git pull";
       };
     };
 
