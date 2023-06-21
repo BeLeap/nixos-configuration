@@ -13,6 +13,7 @@
         azure-cli
 
         kubernetes-helm
+        kubectl
 
         lsd
         fd
@@ -82,6 +83,8 @@
         gp = "git push";
         gf = "git fetch --prune --all";
         gl = "git pull";
+
+        k = "kubectl";
       };
     };
 
