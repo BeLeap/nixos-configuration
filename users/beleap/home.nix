@@ -15,6 +15,7 @@
         kubernetes-helm
         kubectl
 
+        yq
         lsd
         fd
         ripgrep
