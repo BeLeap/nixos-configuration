@@ -11,6 +11,7 @@
         cargo
 
         mtr
+        tshark
 
         azure-cli
 
