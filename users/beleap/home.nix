@@ -10,6 +10,8 @@
         go
         cargo
 
+        mtr
+
         azure-cli
 
         kubernetes-helm
