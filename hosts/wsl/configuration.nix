@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     gcc9
     git
+    openssh
     home-manager
     man-pages
     man-pages-posix
