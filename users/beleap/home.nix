@@ -118,15 +118,19 @@
       };
     };
 
-    zellij = {
+    tmux = {
       enable = true;
+      clock24 = true;
+      shortcut = "a";
+      keyMode = "vi";
 
-      enableFishIntegration = true;
+      plugins = [
+        pkgs.tmuxPlugins.catppuccin
+      ];
     };
   };
 
   xdg.configFile = {
     nvim.source = "${dotfiles}/nvim/.config/nvim";
-    zellij.source = "${dotfiles}/zellij/.config/zellij";
   };
 }
