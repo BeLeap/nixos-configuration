@@ -124,8 +124,9 @@
       shortcut = "a";
       keyMode = "vi";
 
-      plugins = [
-        pkgs.tmuxPlugins.catppuccin
+      plugins = with pkgs.tmuxPlugins; [
+        catppuccin
+        sensible
       ];
     };
   };
