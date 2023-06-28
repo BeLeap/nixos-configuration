@@ -24,7 +24,8 @@
         fd
         ripgrep
         bat
-        difftastic;
+        difftastic
+        unzip;
 
       inherit (pkgs.gitAndTools) gh;
     };
