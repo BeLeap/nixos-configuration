@@ -15,6 +15,8 @@
         tshark
 
         azure-cli
+        saml2aws
+        awscli2
 
         kubernetes-helm
         kubectl
