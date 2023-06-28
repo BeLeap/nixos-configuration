@@ -17,6 +17,7 @@
         azure-cli
         saml2aws
         awscli2
+        terraform
 
         kubernetes-helm
         kubectl
