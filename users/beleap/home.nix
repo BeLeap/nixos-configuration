@@ -9,6 +9,7 @@
         nodejs
         go
         cargo
+        deno
 
         mtr
         tshark
