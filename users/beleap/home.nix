@@ -94,6 +94,7 @@
         gl = "git pull";
 
         k = "kubectl";
+        tf = "terraform";
       };
     };
 
