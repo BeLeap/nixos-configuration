@@ -13,6 +13,7 @@
 
         mtr
         tshark
+        dig
 
         azure-cli
         saml2aws
