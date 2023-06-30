@@ -6,6 +6,7 @@
       inherit (pkgs)
         neovim-nightly
         openvpn
+        vault
 
         nodejs
         go
