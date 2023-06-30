@@ -5,6 +5,7 @@
     packages = lib.attrValues {
       inherit (pkgs)
         neovim-nightly
+        openvpn
 
         nodejs
         go
