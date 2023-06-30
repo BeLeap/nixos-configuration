@@ -7,6 +7,7 @@
         neovim-nightly
         openvpn
         vault
+        postgresql_15
 
         nodejs
         go
