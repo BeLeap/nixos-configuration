@@ -26,6 +26,7 @@
         kubernetes-helm
         kubectl
 
+        file
         yq
         lsd
         fd
