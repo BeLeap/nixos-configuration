@@ -63,6 +63,7 @@
       ignores = [
         "*.null_ls*"
         "root.md"
+        "run.fish"
       ];
     };
 
