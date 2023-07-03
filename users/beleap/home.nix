@@ -25,6 +25,7 @@
 
         kubernetes-helm
         kubectl
+        kubectx
 
         gdb
         file
