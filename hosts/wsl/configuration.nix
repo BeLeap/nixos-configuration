@@ -17,13 +17,13 @@
   users.users.beleap = {
     isNormalUser = true;
 
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     home = "/home/beleap";
     extraGroups = [
       "wheel"
     ];
   };
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   nix = {
     package = pkgs.nixFlakes;
