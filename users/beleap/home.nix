@@ -26,6 +26,7 @@
         kubernetes-helm
         kubectl
 
+        gdb
         file
         yq
         lsd

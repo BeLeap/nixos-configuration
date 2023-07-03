@@ -17,7 +17,7 @@
   users.users.beleap = {
     isNormalUser = true;
 
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     home = "/home/beleap";
     extraGroups = [
       "wheel"
