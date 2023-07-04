@@ -14,6 +14,7 @@
         go
         cargo
         deno
+        ghc
 
         mtr
         tshark
