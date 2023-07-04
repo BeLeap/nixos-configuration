@@ -14,8 +14,9 @@ nixpkgs.lib.nixosSystem {
         defaultUser = "beleap";
         startMenuLaunchers = true;
         nativeSystemd = true;
-        docker-desktop = {
+        docker-native = {
           enable = true;
+          addToDockerGroup = true;
         };
 
         wslConf = {
