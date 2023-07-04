@@ -29,6 +29,7 @@
         kubectl
         kubectx
 
+        fzf
         gdb
         file
         yq
@@ -104,6 +105,7 @@
         gl = "git pull";
 
         k = "kubectl";
+        ktx = "kubectx";
         tf = "terraform";
       };
     };
