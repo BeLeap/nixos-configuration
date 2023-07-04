@@ -14,6 +14,9 @@ nixpkgs.lib.nixosSystem {
         defaultUser = "beleap";
         startMenuLaunchers = true;
         nativeSystemd = true;
+        docker-desktop = {
+          enable = true;
+        };
 
         wslConf = {
           automount.root = "/mnt";
