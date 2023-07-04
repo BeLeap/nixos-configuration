@@ -10,6 +10,7 @@
         postgresql_15
 
         nodejs
+        yarn
         go
         cargo
         deno
