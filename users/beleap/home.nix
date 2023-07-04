@@ -15,6 +15,7 @@
         cargo
         deno
         ghc
+        "haskellPackages.ghcup"
 
         mtr
         tshark
