@@ -19,6 +19,7 @@
         mtr
         tshark
         dig
+        openssl
 
         azure-cli
         saml2aws
