@@ -20,6 +20,7 @@
         tshark
         dig
         openssl
+        ipcalc
 
         azure-cli
         saml2aws
