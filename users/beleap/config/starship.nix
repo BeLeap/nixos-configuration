@@ -36,4 +36,10 @@ $character'';
   terraform = {
     disabled = true;
   };
+  memory_usage = {
+    disabled = false;
+    threshold = -1;
+    format = "\\[$symbol[$ram_pct]($style)\\]";
+    symbol = "󰍛 ";
+  };
 }
