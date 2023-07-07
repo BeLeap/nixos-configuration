@@ -1,7 +1,17 @@
+{ pkgs }:
 {
   nix_shell.symbol = "(nix)";
-  format = "$character";
-  right_format = "$character$all";
+  format = ''$directory
+$character'';
+  right_format = (import ./format_generator.nix { inherit pkgs; })
+    .remove { 
+      to_remove = [
+        "$directory"
+      ]; 
+    };
+  directory = {
+    truncation_symbol = ".../";
+  };
   azure = {
     disabled = false;
     format = "on [$symbol($username)]($style) ";

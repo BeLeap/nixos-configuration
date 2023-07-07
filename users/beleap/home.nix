@@ -128,7 +128,9 @@
     starship = {
       enable = true;
 
-      settings = import ./config/starship.nix;
+      settings = import ./config/starship.nix {
+        inherit pkgs;
+      };
     };
 
     direnv = {
