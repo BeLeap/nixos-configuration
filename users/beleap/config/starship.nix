@@ -21,7 +21,10 @@ $character'';
   };
   kubernetes = {
     disabled = false;
-    format = "\\[[$symbol($context)](dimmed green)\\] ";
+    format = "\\[[$symbol($context)]($style)\\]";
     symbol = "󰻈 ";
+  };
+  git_branch = {
+    format = "\\[[$symbol$branch]($style)\\]";
   };
 }
