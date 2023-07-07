@@ -15,7 +15,7 @@ $character'';
   };
   azure = {
     disabled = false;
-    format = "on [$symbol($username)]($style) ";
+    format = "\\[[$symbol($username)]($style)\\]";
     symbol = "󰠅 ";
     style = "blue bold";
   };
@@ -26,5 +26,11 @@ $character'';
   };
   git_branch = {
     format = "\\[[$symbol$branch]($style)\\]";
+  };
+  git_status = {
+    format = "([\\[$all_status$ahead_behind\\]]($style))";
+  };
+  cmd_duration = {
+    format = "\\[[$duration]($style)\\]";
   };
 }
