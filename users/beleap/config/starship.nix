@@ -6,4 +6,7 @@
     symbol = "󰠅 ";
     style = "blue bold";
   };
+  kubernetes = {
+    disabled = false;
+  };
 }
