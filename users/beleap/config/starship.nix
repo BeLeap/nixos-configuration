@@ -33,4 +33,7 @@ $character'';
   cmd_duration = {
     format = "\\[[$duration]($style)\\]";
   };
+  terraform = {
+    disabled = true;
+  };
 }
