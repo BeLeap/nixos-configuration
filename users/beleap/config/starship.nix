@@ -21,7 +21,7 @@ $character'';
   };
   kubernetes = {
     disabled = false;
-    format = "[$symbol($context)](dimmed green) in ";
+    format = "\\[[$symbol($context)](dimmed green)\\] ";
     symbol = "󰻈 ";
   };
 }
