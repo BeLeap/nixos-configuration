@@ -1,7 +1,7 @@
 {
   nix_shell.symbol = "(nix)";
   format = "$character";
-  right_format = "$all";
+  right_format = "$character$all";
   azure = {
     disabled = false;
     format = "on [$symbol($username)]($style) ";
@@ -10,5 +10,7 @@
   };
   kubernetes = {
     disabled = false;
+    format = "[$symbol($context)](dimmed green) in ";
+    symbol = "󰻈 ";
   };
 }
