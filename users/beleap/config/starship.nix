@@ -7,6 +7,7 @@ $character'';
     .remove { 
       to_remove = [
         "$directory"
+        "$character"
       ]; 
     };
   directory = {
