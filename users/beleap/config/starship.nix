@@ -11,7 +11,7 @@ $character'';
       ]; 
     };
   directory = {
-    truncation_symbol = ".../";
+    truncation_symbol = "(...)/";
   };
   azure = {
     disabled = false;
