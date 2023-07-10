@@ -8,6 +8,7 @@
         openvpn
         vault
         postgresql_15
+        mongosh
 
         nodejs
         yarn
@@ -32,7 +33,7 @@
         kubectl
         kubectx
 
-        mongosh
+        tealdeer
         fzf
         gdb
         file
