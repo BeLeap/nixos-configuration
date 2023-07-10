@@ -32,6 +32,7 @@
         kubectl
         kubectx
 
+        mongosh
         fzf
         gdb
         file
