@@ -33,6 +33,7 @@
         kubectl
         kubectx
 
+        bottom
         tealdeer
         fzf
         gdb
