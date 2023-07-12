@@ -16,6 +16,7 @@
         cargo
         deno
         ghc
+        haskell-language-server
 
         mtr
         tshark
