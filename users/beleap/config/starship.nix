@@ -19,6 +19,9 @@ $character'';
     symbol = "󰠅 ";
     style = "blue bold";
   };
+  aws = {
+    format = "\\[[$symbol($profile)(\\($region\\))(\\[$duration\\])]($style)\\]";
+  };
   kubernetes = {
     disabled = false;
     format = "\\[[$symbol($context)]($style)\\]";
