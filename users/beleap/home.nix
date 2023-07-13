@@ -23,6 +23,7 @@
         dig
         openssl
         ipcalc
+        tcpdump
 
         azure-cli
         saml2aws
