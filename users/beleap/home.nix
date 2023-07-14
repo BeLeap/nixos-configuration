@@ -24,6 +24,7 @@
         openssl
         ipcalc
         tcpdump
+        istioctl
 
         azure-cli
         saml2aws
