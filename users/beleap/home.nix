@@ -17,6 +17,7 @@
         deno
         ghc
         haskell-language-server
+        python311
 
         mtr
         tshark
