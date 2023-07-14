@@ -36,6 +36,7 @@
         kubectl
         kubectx
 
+        irssi
         bottom
         tealdeer
         fzf
