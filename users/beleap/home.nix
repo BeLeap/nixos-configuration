@@ -26,7 +26,7 @@
         ipcalc
         tcpdump
         istioctl
-        ngrok
+        # ngrok
 
         azure-cli
         saml2aws
