@@ -45,4 +45,7 @@ $character'';
     format = "\\[$symbol[$ram_pct]($style)\\]";
     symbol = "󰍛 ";
   };
+ nix_shell = {
+    format ="\\[[$symbol$state( \\($name\\))]($style)\\]";
+ };
 }
