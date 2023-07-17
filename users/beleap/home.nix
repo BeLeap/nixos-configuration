@@ -31,7 +31,6 @@
       azure-cli
       saml2aws
       awscli2
-      terraform
       ansible
 
       kubernetes-helm
