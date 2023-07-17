@@ -82,6 +82,7 @@
         "run.fish"
         "shell.nix"
         ".envrc"
+        ".direnv"
       ];
     };
 
