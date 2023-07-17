@@ -2,60 +2,58 @@
 
 {
   home = {
-    packages = lib.attrValues {
-      inherit (pkgs)
-        neovim-nightly
-        openvpn
-        vault
-        postgresql_15
-        mongosh
-        nix-prefetch-git
+    packages = with pkgs; [
+      neovim-nightly
+      openvpn
+      vault
+      postgresql_15
+      mongosh
+      nix-prefetch-git
 
-        nodejs
-        yarn
-        go
-        cargo
-        deno
-        ghc
-        haskell-language-server
-        python311
+      nodejs
+      yarn
+      go
+      cargo
+      deno
+      ghc
+      haskell-language-server
+      python311
 
-        mtr
-        tshark
-        dig
-        openssl
-        ipcalc
-        tcpdump
-        istioctl
-        # ngrok
+      mtr
+      tshark
+      dig
+      openssl
+      ipcalc
+      tcpdump
+      istioctl
+      # ngrok
 
-        azure-cli
-        saml2aws
-        awscli2
-        terraform
-        ansible
+      azure-cli
+      saml2aws
+      awscli2
+      terraform
+      ansible
 
-        kubernetes-helm
-        kubectl
-        kubectx
+      kubernetes-helm
+      kubectl
+      kubectx
 
-        man
-        irssi
-        bottom
-        tealdeer
-        fzf
-        gdb
-        file
-        yq
-        lsd
-        fd
-        ripgrep
-        bat
-        difftastic
-        unzip;
-
-      inherit (pkgs.gitAndTools) gh;
-    };
+      man
+      irssi
+      bottom
+      tealdeer
+      fzf
+      gdb
+      file
+      yq
+      lsd
+      fd
+      ripgrep
+      bat
+      difftastic
+      unzip
+      gitAndTools.gh
+    ];
 
     stateVersion = "22.05";
     sessionVariables = {
