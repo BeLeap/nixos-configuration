@@ -9,6 +9,7 @@
         vault
         postgresql_15
         mongosh
+        nix-prefetch-git
 
         nodejs
         yarn
