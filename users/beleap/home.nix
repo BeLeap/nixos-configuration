@@ -81,6 +81,7 @@
         "root.md"
         "run.fish"
         "shell.nix"
+        ".envrc"
       ];
     };
 
