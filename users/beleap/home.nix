@@ -145,9 +145,10 @@
 
     direnv = {
       enable = true;
-    };
-    nix-direnv = {
-      enable = true;
+
+      nix-direnv = {
+        enable = true;
+      };
     };
 
     tmux = {
