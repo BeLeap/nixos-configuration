@@ -5,7 +5,28 @@
     "${modulesPath}/profiles/minimal.nix"
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  system.stateVersion = "22.05";
+
+  wsl = {
+    enable = true;
+    defaultUser = "beleap";
+    startMenuLaunchers = true;
+    nativeSystemd = true;
+    docker-native = {
+      enable = true;
+      addToDockerGroup = true;
+    };
+
+    wslConf = {
+      automount.root = "/mnt";
+    };
+  };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
   
   environment.systemPackages = with pkgs; [
     gcc9
