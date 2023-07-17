@@ -10,8 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-utils.url = "github:numtide/flake-utils";
-
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -23,27 +21,23 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { home-manager, nixpkgs, flake-parts, ... }@inputs:
+  outputs = { home-manager, nixpkgs, ... }@inputs:
     let
       overlays = [
         inputs.neovim-nightly-overlay.overlay
       ];
     in
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      flake = {
-        nixosConfigurations = {
-          wsl = import ./hosts/wsl {
-            inherit nixpkgs inputs overlays;
-          };
-        };
-
-        homeConfigurations = {
-          beleap = import ./users/beleap {
-            inherit home-manager nixpkgs inputs overlays;
-          };
+    {
+      nixosConfigurations = {
+        wsl = import ./hosts/wsl {
+          inherit nixpkgs inputs overlays;
         };
       };
 
-      systems = [ "x86_64-linux" ];
+      homeConfigurations = {
+        beleap = import ./users/beleap {
+          inherit home-manager nixpkgs inputs overlays;
+        };
+      };
     };
 }
