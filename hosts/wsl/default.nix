@@ -1,4 +1,4 @@
-{ nixpkgs, inputs }:
+{ nixpkgs, inputs, overlays }:
 
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
@@ -28,3 +28,10 @@ nixpkgs.lib.nixosSystem {
     ./configuration.nix
   ];
 }
+
+    # ({
+    #   nixpkgs = {
+    #     overlays = overlays;
+    #     config.allowUnfree = true; # this is the only allowUnfree that's actually doing anything
+    #   };
+    # })

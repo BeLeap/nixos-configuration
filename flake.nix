@@ -33,7 +33,7 @@
       flake = {
         nixosConfigurations = {
           wsl = import ./hosts/wsl {
-            inherit nixpkgs inputs;
+            inherit nixpkgs inputs overlays;
           };
         };
 

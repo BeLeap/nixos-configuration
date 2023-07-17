@@ -4,13 +4,9 @@
   imports = [
     "${modulesPath}/profiles/minimal.nix"
   ];
+
+  nixpkgs.config.allowUnfree = true;
   
-  nixpkgs = {
-    config = {
-      allowBroken = true;
-      allowUnfree = true;
-    };
-  };
   environment.systemPackages = with pkgs; [
     gcc9
     git
