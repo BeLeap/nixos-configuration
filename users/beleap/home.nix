@@ -39,6 +39,7 @@
         kubectl
         kubectx
 
+        man
         irssi
         bottom
         tealdeer
