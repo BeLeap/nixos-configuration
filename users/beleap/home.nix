@@ -82,6 +82,7 @@
         "*.null_ls*"
         "root.md"
         "run.fish"
+        "shell.nix"
       ];
     };
 
