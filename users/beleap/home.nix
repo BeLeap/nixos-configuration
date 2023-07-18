@@ -19,6 +19,7 @@
       haskell-language-server
       python311
 
+      ntp
       mtr
       tshark
       dig
