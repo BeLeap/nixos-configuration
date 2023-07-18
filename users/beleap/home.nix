@@ -37,6 +37,7 @@
       kubernetes-helm
       kubectl
       kubectx
+      kubectl-node-shell
 
       man
       irssi
