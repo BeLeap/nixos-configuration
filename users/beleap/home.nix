@@ -18,6 +18,7 @@
       ghc
       haskell-language-server
       python311
+      zig
 
       ntp
       mtr
