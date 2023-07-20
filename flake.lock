@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "dotfiles": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1689740155,
-        "narHash": "sha256-6wx1dwGeELnFkAHxI7AblzMNi/XGR9++PNNyvI565Fc=",
-        "owner": "beleap",
-        "repo": "dotfiles",
-        "rev": "39aca362f7f064acef7daffbf29982dec0586161",
-        "type": "github"
-      },
-      "original": {
-        "owner": "beleap",
-        "repo": "dotfiles",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -359,7 +343,6 @@
     },
     "root": {
       "inputs": {
-        "dotfiles": "dotfiles",
         "home-manager": "home-manager",
         "master": "master",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
