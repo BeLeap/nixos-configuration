@@ -39,6 +39,7 @@
       kubectx
       kubectl-node-shell
 
+      sshpass
       gnumake
       stow
       man
