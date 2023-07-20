@@ -39,6 +39,8 @@
       kubectx
       kubectl-node-shell
 
+      gnumake
+      stow
       man
       irssi
       bottom
@@ -165,9 +167,5 @@
         sensible
       ];
     };
-  };
-
-  xdg.configFile = {
-    nvim.source = "${dotfiles}/nvim/.config/nvim";
   };
 }
