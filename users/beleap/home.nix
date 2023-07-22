@@ -14,7 +14,6 @@
       yarn
       go
       cargo
-      pkg-config
       deno
       ghc
       haskell-language-server
