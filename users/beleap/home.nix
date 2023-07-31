@@ -166,7 +166,6 @@
 
       plugins = with pkgs.tmuxPlugins; [
         catppuccin
-        sensible
       ];
     };
   };
