@@ -169,4 +169,8 @@
       ];
     };
   };
+
+  xdg.configFile."tmux/tmux.conf".text = lib.mkOrder 600 ''
+  set -g @catppuccin_window_tabs_enabled on
+  '';
 }
