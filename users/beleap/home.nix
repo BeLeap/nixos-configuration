@@ -19,6 +19,7 @@
       haskell-language-server
       python311
       zig
+      tree-sitter
 
       ntp
       mtr
