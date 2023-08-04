@@ -35,6 +35,7 @@
       saml2aws
       awscli2
       ansible
+      terraform
 
       kubernetes-helm
       kubectl
