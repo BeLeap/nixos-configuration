@@ -13,7 +13,7 @@
       nodejs
       yarn
       go
-      cargo
+      rustup
       evcxr
       deno
       ghc
