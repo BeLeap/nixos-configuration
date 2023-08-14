@@ -14,6 +14,7 @@
       yarn
       go
       cargo
+      evcxr
       deno
       ghc
       haskell-language-server
