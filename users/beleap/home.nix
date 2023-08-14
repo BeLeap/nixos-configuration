@@ -20,6 +20,7 @@
       python311
       zig
       tree-sitter
+      jupyter
 
       ntp
       mtr
