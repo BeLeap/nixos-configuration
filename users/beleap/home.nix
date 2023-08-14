@@ -44,6 +44,7 @@
       kubectx
       kubectl-node-shell
 
+      hexyl
       sshpass
       gnumake
       stow
