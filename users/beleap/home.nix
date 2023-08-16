@@ -174,6 +174,10 @@
       shortcut = "a";
       keyMode = "vi";
 
+      extraConfig = ''
+        set -g base-index 1
+      '';
+
       plugins = with pkgs.tmuxPlugins; [
         catppuccin
       ];
