@@ -23,6 +23,7 @@
       tree-sitter
       jupyter
 
+      croc
       ntp
       mtr
       tshark
