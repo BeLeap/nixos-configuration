@@ -10,6 +10,7 @@
       mongosh
       nix-prefetch-git
 
+      universal-ctags
       nodejs
       yarn
       go
