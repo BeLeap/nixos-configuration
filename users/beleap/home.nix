@@ -176,6 +176,9 @@
 
       extraConfig = ''
         set -g base-index 1
+        set-option -sg escape-time 10
+        set-option -g default-terminal "screen-256color"
+        set-option -sa terminal-features ',XXX:RGB'
       '';
 
       plugins = with pkgs.tmuxPlugins; [
