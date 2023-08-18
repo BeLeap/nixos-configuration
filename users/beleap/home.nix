@@ -181,18 +181,18 @@
 
       extraConfig = ''
         set -g base-index 1
-        set-option -sg escape-time 10
         set-option -g default-terminal "screen-256color"
         set-option -sa terminal-features ',XXX:RGB'
       '';
 
       plugins = with pkgs.tmuxPlugins; [
-        catppuccin
+        {
+          plugin = catppuccin;
+          extraConfig = ''
+            set -g @catppuccin_window_tabs_enabled on
+          '';
+        }
       ];
     };
   };
-
-  xdg.configFile."tmux/tmux.conf".text = lib.mkOrder 600 ''
-  set -g @catppuccin_window_tabs_enabled on
-  '';
 }

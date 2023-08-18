@@ -21,8 +21,4 @@ home-manager.lib.homeManagerConfiguration {
   ];
 
   pkgs = nixpkgs.outputs.legacyPackages.${system};
-
-  extraSpecialArgs = {
-    inherit (inputs) dotfiles;
-  };
 }
