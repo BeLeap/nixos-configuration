@@ -18,7 +18,7 @@
       deno
       ghc
       haskell-language-server
-      python311
+      python3
       zig
       tree-sitter
       jupyter
