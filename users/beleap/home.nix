@@ -1,7 +1,11 @@
-{ lib, pkgs, dotfiles, ... }:
+{ lib, pkgs, ... }:
 
 {
   home = {
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    
     packages = with pkgs; [
       neovim-nightly
       openvpn
