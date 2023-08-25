@@ -8,10 +8,6 @@
     };
   };
   home = {
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
-    
     packages = with pkgs; [
       neovim-nightly
       openvpn
