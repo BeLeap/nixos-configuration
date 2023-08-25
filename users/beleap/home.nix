@@ -1,6 +1,12 @@
 { lib, pkgs, ... }:
 
 {
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
   home = {
     sessionVariables = {
       EDITOR = "nvim";
@@ -37,7 +43,7 @@
       ipcalc
       tcpdump
       istioctl
-      # ngrok
+      ngrok
 
       azure-cli
       saml2aws
