@@ -73,9 +73,6 @@
     ];
 
     stateVersion = "22.05";
-    sessionVariables = {
-      SHELL = "fish";
-    };
   };
 
   programs = {
@@ -155,6 +152,7 @@
       enable = true;
 
       enableFishIntegration = true;
+      enableNushellIntegration = true;
     };
 
     lsd = {
@@ -199,6 +197,31 @@
           '';
         }
       ];
+    };
+
+    nushell = {
+      enable = true;
+
+      envFile = ''
+        $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin')
+      '';
+
+      shellAliases = {
+        v = "nvim";
+
+        gst = "git status";
+        gsw = "git switch";
+        gd = "git diff";
+        ga = "git add";
+        gc = "git commit -v";
+        gp = "git push";
+        gf = "git fetch --prune --all";
+        gl = "git pull";
+
+        k = "kubectl";
+        ktx = "kubectx";
+        tf = "terraform";
+      };
     };
   };
 }
