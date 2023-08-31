@@ -202,7 +202,7 @@
     nushell = {
       enable = true;
 
-      envFile = ''
+      extraEnv = ''
         $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin')
       '';
 
