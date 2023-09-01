@@ -98,6 +98,7 @@
         "shell.nix"
         ".envrc"
         ".direnv"
+        "run.nu"
       ];
 
       aliases = {
