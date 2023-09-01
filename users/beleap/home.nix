@@ -175,6 +175,8 @@
       nix-direnv = {
         enable = true;
       };
+
+      enableNushellIntegration = true;
     };
 
     tmux = {
