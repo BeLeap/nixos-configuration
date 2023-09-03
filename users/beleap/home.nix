@@ -212,7 +212,7 @@
       '';
 
       extraEnv = ''
-        $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin')
+        $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin' | append '/home/beleap/.local/bin')
       '';
 
       shellAliases = {
