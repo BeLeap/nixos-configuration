@@ -40,6 +40,7 @@
       tcpdump
       istioctl
       ngrok
+      pueue
 
       azure-cli
       saml2aws
