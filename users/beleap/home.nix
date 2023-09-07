@@ -207,15 +207,24 @@
       ];
     };
 
-    nushell = {
+    nushell = 
+    let
+      nu_conf = (import ./config/nu);
+    in
+    {
       enable = true;
 
-      extraConfig = ''
-        $env.config = {
-          show_banner: false,
-          edit_mode: vi,
-        }
-      '';
+      extraConfig = lib.strings.concatStrings(
+        [
+          ''
+            $env.config = {
+              show_banner: false,
+              edit_mode: vi,
+            }
+          ''
+          nu_conf.git
+        ]
+      );
 
       extraEnv = ''
         $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin' | append '/home/beleap/.local/bin')
