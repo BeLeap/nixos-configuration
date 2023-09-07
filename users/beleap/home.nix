@@ -209,7 +209,7 @@
 
     nushell = 
     let
-      nu_conf = (import ./config/nu);
+      nushell_conf = (import ./config/nushell);
     in
     {
       enable = true;
@@ -222,7 +222,7 @@
               edit_mode: vi,
             }
           ''
-          nu_conf.git
+          nushell_conf.git
         ]
       );
 
