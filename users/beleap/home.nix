@@ -227,6 +227,7 @@
       );
 
       extraEnv = ''
+        $env.EDITOR = 'nvim'
         $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin' | append '/home/beleap/.local/bin')
       '';
 
