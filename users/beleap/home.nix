@@ -77,6 +77,14 @@
   };
 
   programs = {
+    bash = {
+      enable = true;
+      bashrcExtra = ''
+        export EDITOR=nvim
+        eval "$(direnv hook bash)"
+      '';
+    };
+    
     git = {
       enable = true;
       
