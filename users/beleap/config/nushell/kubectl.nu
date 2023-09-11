@@ -16,12 +16,12 @@ def finalword [words: string] {
 def namespace [line:string] {
     $line | parse -r "(?P<n>-n [a-zA-Z-0-9]+)|(?P<namespace>--namespace [a-zA-Z-0-9]+)"
     | each { |it| $"($it.n)($it.namespace)" }
-    | str find-replace "-n " "" | str find-replace "--namespace" ""
+    | str replace "-n " "" | str replace "--namespace" ""
 }
 
 # Namespace
 def "nu-complete kubectl namespace" [line: string, pos: int] {
-    resource-items namespace ""
+  ^kubectl get namespaces -o json | from json | get items | get metadata | select name | get name
 }
 
 # Logs
@@ -59,7 +59,7 @@ export extern "kubectl logs" [
 
 # Resources
 def "nu-complete kubectl resources" [line: string, pos: int] {
-    ^kubectl api-resources | lines | skip 1 | parse -r "^([a-z]+) " | get Capture1
+    ^kubectl api-resources -o name | lines | skip 1
 }
 
 # Kubectl
@@ -68,14 +68,7 @@ def "nu-complete kubectl" [] {
 }
 
 def "nu-complete kubectl resource names" [line: string, pos: int] {
-
     resource-items ( $line | split row " " | last ) $line
-
-    # if (queryns | str length) > 0 {
-    #     resource-items $resource $queryns
-    # } else {
-    #     resource-items $resource ""
-    # }
 }
 
 # Kubectl
