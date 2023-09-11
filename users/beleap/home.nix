@@ -230,6 +230,7 @@
             }
           ''
           nushell_conf.git
+          nushell_conf.kubectl
         ]
       );
 
