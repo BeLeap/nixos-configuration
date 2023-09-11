@@ -11,7 +11,7 @@
     packages = with pkgs; [
       neovim-nightly
       openvpn
-      vault
+      vault-bin
       postgresql_15
       mongosh
       nix-prefetch-git
