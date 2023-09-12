@@ -274,11 +274,12 @@
         };
       };
 
-      profiles = {
-        personal = {
-          id = 0;
-          name = "personal";
-
+      profiles = 
+      let
+        common = {
+          settings = {
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          };
           userChrome = ''
             #main-window #titlebar {
               overflow: hidden;
@@ -293,14 +294,62 @@
             /* Hidden state: Fix z-index of active pinned tabs */
             #main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs { z-index: 0 !important; }
           '';
-          
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+            profile-switcher
             onepassword-password-manager
             tridactyl
             refined-github
             sidebery
             i-dont-care-about-cookies
             auto-tab-discard
+          ];
+          search = {
+            force = true;
+            default = "Phind";
+            engines = {
+              "Phind" = {
+                urls = [{ template = "https://www.phind.com/search?q={searchTerms}"; }];
+                iconUpdateURL = "https://www.phind.com/favicon.ico";
+                updateInterval = 24 * 60 * 60 * 1000;
+              };
+            };
+          };
+        };
+      in
+      {
+        personal = {
+          id = 0;
+          name = "personal";
+
+          settings = common.settings;
+          userChrome = common.userChrome;
+          extensions = common.extensions;
+          search = common.search;
+          isDefault = true;
+
+          bookmarks = [];
+        };
+        work = {
+          id = 1;
+          name = "work";
+
+          settings = common.settings;
+          userChrome = common.userChrome;
+          extensions = common.extensions;
+          search = common.search;
+
+          bookmarks = [
+            {
+              name = "Shortcut";
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "Terraform | AWS";
+                  url = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs";
+                  keyword = "tfaws";
+                }
+              ];
+            }
           ];
         };
       };
@@ -309,7 +358,7 @@
     wofi = {
       enable = true;
 
-      style = builtins.readFile (./. + "/wofi/style.css");
+      style = builtins.readFile (./. + "/config/wofi/style.css");
     };
   };
 }
