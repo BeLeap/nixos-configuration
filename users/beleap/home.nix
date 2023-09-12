@@ -195,15 +195,7 @@
       enableAliases = true;
     };
 
-    direnv = {
-      enable = true;
-
-      nix-direnv = {
-        enable = true;
-      };
-
-      enableNushellIntegration = true;
-    };
+    direnv = (import ./config/tui).direnv;
 
     tmux = {
       enable = true;
