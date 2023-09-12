@@ -29,7 +29,7 @@
 
     fish = (import ./config/fish);
     git = (import ./config/git);
-    
+
     starship = {
       enable = true;
 
@@ -45,14 +45,25 @@
 
     firefox = (import ./config/firefox) { inherit pkgs; };
   };
-  xdg.desktopEntries = {
-    firefox = {
-      name = "Firefox";
-      genericName = "Web Browser";
-      exec = "firefox %U";
-      terminal = false;
-      categories = [ "Application" "Network" "WebBrowser" ];
-      mimeType = [ "text/html" "text/xml" ];
+  xdg = {
+    enable = true;
+ 
+    systemDirs = {
+      data = [
+        "/usr/share"
+        "/usr/local/share"
+        "/home/beleap/.nix-profile/share"
+      ];
+    };
+    desktopEntries = {
+      firefox = {
+        name = "Firefox";
+        genericName = "Web Browser";
+        exec = "firefox %U";
+        terminal = false;
+        categories = [ "Application" "Network" "WebBrowser" ];
+        mimeType = [ "text/html" "text/xml" ];
+      };
     };
   };
 }
