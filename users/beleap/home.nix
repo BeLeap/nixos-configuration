@@ -87,17 +87,17 @@
 
   programs = {
     home-manager.enable = true;
-    
+
     bash = {
       enable = true;
       bashrcExtra = ''
         export EDITOR=nvim
       '';
     };
-    
+
     git = {
       enable = true;
-      
+
       userName = "BeLeap";
       userEmail = "beleap@beleap.dev";
 
