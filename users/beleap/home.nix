@@ -221,7 +221,7 @@
       ];
     };
 
-    nushell = 
+    nushell =
     let
       nushell_conf = (import ./config/nushell);
     in
