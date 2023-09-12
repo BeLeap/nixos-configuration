@@ -48,13 +48,6 @@
   xdg = {
     enable = true;
  
-    systemDirs = {
-      data = [
-        "/usr/share"
-        "/usr/local/share"
-        "/home/beleap/.nix-profile/share"
-      ];
-    };
     desktopEntries = {
       firefox = {
         name = "Firefox";
