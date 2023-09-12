@@ -15,6 +15,9 @@
     };
   };
   home = {
+    sessionVariables = {
+      MOZ_ENABLE_WAYLAND = 1;
+    };
     packages = with pkgs; [
       neovim-nightly
       openvpn
@@ -234,12 +237,35 @@
     firefox = {
       enable = true;
 
-      package = pkgs.firefox.override {
+      package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
+        extraPolicies = {
+          CaptivePortal = false;
+          DisableFirefoxStudies = true;
+          DisablePocket = true;
+          DisableTelemetry = true;
+          DisableFirefoxAccounts = false;
+          NoDefaultBookmarks = true;
+          OfferToSaveLogins = false;
+          OfferToSaveLoginsDefault = false;
+          PasswordManagerEnabled = false;
+          FirefoxHome = {
+            Search = true;
+            Pocket = false;
+            Snippets = false;
+            TopSites = false;
+            Highlights = false;
+          };
+          UserMessaging = {
+            ExtensionRecommendations = false;
+            SkipOnboarding = true;
+          };
+        };
         cfg = {
           enableGnomeExtensions = true;
           enableTridactylNative = true;
         };
       };
+ 
 
       profiles = 
       let
@@ -321,12 +347,6 @@
           ];
         };
       };
-    };
-
-    wofi = {
-      enable = true;
-
-      style = builtins.readFile (./. + "/config/wofi/style.css");
     };
   };
 }
