@@ -279,6 +279,7 @@
         common = {
           settings = {
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+            "browser.aboutConfig.showWarning" = false;
           };
           userChrome = ''
             #main-window #titlebar {
