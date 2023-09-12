@@ -17,6 +17,7 @@
   home = {
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
+      EDITOR = "nvim";
     };
     packages = with pkgs; [
       neovim-nightly
@@ -98,6 +99,35 @@
       '';
     };
 
+        fish = {
+      enable = true;
+
+      interactiveShellInit = ''
+         fish_vi_key_bindings
+      '';
+
+      shellAliases = {
+        sofish = "source ~/.config/fish/config.fish";
+
+        v = "nvim";
+      };
+
+      shellAbbrs = {
+        gst = "git status";
+        gsw = "git switch";
+        gd = "git diff";
+        ga = "git add";
+        gc = "git commit -v";
+        gp = "git push";
+        gf = "git fetch --prune --all";
+        gl = "git pull";
+
+        k = "kubectl";
+        ktx = "kubectx";
+        tf = "terraform";
+      };
+    };
+
     git = {
       enable = true;
 
@@ -159,6 +189,12 @@
       };
     };
 
+    lsd = {
+      enable = true;
+
+      enableAliases = true;
+    };
+
     direnv = {
       enable = true;
 
@@ -189,49 +225,6 @@
           '';
         }
       ];
-    };
-
-    nushell =
-    let
-      nushell_conf = (import ./config/nushell);
-    in
-    {
-      enable = true;
-
-      extraConfig = lib.strings.concatStrings(
-        [
-          ''
-            $env.config = {
-              show_banner: false,
-              edit_mode: vi,
-            }
-          ''
-          nushell_conf.git
-          nushell_conf.kubectl
-        ]
-      );
-
-      extraEnv = ''
-        $env.EDITOR = 'nvim'
-        $env.PATH = ($env.PATH | split row (char esep) | append '/home/beleap/.nix-profile/bin' | append '/home/beleap/.local/bin')
-      '';
-
-      shellAliases = {
-        v = "nvim";
-
-        gst = "git status";
-        gsw = "git switch";
-        gd = "git diff";
-        ga = "git add";
-        gc = "git commit -v";
-        gp = "git push";
-        gf = "git fetch --prune --all";
-        gl = "git pull";
-
-        k = "kubectl";
-        ktx = "kubectx";
-        tf = "terraform";
-      };
     };
 
     firefox = {
