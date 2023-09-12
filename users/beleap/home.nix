@@ -78,6 +78,8 @@
       difftastic
       unzip
       gitAndTools.gh
+
+      anytype
     ];
 
     stateVersion = "22.05";
