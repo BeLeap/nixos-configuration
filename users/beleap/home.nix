@@ -19,72 +19,7 @@
       MOZ_ENABLE_WAYLAND = 1;
       EDITOR = "nvim";
     };
-    packages = with pkgs; [
-      neovim-nightly
-      openvpn
-      vault-bin
-      postgresql_15
-      mongosh
-      nix-prefetch-git
-
-      universal-ctags
-      nodejs
-      yarn
-      go
-      rustup
-      evcxr
-      deno
-      ghc
-      haskell-language-server
-      python3
-      zig
-      tree-sitter
-      jupyter
-
-      croc
-      ntp
-      mtr
-      tshark
-      dig
-      openssl
-      ipcalc
-      tcpdump
-      istioctl
-      ngrok
-      pueue
-
-      azure-cli
-      saml2aws
-      awscli2
-      terraform
-
-      kubernetes-helm
-      kubectl
-      kubectx
-      kubectl-node-shell
-
-      hexyl
-      sshpass
-      gnumake
-      stow
-      man
-      irssi
-      bottom
-      tealdeer
-      fzf
-      gdb
-      file
-      yq
-      lsd
-      fd
-      ripgrep
-      bat
-      difftastic
-      unzip
-      gitAndTools.gh
-
-      anytype
-    ];
+    packages = ((import ./packages){ inherit pkgs; }).packages ;
 
     stateVersion = "22.05";
   };
