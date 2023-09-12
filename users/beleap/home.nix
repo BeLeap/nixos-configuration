@@ -6,7 +6,9 @@
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
       packageOverrides = pkgs: {
-        nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+        nur = import (builtins.fetchTarball {
+          url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+        }) {
           inherit pkgs;
         };
       };
@@ -265,6 +267,13 @@
     firefox = {
       enable = true;
 
+      package = pkgs.firefox.override {
+        cfg = {
+          enableGnomeExtensions = true;
+          enableTridactylNative = true;
+        };
+      };
+
       profiles = {
         personal = {
           id = 0;
@@ -287,15 +296,20 @@
           
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             onepassword-password-manager
+            tridactyl
+            refined-github
+            sidebery
+            i-dont-care-about-cookies
+            auto-tab-discard
           ];
         };
       };
-      
-      # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      # ];
+    };
 
-      # userChrome = ''
-      # '';
+    wofi = {
+      enable = true;
+
+      style = builtins.readFile (./. + "/wofi/style.css");
     };
   };
 }
