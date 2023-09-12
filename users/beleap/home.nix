@@ -98,9 +98,7 @@
     starship = {
       enable = true;
 
-      settings = import ./config/starship {
-        inherit pkgs;
-      };
+      settings = (import ./config/starship){ inherit pkgs; };
     };
 
     neovim = (import ./config/tui).neovim;
