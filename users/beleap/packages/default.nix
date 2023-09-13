@@ -44,6 +44,7 @@ let
     zig
     tree-sitter
     jupyter
+    jdk
   ];
   network = [
     croc
