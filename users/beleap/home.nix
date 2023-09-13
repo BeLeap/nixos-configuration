@@ -44,6 +44,7 @@
     tmux = (import ./config/tui).tmux { inherit pkgs; };
 
     firefox = (import ./config/firefox) { inherit pkgs; };
+    waybar = (import ./config/waybar);
   };
   wayland = {
     windowManager = {
