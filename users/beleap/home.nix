@@ -45,6 +45,23 @@
 
     firefox = (import ./config/firefox) { inherit pkgs; };
   };
+  wayland = {
+    windowManager = {
+      hyprland = {
+        enable = true;
+
+        enableNvidiaPatches = true;
+        systemdIntegration = true;
+
+        extraConfig = (import ./config/hypr).config;
+      };
+    };
+  };
+  i18n = {
+    inputMethod = {
+      enabled = "kime";
+    };
+  };
   xdg = {
     enable = true;
  
