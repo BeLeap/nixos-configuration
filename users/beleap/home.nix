@@ -59,7 +59,6 @@ in
   };
   wayland = {
     windowManager = {
-      hyprland = (import ./config/hypr);
       sway = lib.trivial.mergeAttrs {
         enable = true;
         package = (helpers.nixGLMesaWrap pkgs.sway);
