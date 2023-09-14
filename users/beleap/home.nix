@@ -42,11 +42,13 @@ in
     };
     waybar = (import ./config/sway/waybar);
   } ((import ./programs) { inherit pkgs; });
+ 
   services = {
     mako = (import ./config/sway/mako);
     kanshi = (import ./config/sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
   };
+ 
   wayland = {
     windowManager = {
       sway = lib.trivial.mergeAttrs {
@@ -55,11 +57,13 @@ in
       } (import ./config/sway);
     };
   };
+ 
   i18n = {
     inputMethod = {
       enabled = "kime";
     };
   };
+ 
   xdg = {
     enable = true;
  
