@@ -24,7 +24,7 @@ let
     difftastic
     unzip
     gitAndTools.gh
-
+    playerctl
   ];
   db = [
     postgresql_15
