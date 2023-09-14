@@ -16,5 +16,11 @@
     ];
     terminal = "wezterm";
     menu = "tofi-drun --drun-launch=true";
+
+    output = {
+      "DP-2" = {
+        scale = "1.5";
+      };
+    };
   };
 }
