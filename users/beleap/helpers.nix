@@ -1,4 +1,4 @@
-{ pkgs, lib, config, specialArgs, ... }:
+{ pkgs, lib, ... }:
 let
 
   nixGLMesaWrap = pkg:

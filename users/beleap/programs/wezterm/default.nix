@@ -1,4 +1,14 @@
+{ pkgs, lib }:
+let
+  helpers = import ../../helpers.nix {
+    inherit
+      pkgs
+      lib;
+  };
+in
 {
+  enable = true;
+  package = (helpers.nixGLMesaWrap pkgs.wezterm);
   extraConfig = ''
     local wezterm = require("wezterm")
     local mux = wezterm.mux

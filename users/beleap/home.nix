@@ -1,11 +1,9 @@
-{ pkgs, lib, config, specialArgs, ... }:
+{ pkgs, lib, ... }:
 let
   helpers = import ./helpers.nix {
     inherit
       pkgs
-      lib
-      config
-      specialArgs;
+      lib;
   };
 in
 {
@@ -35,13 +33,8 @@ in
   programs = lib.trivial.mergeAttrs {
     home-manager.enable = true;
 
-    wezterm = {
-      enable = true;
-      package = (helpers.nixGLMesaWrap pkgs.wezterm);
-      extraConfig = (import ./config/wezterm).extraConfig;
-    };
     waybar = (import ./config/sway/waybar);
-  } ((import ./programs) { inherit pkgs; });
+  } ((import ./programs) { inherit pkgs lib; });
  
   services = {
     mako = (import ./config/sway/mako);
@@ -51,10 +44,7 @@ in
  
   wayland = {
     windowManager = {
-      sway = lib.trivial.mergeAttrs {
-        enable = true;
-        package = (helpers.nixGLMesaWrap pkgs.sway);
-      } (import ./config/sway);
+      sway = (import ./config/sway) { inherit pkgs lib; };
     };
   };
  

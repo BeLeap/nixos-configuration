@@ -1,8 +1,17 @@
+{ pkgs, lib }:
 let
   modifier = "Mod4";
   swaysome = builtins.readFile(./. + "/swaysome.conf");
+  helpers = import ../../helpers.nix {
+    inherit
+      pkgs
+      lib;
+  };
 in
 {
+  enable = true;
+  package = (helpers.nixGLMesaWrap pkgs.sway);
+
   systemd = {
     enable = true;
   };
