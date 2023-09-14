@@ -3,8 +3,7 @@
   enable = true;
   settings = {
     nix_shell.symbol = "(nix)";
-    format = ''$directory
-  $character'';
+    format = "$directory\n$character";
     right_format = (import ./format_generator.nix { inherit pkgs; })
       .remove { 
         to_remove = [
