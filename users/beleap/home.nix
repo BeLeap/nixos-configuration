@@ -28,6 +28,7 @@
 
     waybar = (import ./config/sway/waybar);
     wofi = (import ./config/sway/wofi);
+    swaylock = (import ./config/sway/swaylock);
   } ((import ./programs) { inherit pkgs lib; });
  
   services = {
