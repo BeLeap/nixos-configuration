@@ -25,9 +25,11 @@ let
     unzip
     gitAndTools.gh
     playerctl
+    _1password
   ];
   gui = [
     swaysome
+    _1password-gui
   ];
   db = [
     postgresql_15
