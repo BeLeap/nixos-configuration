@@ -1,10 +1,11 @@
 { pkgs, lib, config, specialArgs, ... }:
 let
   helpers = import ./helpers.nix {
-    inherit pkgs;
-    inherit lib;
-    inherit config;
-    inherit specialArgs;
+    inherit
+      pkgs
+      lib
+      config
+      specialArgs;
   };
 in
 {
