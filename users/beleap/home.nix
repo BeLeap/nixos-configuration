@@ -47,14 +47,7 @@
   };
   wayland = {
     windowManager = {
-      hyprland = {
-        enable = true;
-
-        enableNvidiaPatches = true;
-        systemdIntegration = true;
-
-        extraConfig = (import ./config/hypr).config;
-      };
+      hyprland = (import ./config/hypr);
     };
   };
   i18n = {

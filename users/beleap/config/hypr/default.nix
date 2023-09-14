@@ -5,5 +5,10 @@ let
   windowrule = builtins.readFile(./. + "/windowrule.conf");
 in
 {
-  config = builtins.concatStringsSep "\n" [(import ./theme).mocha bind env main windowrule];
+  enable = true;
+
+  enableNvidiaPatches = true;
+  systemdIntegration = true;
+
+  extraConfig = builtins.concatStringsSep "\n" [(import ./theme).mocha bind env main windowrule];
 }
