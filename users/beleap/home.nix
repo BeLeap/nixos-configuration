@@ -40,6 +40,7 @@
     tmux = (import ./config/tui).tmux { inherit pkgs; };
 
     firefox = (import ./config/firefox) { inherit pkgs; };
+    wezterm = (import ./config/wezterm);
     waybar = (import ./config/waybar);
   };
   services = {
