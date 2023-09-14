@@ -53,11 +53,11 @@ in
       package = (helpers.nixGLMesaWrap pkgs.wezterm);
       extraConfig = (import ./config/wezterm).extraConfig;
     };
-    waybar = (import ./config/waybar);
+    waybar = (import ./config/sway/waybar);
   };
   services = {
-    mako = (import ./config/mako);
-    kanshi = (import ./config/kanshi);
+    mako = (import ./config/sway/mako);
+    kanshi = (import ./config/sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
   };
   wayland = {
