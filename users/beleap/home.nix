@@ -60,10 +60,10 @@ in
   wayland = {
     windowManager = {
       hyprland = (import ./config/hypr);
-      sway = {
+      sway = lib.trivial.mergeAttrs {
         enable = true;
         package = (helpers.nixGLMesaWrap pkgs.sway);
-      };
+      } (import ./config/sway);
     };
   };
   i18n = {
