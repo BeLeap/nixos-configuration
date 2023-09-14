@@ -8,6 +8,7 @@
   };
 
   config = {
+    modifier = "Mod4";
     bars = [
       {
         command = "waybar";
