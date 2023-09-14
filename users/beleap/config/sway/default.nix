@@ -26,6 +26,12 @@ in
         scale = "1.5";
       };
     };
+
+    startup = [
+      { command = "wezterm"; }
+      { command = "firefox"; }
+      { command = "1password &"; }
+    ];
   };
 
   extraConfig = builtins.concatStringsSep "\n" [
