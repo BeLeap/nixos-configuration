@@ -46,6 +46,9 @@
     firefox = (import ./config/firefox) { inherit pkgs; };
     waybar = (import ./config/waybar);
   };
+  services = {
+    mako = (import ./config/mako);
+  };
   wayland = {
     windowManager = {
       hyprland = {
