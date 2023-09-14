@@ -6,10 +6,10 @@
       layer = "top";
       spacing = 8;
       modules-left = [
-        "hyprland/workspaces"
+        "sway/workspaces"
         "mpris"
       ];
-      modules-center = ["hyprland/window"];
+      modules-center = ["sway/window"];
       modules-right = [
         "custom/github"
         "pulseaudio"
@@ -24,7 +24,7 @@
         "tray"
       ];
       
-      "hyprland/workspaces" = {
+      "sway/workspaces" = {
         "format" = "{name}: {icon}";
         "on-click" = "activate";
         "format-icons" = {
@@ -39,7 +39,7 @@
           "default" = "";
         };
       };    
-      "hyprland/window" = {
+      "sway/window" = {
         "format" = "{}";
         "rewrite" = {
           "(.*) — Mozilla Firefox" = "🌎 $1";
