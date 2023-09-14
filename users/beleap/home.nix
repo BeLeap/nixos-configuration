@@ -27,6 +27,7 @@
     home-manager.enable = true;
 
     waybar = (import ./config/sway/waybar);
+    wofi = (import ./config/sway/wofi);
   } ((import ./programs) { inherit pkgs lib; });
  
   services = {

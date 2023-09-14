@@ -28,7 +28,7 @@ in
       }
     ];
     terminal = "wezterm";
-    menu = "tofi-drun --drun-launch=true";
+    menu = "wofi --show drun | xargs swaymsg exec -- ";
 
     output = {
       "DP-2" = {
