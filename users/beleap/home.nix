@@ -60,6 +60,10 @@ in
   wayland = {
     windowManager = {
       hyprland = (import ./config/hypr);
+      sway = {
+        enable = true;
+        package = (helpers.nixGLMesaWrap pkgs.sway);
+      };
     };
   };
   i18n = {
