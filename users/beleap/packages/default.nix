@@ -26,6 +26,9 @@ let
     gitAndTools.gh
     playerctl
   ];
+  gui = [
+    swaysome
+  ];
   db = [
     postgresql_15
     mongosh
@@ -77,5 +80,5 @@ let
   ];
 in
 {
-  packages = nix ++ tui ++ db ++ language-support ++ network ++ devops ++ others;
+  packages = nix ++ tui ++ gui ++ db ++ language-support ++ network ++ devops ++ others;
 }

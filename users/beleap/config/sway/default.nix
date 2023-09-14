@@ -1,3 +1,6 @@
+let
+  swaysome = builtins.readFile(./. + "/swaysome.conf");
+in
 {
   systemd = {
     enable = true;
@@ -23,4 +26,6 @@
       };
     };
   };
+
+  extraConfig = swaysome;
 }
