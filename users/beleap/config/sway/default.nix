@@ -1,4 +1,5 @@
 let
+  modifier = "Mod4";
   swaysome = builtins.readFile(./. + "/swaysome.conf");
 in
 {
@@ -11,7 +12,7 @@ in
   };
 
   config = {
-    modifier = "Mod4";
+    modifier = modifier;
     bars = [
       {
         command = "waybar";
@@ -27,5 +28,8 @@ in
     };
   };
 
-  extraConfig = swaysome;
+  extraConfig = builtins.concatStringsSep "\n" [
+    "set $mod ${modifier}"
+    swaysome
+  ];
 }
