@@ -30,11 +30,7 @@
     fish = (import ./config/fish);
     git = (import ./config/git);
 
-    starship = {
-      enable = true;
-
-      settings = (import ./config/starship){ inherit pkgs; };
-    };
+    starship = (import ./config/starship){ inherit pkgs; };
 
     neovim = (import ./config/tui).neovim;
     zoxide = (import ./config/tui).zoxide;
