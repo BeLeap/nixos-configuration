@@ -56,6 +56,7 @@ in
   };
   services = {
     mako = (import ./config/mako);
+    kanshi = (import ./config/kanshi);
   };
   wayland = {
     windowManager = {
