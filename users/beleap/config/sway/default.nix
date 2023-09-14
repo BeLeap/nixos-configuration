@@ -45,6 +45,7 @@ in
 
   extraConfig = builtins.concatStringsSep "\n" [
     "set $mod ${modifier}"
+    "bindsym $mod+q exec swaylock"
     swaysome
   ];
 }
