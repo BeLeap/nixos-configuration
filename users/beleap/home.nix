@@ -32,29 +32,16 @@ in
     stateVersion = "22.05";
   };
 
-  programs = {
+  programs = lib.trivial.mergeAttrs {
     home-manager.enable = true;
 
-    fish = (import ./config/fish);
-    git = (import ./config/git);
-
-    starship = (import ./config/starship){ inherit pkgs; };
-
-    neovim = (import ./config/tui).neovim;
-    zoxide = (import ./config/tui).zoxide;
-    lsd = (import ./config/tui).lsd;
-    direnv = (import ./config/tui).direnv;
-
-    tmux = (import ./config/tui).tmux { inherit pkgs; };
-
-    firefox = (import ./config/firefox) { inherit pkgs; };
     wezterm = {
       enable = true;
       package = (helpers.nixGLMesaWrap pkgs.wezterm);
       extraConfig = (import ./config/wezterm).extraConfig;
     };
     waybar = (import ./config/sway/waybar);
-  };
+  } ((import ./programs) { inherit pkgs; });
   services = {
     mako = (import ./config/sway/mako);
     kanshi = (import ./config/sway/kanshi);
