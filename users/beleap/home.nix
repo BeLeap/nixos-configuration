@@ -57,6 +57,7 @@ in
   services = {
     mako = (import ./config/mako);
     kanshi = (import ./config/kanshi);
+    kdeconnect = { enable = true; indicator = true; };
   };
   wayland = {
     windowManager = {
