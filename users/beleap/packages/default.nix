@@ -26,6 +26,7 @@ let
     gitAndTools.gh
     playerctl
     _1password
+    wally-cli
   ];
   gui = [
     swaysome
