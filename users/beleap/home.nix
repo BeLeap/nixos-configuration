@@ -1,11 +1,4 @@
 { pkgs, lib, ... }:
-let
-  helpers = import ./helpers.nix {
-    inherit
-      pkgs
-      lib;
-  };
-in
 {
   nixpkgs = {
     config = {
