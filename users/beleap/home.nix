@@ -1,5 +1,12 @@
-{ pkgs, ... }:
-
+{ pkgs, lib, config, specialArgs, ... }:
+let
+  helpers = import ./helpers.nix {
+    inherit pkgs;
+    inherit lib;
+    inherit config;
+    inherit specialArgs;
+  };
+in
 {
   nixpkgs = {
     config = {
@@ -40,7 +47,11 @@
     tmux = (import ./config/tui).tmux { inherit pkgs; };
 
     firefox = (import ./config/firefox) { inherit pkgs; };
-    wezterm = (import ./config/wezterm);
+    wezterm = {
+      enable = true;
+      package = (helpers.nixGLMesaWrap pkgs.wezterm);
+      extraConfig = (import ./config/wezterm).extraConfig;
+    };
     waybar = (import ./config/waybar);
   };
   services = {

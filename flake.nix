@@ -13,6 +13,8 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
+    nixgl.url = "github:guibou/nixGL";
+
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
@@ -20,6 +22,7 @@
     let
       overlays = [
         inputs.neovim-nightly-overlay.overlay
+        inputs.nixgl.overlay
       ];
     in
     {

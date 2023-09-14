@@ -7,6 +7,7 @@ in
 home-manager.lib.homeManagerConfiguration {
   modules = [
     {
+      imports = [ ./options.nix ];
       nixpkgs = {
         inherit overlays;
       };
