@@ -31,7 +31,6 @@ let
     polkit_gnome
   ];
   gui = [
-    swaysome
     swaybg
     _1password-gui
     blueman
