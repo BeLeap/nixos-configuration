@@ -30,6 +30,7 @@ let
   ];
   gui = [
     swaysome
+    swaybg
     _1password-gui
   ];
   db = [
