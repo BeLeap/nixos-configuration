@@ -69,6 +69,11 @@
         exec = "reboot";
         terminal = false;
       };
+      shutdown = {
+        name = "Shutdown";
+        exec = "shutdown";
+        terminal = false;
+      };
     };
   };
 
