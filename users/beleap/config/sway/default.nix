@@ -43,7 +43,7 @@ rec {
       { command = "wezterm"; }
       { command = "firefox"; }
       { command = "1password &"; }
-      { command = "swaybg --color #000000"; }
+      { command = "swaybg --color \"#1e1e2e\""; always = true; }
     ];
   };
 
