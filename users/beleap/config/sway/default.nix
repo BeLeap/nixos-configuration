@@ -39,7 +39,7 @@ rec {
       { command = "1password &"; }
       { command = "swaybg --color \"#1e1e2e\""; always = true; }
       { command = "systemctl --user restart kanshi.service"; always = true; }
-      { command = "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"; }
+      { command = "/home/beleap/.nix-profile/libexec/polkit-gnome-authentication-agent-1"; always = true; }
     ];
   };
 
