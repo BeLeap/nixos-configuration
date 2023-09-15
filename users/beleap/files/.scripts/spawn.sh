@@ -2,9 +2,9 @@
 
 SESSIONS=("config" "personal" "work")
 
-for SESSION in $SESSIONS
+for SESSION in ${SESSIONS[@]}
 do
   tmuxinator start $SESSION
 done
 
-tmux attach config
+tmux attach -t config
