@@ -58,6 +58,10 @@
         "/usr/local/share"
         "/home/beleap/.nix-profile/share"
       ];
+      config = [
+        "/etc/xdg"
+        "/home/beleap/.nix-profile/etc/xdg"
+      ];
     };
     desktopEntries = {
       reboot = {
