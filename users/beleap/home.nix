@@ -48,7 +48,7 @@
       enabled = "kime";
     };
   };
- 
+
   xdg = {
     enable = true;
  
@@ -64,6 +64,16 @@
         name = "Reboot";
         exec = "reboot";
         terminal = false;
+      };
+    };
+  };
+
+  home = {
+    file = {
+      ".pam.d/swaylock" = {
+        text = ''
+          auth include login
+        '';
       };
     };
   };
