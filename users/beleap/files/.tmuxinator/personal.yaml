@@ -1,5 +1,6 @@
 name: personal
 root: ~/
+attach: false
 
 windows:
   - editor:

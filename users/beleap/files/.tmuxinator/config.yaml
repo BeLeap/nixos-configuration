@@ -1,5 +1,6 @@
 name: config
 root: ~/
+attach: false
 
 windows:
   - nixos-configuration:
