@@ -1,0 +1,14 @@
+name: default
+root: ~/
+
+windows:
+  - 0:
+      panes:
+        - nvim ~/nixos-configuration
+        - nvim ~/dotfiles
+  - personal:
+      panes:
+        - nvim
+  - work:
+      panes:
+        - nvim

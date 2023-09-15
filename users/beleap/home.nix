@@ -75,6 +75,9 @@
           auth include login
         '';
       };
+      ".tmuxinator/default.yaml" = {
+        text = builtins.readFile(./. + "/files/.tmuxinator/default.yaml");
+      };
     };
   };
 }
