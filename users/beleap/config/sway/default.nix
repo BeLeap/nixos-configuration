@@ -33,12 +33,6 @@ rec {
       "${config.modifier}+Shift+r" = "mode resize";
     };
 
-    output = {
-      "DP-2" = {
-        scale = "1.5";
-      };
-    };
-
     startup = [
       { command = "wezterm"; }
       { command = "firefox"; }
