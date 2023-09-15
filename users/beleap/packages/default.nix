@@ -38,6 +38,7 @@ let
     pavucontrol
     gnome.nautilus
     wdisplays
+    swayest-workstyle
   ];
   db = [
     postgresql_15
