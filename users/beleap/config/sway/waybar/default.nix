@@ -46,13 +46,6 @@
         };
         "separate-outputs" = true;
       };
-      "custom/github" = {
-        "format" = " {}";
-        "return-type" = "json";
-        "interval" = 60;
-        "exec" = "$HOME/.config/waybar/scripts/github.sh";
-        "on-click" = "xdg-open https://github.com/notifications";
-      };
       "pulseaudio" = {
         "format" = "{icon} {volume}% {format_source}";
         "format-bluetooth" = "{icon} {volume}% {format_source}";
@@ -125,7 +118,7 @@
       };
       "custom/mako" = {
         "exec-if" = "command -v makoctl";
-        "exec" = "$HOME/.config/waybar/scripts/mako.sh";
+        "exec" = "sh /home/beleap/.scripts/mako.sh";
         "format" = "{}";
         "on-click" = "makoctl dismiss -a";
         "interval" = 3;
