@@ -34,6 +34,8 @@ let
     swaysome
     swaybg
     _1password-gui
+    blueman
+    pavucontrol
   ];
   db = [
     postgresql_15
