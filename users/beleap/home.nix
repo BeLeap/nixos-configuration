@@ -81,6 +81,12 @@
       ".tmuxinator/config.yaml" = {
         text = builtins.readFile(./. + "/files/.tmuxinator/config.yaml");
       };
+      ".tmuxinator/work.yaml" = {
+        text = builtins.readFile(./. + "/files/.tmuxinator/work.yaml");
+      };
+      ".tmuxinator/personal.yaml" = {
+        text = builtins.readFile(./. + "/files/.tmuxinator/personal.yaml");
+      };
     };
   };
 }
