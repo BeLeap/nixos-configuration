@@ -37,6 +37,7 @@ let
     blueman
     pavucontrol
     gnome.nautilus
+    wdisplays
   ];
   db = [
     postgresql_15
