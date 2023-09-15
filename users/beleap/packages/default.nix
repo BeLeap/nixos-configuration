@@ -36,6 +36,7 @@ let
     _1password-gui
     blueman
     pavucontrol
+    gnome.nautilus
   ];
   db = [
     postgresql_15
