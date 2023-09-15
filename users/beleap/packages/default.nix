@@ -27,6 +27,7 @@ let
     playerctl
     _1password
     wally-cli
+    polkit
     polkit_gnome
   ];
   gui = [
