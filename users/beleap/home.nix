@@ -71,7 +71,7 @@
       };
       shutdown = {
         name = "Shutdown";
-        exec = "shutdown";
+        exec = "shutdown -h now";
         terminal = false;
       };
     };
