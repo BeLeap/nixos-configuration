@@ -6,3 +6,5 @@ for SESSION in $SESSIONS
 do
   tmuxinator start $SESSION
 done
+
+tmux attach config

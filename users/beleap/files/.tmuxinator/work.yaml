@@ -1,5 +1,6 @@
 name: work
 root: ~/work
+attach: false
 
 windows:
   - editor:
