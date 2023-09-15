@@ -35,6 +35,21 @@ rec {
       "${config.modifier}+e" = "exec nautilus";
     };
 
+    window = {
+      commands = [
+        {
+          command = "resize set 900 500";
+          criteria = { class = "1Password"; };
+        }
+      ];
+    };
+
+    floating = {
+      criteria = [
+        { class = "1Password"; }
+      ];
+    };
+
     startup = [
       { command = "wezterm"; }
       { command = "firefox"; }
