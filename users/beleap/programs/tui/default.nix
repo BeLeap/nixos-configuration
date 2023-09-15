@@ -31,6 +31,10 @@
       set-option -sa terminal-features ',XXX:RGB'
     '';
 
+    tmuxinator = {
+      enable = true;
+    };
+
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = catppuccin;
