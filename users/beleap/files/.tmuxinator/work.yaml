@@ -1,0 +1,8 @@
+name: work
+root: ~/work
+
+windows:
+  - editor:
+      panes:
+        - nvim
+  - shell:

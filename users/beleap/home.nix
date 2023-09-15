@@ -75,6 +75,9 @@
           auth include login
         '';
       };
+      ".scripts/spawn.sh" = {
+        text = builtins.readFile(./. + "/files/.scripts/spawn.sh");
+      };
       ".tmuxinator/config.yaml" = {
         text = builtins.readFile(./. + "/files/.tmuxinator/config.yaml");
       };
