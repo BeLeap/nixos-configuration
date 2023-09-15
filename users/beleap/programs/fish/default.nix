@@ -9,6 +9,7 @@
     sofish = "source ~/.config/fish/config.fish";
 
     v = "nvim";
+    mux = "tmuxinator";
   };
 
   shellAbbrs = {
