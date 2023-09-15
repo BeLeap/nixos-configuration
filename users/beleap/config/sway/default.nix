@@ -1,6 +1,5 @@
 { pkgs, lib }:
 let
-  modifier = "Mod4";
   swaysome = builtins.readFile(./. + "/swaysome.conf");
   helpers = import ../../helpers.nix {
     inherit
@@ -8,7 +7,7 @@ let
       lib;
   };
 in
-{
+rec {
   enable = true;
   package = (helpers.nixGLMesaWrap pkgs.sway);
 
@@ -21,7 +20,7 @@ in
   };
 
   config = {
-    modifier = modifier;
+    modifier = "Mod4";
     bars = [
       {
         command = "waybar";
@@ -29,6 +28,10 @@ in
     ];
     terminal = "wezterm";
     menu = "wofi --show drun | xargs swaymsg exec -- ";
+    keybindings = lib.mkOptionDefault {
+      "${config.modifier}+r" = "exec ${config.menu}";
+      "${config.modifier}+Shift+r" = "mode resize";
+    };
 
     output = {
       "DP-2" = {
@@ -44,7 +47,7 @@ in
   };
 
   extraConfig = builtins.concatStringsSep "\n" [
-    "set $mod ${modifier}"
+    "set $mod ${config.modifier}"
     "bindsym $mod+q exec swaylock"
     swaysome
   ];

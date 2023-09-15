@@ -20,8 +20,8 @@ in
       enable_tab_bar = false,
       check_for_updates = false,
       warn_about_missing_glyphs = false,
-      default_prog = { 'tmux' },
       use_ime = true,
     }
   '';
 }
+# default_prog = { 'tmux' },
