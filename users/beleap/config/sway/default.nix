@@ -55,6 +55,7 @@ rec {
       "${config.modifier}+r" = "exec ${config.menu}";
       "${config.modifier}+Shift+r" = "mode resize";
       "${config.modifier}+q" = "exec swaylock";
+      "${config.modifier}+e" = "exec nautilus";
     };
 
     startup = [
