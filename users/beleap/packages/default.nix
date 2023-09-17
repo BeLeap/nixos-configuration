@@ -53,11 +53,14 @@ let
     deno
     ghc
     haskell-language-server
-    python3
+    python311
     zig
     tree-sitter
     jupyter
     jdk
+  ];
+  python-packages = with python311Packages; [
+    huggingface-hub
   ];
   network = [
     croc
@@ -95,5 +98,5 @@ let
   ];
 in
 {
-  packages = nix ++ tui ++ gui ++ db ++ language-support ++ network ++ devops ++ fonts ++ others;
+  packages = nix ++ tui ++ gui ++ db ++ language-support ++ python-packages ++ network ++ devops ++ fonts ++ others;
 }
