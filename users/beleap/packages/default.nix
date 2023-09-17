@@ -88,6 +88,7 @@ let
   fonts = [
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
+    nerdfonts.override { fonts = [ "CascadiaCode" ]; }
   ];
   others = [
     anytype
