@@ -85,10 +85,14 @@ let
     kubectx
     kubectl-node-shell
   ];
+  fonts = [
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+  ];
   others = [
     anytype
   ];
 in
 {
-  packages = nix ++ tui ++ gui ++ db ++ language-support ++ network ++ devops ++ others;
+  packages = nix ++ tui ++ gui ++ db ++ language-support ++ network ++ devops ++ fonts ++ others;
 }
