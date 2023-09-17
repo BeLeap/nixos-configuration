@@ -1,6 +1,5 @@
 { pkgs, lib }:
 let
-  swaysome = builtins.readFile(./. + "/swaysome.conf");
   helpers = import ../../helpers.nix {
     inherit
       pkgs
@@ -63,9 +62,13 @@ rec {
  
   extraConfig = ''
     input type:keyboard {
-      # Capslock key should work as escape key
-      # See /usr/share/X11/xkb/rules/xorg.lst for options
       xkb_options ctrl:nocaps
+    }
+
+    input type:touchpad {
+      tap enabled
+      natural_scroll disabled
+      dwt enabled
     }
   '';
 }

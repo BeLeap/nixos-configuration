@@ -60,6 +60,7 @@ let
     jdk
   ];
   python-packages = with python311Packages; [
+    msrest
     huggingface-hub
   ];
   network = [
@@ -78,7 +79,7 @@ let
     openvpn
     vault-bin
 
-    azure-cli
+    # azure-cli
     saml2aws
     awscli2
     terraform
