@@ -60,4 +60,12 @@ rec {
       { command = "sworkstyle"; }
     ];
   };
+ 
+  extraConfig = ''
+    input type:keyboard {
+      # Capslock key should work as escape key
+      # See /usr/share/X11/xkb/rules/xorg.lst for options
+      xkb_options ctrl:nocaps
+    }
+  '';
 }
