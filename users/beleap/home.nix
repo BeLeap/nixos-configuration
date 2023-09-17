@@ -64,6 +64,11 @@
       ];
     };
     desktopEntries = {
+      firefox = {
+        name = "Firefox";
+        exec = "firefox %U";
+        terminal = false;
+      };
       reboot = {
         name = "Reboot";
         exec = "reboot";
