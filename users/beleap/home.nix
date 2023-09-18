@@ -103,6 +103,9 @@
       ".tmuxinator/personal.yaml" = {
         text = builtins.readFile(./. + "/files/.tmuxinator/personal.yaml");
       };
+      ".tridactylrc" = {
+        text = builtins.readFile(./. + "/files/.tridactylrc");
+      };
     };
   };
 }
