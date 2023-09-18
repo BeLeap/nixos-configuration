@@ -18,7 +18,7 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { home-manager, nixpkgs, ... }@inputs:
+  outputs = inputs@{ home-manager, nixpkgs, ... }:
     let
       overlays = [
         inputs.neovim-nightly-overlay.overlay
