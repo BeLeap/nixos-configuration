@@ -41,6 +41,7 @@ let
     grim
     slurp
     wl-clipboard
+    tridactyl-native
   ];
   db = [
     postgresql_15
