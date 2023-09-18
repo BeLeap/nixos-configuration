@@ -76,7 +76,7 @@
             urls = [{ template = "https://search.nixos.org/packages?channel=unstable&query={searchTerms}"; }];
             iconUpdateURL = "https://nixos.org/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000;
-            definedAlias = ["@np"];
+            definedAliases = ["@np"];
           };
         };
       };
