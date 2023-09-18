@@ -38,6 +38,9 @@ let
     gnome.nautilus
     wdisplays
     swayest-workstyle
+    grim
+    slurp
+    wl-clipboard
   ];
   db = [
     postgresql_15
