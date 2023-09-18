@@ -38,6 +38,7 @@
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "browser.aboutConfig.showWarning" = false;
+        "browser.autofocus" = false;
       };
       userChrome = ''
         #main-window #titlebar {
