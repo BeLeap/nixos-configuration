@@ -51,6 +51,11 @@ rec {
       ];
     };
 
+    assigns = {
+      "1" = [{ app_id = "org.wezfurlong.wezterm"; }];
+      "2" = [{ app_id = "firefox"; }];
+    };
+
     startup = [
       { command = "wezterm"; }
       { command = "firefox"; }
