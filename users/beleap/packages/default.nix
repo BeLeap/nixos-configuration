@@ -91,6 +91,7 @@ let
     kubectl
     kubectx
     kubectl-node-shell
+    adoptopenjdk-icedtea-web
   ];
   fonts = [
     noto-fonts-cjk-sans
