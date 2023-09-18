@@ -39,6 +39,7 @@
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         "browser.aboutConfig.showWarning" = false;
         "browser.autofocus" = false;
+        "browser.uiCustomization.state" = builtins.readFile(./. + "/uiCustomization.state.json");
       };
       userChrome = ''
         #main-window #titlebar {
