@@ -71,10 +71,11 @@
             iconUpdateURL = "https://www.phind.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000;
           };
-          "NixOS" = {
+          "Nix Packages" = {
             urls = [{ template = "https://search.nixos.org/packages?channel=unstable&query={searchTerms}"; }];
             iconUpdateURL = "https://nixos.org/favicon.png";
             updateInterval = 24 * 60 * 60 * 1000;
+            definedAlias = ["@np"];
           };
         };
       };
