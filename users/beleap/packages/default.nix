@@ -1,14 +1,19 @@
 { pkgs }: with pkgs;
 let
-  nix = [
+  prereq = [
     nix-prefetch-git
+    gnumake
+    go
+    rustup
+    stow
+    cmake
+    deno
+    zig
   ];
   tui = [
     neovim-nightly
     hexyl
     sshpass
-    gnumake
-    stow
     man
     irssi
     bottom
@@ -42,6 +47,7 @@ let
     slurp
     wl-clipboard
     tridactyl-native
+    ((import ../../../pkgs/firefox-profile-switcher-connector.nix) { inherit lib pkgs; })
   ];
   db = [
     postgresql_15
@@ -51,14 +57,10 @@ let
     universal-ctags
     nodejs
     yarn
-    go
-    rustup
     evcxr
-    deno
     ghc
     haskell-language-server
     python311
-    zig
     tree-sitter
     jupyter
     jdk
@@ -104,5 +106,5 @@ let
   ];
 in
 {
-  packages = nix ++ tui ++ gui ++ db ++ language-support ++ python-packages ++ network ++ devops ++ fonts ++ others;
+  packages = prereq ++ tui ++ gui ++ db ++ language-support ++ python-packages ++ network ++ devops ++ fonts ++ others;
 }

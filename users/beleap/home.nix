@@ -106,6 +106,9 @@
       ".tridactylrc" = {
         text = builtins.readFile(./. + "/files/.tridactylrc");
       };
+      ".mozilla/native-messaging-hosts/ax.nd.profile_switcher_ff.json" = {
+        text = builtins.readFile(./. + "/files/.mozilla/native-messaging-hosts/ax.nd.profile_switcher_ff.json");
+      };
     };
   };
 }
