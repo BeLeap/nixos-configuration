@@ -4,6 +4,6 @@
     ],
     "description": "Profile Switcher for Firefox",
     "name": "ax.nd.profile_switcher_ff",
-    "path": "/usr/bin/ff-pswitch-connector",
+    "path": "/home/beleap/.nix-profile/bin/firefox_profile_switcher_connector",
     "type": "stdio"
 }
