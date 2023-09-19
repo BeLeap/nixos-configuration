@@ -86,7 +86,7 @@ let
     openvpn
     vault-bin
 
-    # azure-cli
+    azure-cli
     saml2aws
     awscli2
     terraform
