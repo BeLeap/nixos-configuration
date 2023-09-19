@@ -82,6 +82,13 @@
         terminal = false;
       };
     };
+
+    configFile = {
+      "nvim" = {
+        source = ./files/.config/nvim;
+        recursive = true;
+      };
+    };
   };
 
   home = {
