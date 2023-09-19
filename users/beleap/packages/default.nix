@@ -60,14 +60,13 @@ let
     evcxr
     ghc
     haskell-language-server
-    python311
+    python310
     tree-sitter
     jupyter
     jdk
   ];
-  python-packages = with python311Packages; [
+  python-packages = with python310Packages; [
     pip
-    msrest
     huggingface-hub
   ];
   network = [
