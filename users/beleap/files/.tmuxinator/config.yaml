@@ -7,9 +7,5 @@ windows:
       root: ~/nixos-configuration
       panes:
         - nvim
-  - dotfiles:
-      root: ~/dotfiles
-      panes:
-        - nvim
   - shell:
       root: ~/
