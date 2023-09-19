@@ -52,8 +52,8 @@ rec {
     };
 
     assigns = {
-      "1" = [{ app_id = "org.wezfurlong.wezterm"; }];
-      "2" = [{ app_id = "firefox"; }];
+      "number 1" = [{ app_id = "org.wezfurlong.wezterm"; }];
+      "number 2" = [{ app_id = "firefox"; }];
     };
 
     startup = [
