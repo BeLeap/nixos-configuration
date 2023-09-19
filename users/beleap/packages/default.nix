@@ -66,6 +66,7 @@ let
     jdk
   ];
   python-packages = with python311Packages; [
+    pip
     msrest
     huggingface-hub
   ];
