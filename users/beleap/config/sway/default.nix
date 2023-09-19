@@ -30,7 +30,7 @@ rec {
     keybindings = lib.mkOptionDefault {
       "${config.modifier}+r" = "exec ${config.menu}";
       "${config.modifier}+Shift+r" = "mode resize";
-      "${config.modifier}+q" = "exec swaylock";
+      # "${config.modifier}+q" = "exec swaylock";
       "${config.modifier}+e" = "exec nautilus";
       "${config.modifier}+s" = "exec grim - | wl-copy";
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
