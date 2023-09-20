@@ -71,6 +71,11 @@
         exec = "firefox %U";
         terminal = false;
       };
+      firefox-work = {
+        name = "Firefox (Work)";
+        exec = "firefox %U -P work";
+        terminal = false;
+      };
       reboot = {
         name = "Reboot";
         exec = "reboot";
