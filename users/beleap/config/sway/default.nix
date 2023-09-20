@@ -19,6 +19,9 @@ rec {
   };
 
   config = {
+    focus = {
+      newWindow = "focus";
+    };
     modifier = "Mod4";
     bars = [
       {
@@ -35,6 +38,7 @@ rec {
       "${config.modifier}+s" = "exec grim - | wl-copy";
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
       "${config.modifier}+c" = "exec cliphist list | wofi --dmenu | cliphist decode | wl-copy";
+      "${config.modifier}+n" = "exec makoctl menu wofi --dmenu || makoctl dismiss";
     };
 
     window = {

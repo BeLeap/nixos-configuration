@@ -6,7 +6,6 @@
   borderColor = "#89b4fa";
   borderRadius = 10;
   progressColor = "over #313244";
-  defaultTimeout = 10000;
 
   extraConfig = ''
     [urgency=high]
