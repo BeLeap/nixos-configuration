@@ -35,7 +35,7 @@ rec {
       "${config.modifier}+Shift+r" = "mode resize";
       # "${config.modifier}+q" = "exec swaylock";
       "${config.modifier}+e" = "exec nautilus";
-      "${config.modifier}+s" = "exec grim - | wl-copy";
+      "${config.modifier}+Ctrl+s" = "exec grim - | wl-copy";
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
       "${config.modifier}+c" = "exec cliphist list | wofi --dmenu | cliphist decode | wl-copy";
       "${config.modifier}+n" = "exec makoctl menu wofi --dmenu || makoctl dismiss";
