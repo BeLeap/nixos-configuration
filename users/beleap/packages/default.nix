@@ -50,6 +50,7 @@ in
     wl-clipboard
     tridactyl-native
     ((import ../../../pkgs/firefox-profile-switcher-connector.nix) { inherit lib pkgs; })
+    cliphist
   ];
   db = [
     postgresql_15
