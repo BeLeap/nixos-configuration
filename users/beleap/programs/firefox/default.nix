@@ -85,6 +85,12 @@
             updateInterval = 24 * 60 * 60 * 1000;
             definedAliases = ["@nhm"];
           };
+          "GitHub" = {
+            urls = [{ template = "https://github.com//search?q={searchTerms}"; }];
+            iconUpdateURL = "https://github.githubassets.com/favicons/favicon.svg";
+            updateInterval = 24 * 60 * 60 * 1000;
+            definedAliases = ["@gh"];
+          };
         };
       };
     };
