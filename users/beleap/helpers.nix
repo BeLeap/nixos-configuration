@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs ? import <nixpkgs>{}, lib ? pkgs.lib, ... }:
 let
   nixGLMesaWrap = pkg:
     pkgs.runCommand "${pkg.name}-nixgl-wrapper" { } ''
