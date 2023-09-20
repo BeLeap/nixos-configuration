@@ -39,6 +39,7 @@ rec {
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
       "${config.modifier}+c" = "exec cliphist list | wofi --dmenu | cliphist decode | wl-copy";
       "${config.modifier}+n" = "exec makoctl menu wofi --dmenu || makoctl dismiss";
+      "${config.modifier}+Shift+n" = "exec makoctl dismiss";
     };
 
     window = {
