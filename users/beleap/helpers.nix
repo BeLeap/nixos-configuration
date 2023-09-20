@@ -1,6 +1,5 @@
 { pkgs, lib, ... }:
 let
-
   nixGLMesaWrap = pkg:
     pkgs.runCommand "${pkg.name}-nixgl-wrapper" { } ''
       mkdir $out
@@ -44,8 +43,20 @@ let
       done
     '';
 
+  files =
+  let
+    autoloadRoot = ./. + "/files";
+  in
+  lib.lists.foldl (
+    acc: curr:
+    let
+      currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
+    in
+    lib.trivial.mergeAttrs { "${currRelative}".text = builtins.readFile(curr); } acc
+  ) {} (lib.filesystem.listFilesRecursive autoloadRoot);
 in {
   nixGLMesaWrap = nixGLMesaWrap;
   nixGLVulkanWrap = nixGLVulkanWrap;
   nixGLVulkanMesaWrap = nixGLVulkanMesaWrap;
+  files = files;
 }

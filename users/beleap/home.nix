@@ -90,37 +90,17 @@
 
     configFile = {
       "nvim" = {
-        source = ./files/.config/nvim;
+        source = ./config/nvim;
         recursive = true;
       };
     };
   };
 
   home = {
-    file = {
-      ".pam.d/swaylock" = {
-        text = ''
-          auth include login
-        '';
-      };
-      ".scripts/spawn.sh" = {
-        text = builtins.readFile(./. + "/files/.scripts/spawn.sh");
-      };
-      ".tmuxinator/config.yaml" = {
-        text = builtins.readFile(./. + "/files/.tmuxinator/config.yaml");
-      };
-      ".tmuxinator/work.yaml" = {
-        text = builtins.readFile(./. + "/files/.tmuxinator/work.yaml");
-      };
-      ".tmuxinator/personal.yaml" = {
-        text = builtins.readFile(./. + "/files/.tmuxinator/personal.yaml");
-      };
-      ".tridactylrc" = {
-        text = builtins.readFile(./. + "/files/.tridactylrc");
-      };
-      ".mozilla/native-messaging-hosts/ax.nd.profile_switcher_ff.json" = {
-        text = builtins.readFile(./. + "/files/.mozilla/native-messaging-hosts/ax.nd.profile_switcher_ff.json");
-      };
-    };
+    file = lib.trivial.mergeAttrs {} (
+      (
+        (import ./helpers.nix) { inherit pkgs lib; }
+      ).files
+    );
   };
 }
