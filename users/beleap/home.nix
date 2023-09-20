@@ -54,6 +54,15 @@ in
         engine = {
           hangul = {
             layout = "sebeolsik-3-90";
+            preedit_johab = "Always";
+            addons = {
+              sebeolsik-3-90 = [
+                "ComposeChoseongSsang"
+                "FlexibleComposeOrder"
+                "ComposeJungseongSsang"
+                "ComposeJongseongSsang"
+              ];
+            };
           };
         };
       };
