@@ -43,20 +43,11 @@ let
       done
     '';
 
-  files =
-    let
-      autoloadRoot = ./. + "/files";
-    in
-    lib.lists.foldl (
-      acc: curr:
-      let
-        currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
-      in
-      lib.trivial.mergeAttrs { "${currRelative}".text = builtins.readFile(curr); } acc
-    ) {} (lib.filesystem.listFilesRecursive autoloadRoot);
+  autoloader = { fn, initialVal, root }:
+    lib.lists.foldl fn initialVal (lib.filesystem.listFilesRecursive root);
 in {
   nixGLMesaWrap = nixGLMesaWrap;
   nixGLVulkanWrap = nixGLVulkanWrap;
   nixGLVulkanMesaWrap = nixGLVulkanMesaWrap;
-  files = files;
+  autoloader = autoloader;
 }

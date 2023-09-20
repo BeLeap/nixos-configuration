@@ -1,4 +1,7 @@
 { pkgs, lib, ... }:
+let
+  helpers = import ./helpers.nix { inherit pkgs lib; };
+in
 {
   nixpkgs = {
     config = {
@@ -104,9 +107,20 @@
 
   home = {
     file = lib.trivial.mergeAttrs {} (
-      (
-        (import ./helpers.nix) { inherit pkgs lib; }
-      ).files
+    let
+      autoloadRoot = ./. + "/files";
+    in
+      helpers.autoloader {
+        fn = (
+          acc: curr:
+          let
+            currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
+          in
+          lib.trivial.mergeAttrs { "${currRelative}".text = builtins.readFile(curr); } acc
+        );
+        initialVal = {};
+        root = autoloadRoot;
+      }
     );
   };
 }
