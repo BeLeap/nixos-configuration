@@ -81,6 +81,11 @@
         exec = "shutdown -h now";
         terminal = false;
       };
+      exit = {
+        name = "Exit";
+        exec = "swaymsg exit";
+        terminal = false;
+      };
     };
 
     configFile = {
