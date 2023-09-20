@@ -1,5 +1,7 @@
 { pkgs }: with pkgs;
 let
+in
+{
   prereq = [
     nix-prefetch-git
     gnumake
@@ -104,7 +106,4 @@ let
   others = [
     anytype
   ];
-in
-{
-  packages = prereq ++ tui ++ gui ++ db ++ language-support ++ python-packages ++ network ++ devops ++ fonts ++ others;
 }

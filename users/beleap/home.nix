@@ -18,7 +18,7 @@
       MOZ_ENABLE_WAYLAND = 1;
       EDITOR = "nvim";
     };
-    packages = ((import ./packages){ inherit pkgs; }).packages ;
+    packages = lib.lists.flatten (lib.attrsets.attrValues ((import ./packages){ inherit pkgs; })) ;
 
     stateVersion = "22.05";
   };
