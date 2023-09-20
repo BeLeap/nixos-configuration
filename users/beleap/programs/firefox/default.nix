@@ -79,6 +79,12 @@
             updateInterval = 24 * 60 * 60 * 1000;
             definedAliases = ["@np"];
           };
+          "Nix Home Manager" = {
+            urls = [{ template = "https://github.com/nix-community/home-manager/search?q={searchTerms}"; }];
+            iconUpdateURL = "https://nixos.org/favicon.png";
+            updateInterval = 24 * 60 * 60 * 1000;
+            definedAliases = ["@nhm"];
+          };
         };
       };
     };
