@@ -44,16 +44,16 @@ let
     '';
 
   files =
-  let
-    autoloadRoot = ./. + "/files";
-  in
-  lib.lists.foldl (
-    acc: curr:
     let
-      currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
+      autoloadRoot = ./. + "/files";
     in
-    lib.trivial.mergeAttrs { "${currRelative}".text = builtins.readFile(curr); } acc
-  ) {} (lib.filesystem.listFilesRecursive autoloadRoot);
+    lib.lists.foldl (
+      acc: curr:
+      let
+        currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
+      in
+      lib.trivial.mergeAttrs { "${currRelative}".text = builtins.readFile(curr); } acc
+    ) {} (lib.filesystem.listFilesRecursive autoloadRoot);
 in {
   nixGLMesaWrap = nixGLMesaWrap;
   nixGLVulkanWrap = nixGLVulkanWrap;
