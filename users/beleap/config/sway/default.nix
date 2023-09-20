@@ -65,6 +65,7 @@ rec {
       { command = "systemctl --user restart kanshi.service"; always = true; }
       { command = "/home/beleap/.nix-profile/libexec/polkit-gnome-authentication-agent-1"; always = true; }
       { command = "sworkstyle"; }
+      { command = "kime"; }
     ];
   };
  
