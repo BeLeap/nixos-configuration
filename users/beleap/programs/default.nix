@@ -26,10 +26,13 @@ let
     root = autoloadRoot;
   });
 in
+let
+  tui = (import ./tui);
+in
 lib.trivial.mergeAttrs {
-  neovim = (import ./tui).neovim;
-  zoxide = (import ./tui).zoxide;
-  lsd = (import ./tui).lsd;
-  direnv = (import ./tui).direnv;
-  tmux = (import ./tui).tmux { inherit pkgs; };
+  neovim = tui.neovim;
+  zoxide = tui.zoxide;
+  lsd = tui.lsd;
+  direnv = tui.direnv;
+  tmux = tui.tmux { inherit pkgs; };
 } autoloaded
