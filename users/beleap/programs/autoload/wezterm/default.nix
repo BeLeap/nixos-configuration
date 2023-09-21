@@ -1,6 +1,6 @@
-{ pkgs, lib }:
+{ pkgs, lib, ... }:
 let
-  helpers = import ../../helpers.nix {
+  helpers = import ../../../helpers.nix {
     inherit
       pkgs
       lib;

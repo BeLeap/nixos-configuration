@@ -44,7 +44,10 @@ let
     '';
 
   autoloader = { fn, initialVal, root }:
-    lib.lists.foldl fn initialVal (lib.filesystem.listFilesRecursive root);
+    let
+      listing = lib.filesystem.listFilesRecursive root;
+    in
+    lib.lists.foldl fn initialVal listing;
 in {
   nixGLMesaWrap = nixGLMesaWrap;
   nixGLVulkanWrap = nixGLVulkanWrap;
