@@ -29,7 +29,7 @@ rec {
       }
     ];
     terminal = "wezterm";
-    menu = "wofi --show drun | xargs swaymsg exec -- ";
+    menu = "wofi --show drun -p 'Select application...' | xargs swaymsg exec -- ";
     keybindings = lib.mkOptionDefault {
       "${config.modifier}+r" = "exec ${config.menu}";
       "${config.modifier}+Shift+r" = "mode resize";
@@ -37,8 +37,8 @@ rec {
       "${config.modifier}+e" = "exec nautilus";
       "${config.modifier}+Ctrl+s" = "exec grim - | wl-copy";
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
-      "${config.modifier}+v" = "exec cliphist list | wofi --dmenu | cliphist decode | wl-copy";
-      "${config.modifier}+n" = "exec makoctl menu wofi --dmenu || makoctl dismiss";
+      "${config.modifier}+v" = "exec cliphist list | wofi --dmenu -p 'Select to copy...' | cliphist decode | wl-copy";
+      "${config.modifier}+n" = "exec makoctl menu wofi --dmenu -p 'Select to execute action...' || makoctl dismiss";
       "${config.modifier}+Shift+n" = "exec makoctl dismiss";
     };
 
