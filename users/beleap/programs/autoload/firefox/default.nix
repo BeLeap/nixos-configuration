@@ -40,6 +40,8 @@
         "browser.aboutConfig.showWarning" = false;
         "browser.autofocus" = false;
         "browser.uiCustomization.state" = builtins.readFile(./. + "/uiCustomization.state.json");
+        "font.name.sans-serif.x-western" = "Noto Sans CJK KR";
+        "font.name.serif.x-western" = "Noto Serif CJK KR";
       };
       userChrome = ''
         #main-window #titlebar {
