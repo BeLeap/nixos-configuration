@@ -40,8 +40,12 @@
         "browser.aboutConfig.showWarning" = false;
         "browser.autofocus" = false;
         "browser.uiCustomization.state" = builtins.readFile(./. + "/uiCustomization.state.json");
-        "font.name.sans-serif.x-western" = "Noto Sans CJK KR";
+        "font.name.sans-serif.x-western" = "Pretendard";
         "font.name.serif.x-western" = "Noto Serif CJK KR";
+        "font.name.monospace.x-western" = "CaskaydiaCove Nerd Font";
+        "font.name.sans-serif.ko" = "Pretendard";
+        "font.name.serif.ko" = "Noto Serif CJK KR";
+        "font.name.monospace.ko" = "NanumGothicCoding";
       };
       userChrome = ''
         #main-window #titlebar {

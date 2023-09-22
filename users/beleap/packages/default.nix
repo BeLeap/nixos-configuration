@@ -99,11 +99,10 @@ in
     adoptopenjdk-icedtea-web
   ];
   fonts = [
-    noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
     ((import ../../../pkgs/nanum-gothic-coding.nix) { inherit lib pkgs; })
-    nanum-gothic-coding
+    pretendard
   ];
   others = [
     # (helpers.nixGLMesaWrap anytype)
