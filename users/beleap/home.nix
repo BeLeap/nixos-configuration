@@ -115,9 +115,9 @@ in
 
   home = {
     file = lib.trivial.mergeAttrs {} (
-    let
-      autoloadRoot = ./. + "/files";
-    in
+      let
+        autoloadRoot = ./. + "/files";
+      in
       helpers.autoloader {
         fn = (
           acc: curr:
