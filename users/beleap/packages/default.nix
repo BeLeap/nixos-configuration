@@ -1,6 +1,4 @@
 { pkgs }: with pkgs;
-let
-in
 {
   prereq = [
     nix-prefetch-git
