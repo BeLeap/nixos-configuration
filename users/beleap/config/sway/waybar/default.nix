@@ -23,7 +23,7 @@
         "custom/mako"
         "tray"
       ];
-      
+
       "sway/workspaces" = {
         "format" = "{name}: {icon}";
         "on-click" = "activate";
@@ -38,7 +38,7 @@
           "focused" = "";
           "default" = "";
         };
-      };    
+      };
       "sway/window" = {
         "format" = "{}";
         "separate-outputs" = true;
