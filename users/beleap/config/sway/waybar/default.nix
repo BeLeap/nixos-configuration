@@ -41,9 +41,6 @@
       };    
       "sway/window" = {
         "format" = "{}";
-        "rewrite" = {
-          "(.*) — Mozilla Firefox" = "🌎 $1";
-        };
         "separate-outputs" = true;
       };
       "pulseaudio" = {
