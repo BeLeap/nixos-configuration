@@ -32,12 +32,10 @@
     playerctl
     _1password
     wally-cli
-    polkit
-    polkit_gnome
   ];
   gui = [
-    swaybg
     _1password-gui
+    swaybg
     blueman
     pavucontrol
     gnome.nautilus
