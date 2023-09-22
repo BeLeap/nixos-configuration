@@ -1,4 +1,7 @@
-{ pkgs }: with pkgs;
+{ pkgs, lib }: with pkgs;
+let
+  helpers = import ../helpers.nix { inherit pkgs lib; };
+in
 {
   prereq = [
     nix-prefetch-git
@@ -101,6 +104,6 @@
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
   ];
   others = [
-    anytype
+    # (helpers.nixGLMesaWrap anytype)
   ];
 }
