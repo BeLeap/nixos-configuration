@@ -1,1 +1,1 @@
-home-manager switch --flake '.#beleap' --impure
+home-manager switch --flake '.#beleap' --impure --show-trace
