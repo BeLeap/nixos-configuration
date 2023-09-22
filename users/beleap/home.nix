@@ -54,14 +54,6 @@ in
         engine = {
           hangul = {
             layout = "sebeolsik-3-90";
-            addons = {
-              sebeolsik-3-90 = [
-                "ComposeChoseongSsang"
-                "FlexibleComposeOrder"
-                "ComposeJungseongSsang"
-                "ComposeJongseongSsang"
-              ];
-            };
           };
         };
       };
