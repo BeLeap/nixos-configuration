@@ -313,23 +313,6 @@ return {
     config = true,
   },
   {
-    "stevearc/aerial.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("aerial").setup({
-        filter_kind = false,
-        close_automatic_events = {
-          "unsupported",
-          "unfocus",
-        },
-        open_automatic = true,
-        autojump = true,
-      })
-      -- You probably also want to set a keymap to toggle aerial
-      vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Open code outline" })
-    end,
-  },
-  {
     "creativenull/efmls-configs-nvim",
     version = "v1.x.x", -- version is optional, but recommended
   },
