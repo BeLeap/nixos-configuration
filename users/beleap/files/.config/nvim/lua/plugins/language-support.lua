@@ -41,7 +41,7 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-u>"] = cmp.mapping.scroll_docs(-4), -- Up
-          ["<C-d>"] = cmp.mapping.scroll_docs(4),  -- Down
+          ["<C-d>"] = cmp.mapping.scroll_docs(4), -- Down
           -- C-b (back) C-f (forward) for snippet placeholder navigation.
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({
@@ -237,7 +237,7 @@ return {
           })
           for k, v in pairs(languages) do
             languages[k] = vim.tbl_extend("force", v, {
-              require("efmls-configs.linters.codespell")
+              require("efmls-configs.linters.codespell"),
             })
           end
 
@@ -328,14 +328,6 @@ return {
       -- You probably also want to set a keymap to toggle aerial
       vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>", { desc = "Open code outline" })
     end,
-  },
-  {
-    "huggingface/llm.nvim",
-    event = "VeryLazy",
-    opts = {
-      accept_keymap = "<Left>",
-      dismiss_keymap = "<Right>",
-    },
   },
   {
     "creativenull/efmls-configs-nvim",
