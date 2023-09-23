@@ -64,12 +64,12 @@ in
     haskell-language-server
     python310
     tree-sitter
-    jupyter
     jdk
   ];
   python-packages = with python310Packages; [
     pip
     huggingface-hub
+    jupyterlab
   ];
   network = [
     croc
