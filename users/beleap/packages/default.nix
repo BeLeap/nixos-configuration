@@ -103,6 +103,6 @@ in
     pretendard
   ];
   others = [
-    (helpers.nixGLMesaWrap anytype)
+    (helpers.nixGLVulkanMesaWrap anytype)
   ];
 }
