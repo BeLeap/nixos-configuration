@@ -3,17 +3,8 @@ let
   helpers = import ../helpers.nix { inherit pkgs lib; };
 in
 {
-  prereq = [
-    nix-prefetch-git
-    gnumake
-    go
-    rustup
-    stow
-    cmake
-    deno
-    zig
-  ];
   tui = [
+    nix-prefetch-git
     neovim-nightly
     hexyl
     sshpass
@@ -56,6 +47,13 @@ in
     mongosh
   ];
   language-support = [
+    gnumake
+    go
+    rustup
+    stow
+    cmake
+    deno
+    zig
     universal-ctags
     nodejs
     yarn
