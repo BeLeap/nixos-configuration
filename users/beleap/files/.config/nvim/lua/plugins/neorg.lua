@@ -20,6 +20,7 @@ return {
 							work = "~/notes/work",
 							personal = "~/notes/personal",
 						},
+						default_workspace = "personal",
 					},
 				},
 				["core.completion"] = {
