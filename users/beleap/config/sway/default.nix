@@ -8,7 +8,7 @@ let
 in
 rec {
   enable = true;
-  package = (helpers.nixGLMesaWrap pkgs.sway);
+  package = (helpers.nixGLWrap pkgs.sway);
 
   systemd = {
     enable = true;
