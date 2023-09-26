@@ -8,6 +8,6 @@ let
 in
 {
   enable = true;
-  package = (helpers.nixGLMesaWrap pkgs.wezterm);
+  package = (helpers.nixGLWrap pkgs.wezterm);
   extraConfig = builtins.readFile(./. + "/config.lua");
 }
