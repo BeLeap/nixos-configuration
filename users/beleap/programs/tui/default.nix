@@ -44,7 +44,8 @@
       }
     ];
   };
-  neovim = {
+  neovim = { pkgs }:
+  {
     enable = true;
     defaultEditor = true;
 
@@ -54,5 +55,9 @@
     withNodeJs = true;
     withRuby = true;
     withPython3 = true;
+
+    extraPackages = with pkgs; [
+      gcc
+    ];
   };
 }

@@ -30,7 +30,7 @@ let
   tui = (import ./tui);
 in
 lib.trivial.mergeAttrs {
-  neovim = tui.neovim;
+  neovim = tui.neovim { inherit pkgs; };
   zoxide = tui.zoxide;
   lsd = tui.lsd;
   direnv = tui.direnv;

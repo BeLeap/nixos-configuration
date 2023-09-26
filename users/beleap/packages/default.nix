@@ -47,6 +47,7 @@ in
     mongosh
   ];
   language-support = [
+    glibc
     gnumake
     go
     rustup
