@@ -26,6 +26,7 @@ in
     playerctl
     _1password
     wally-cli
+    mpv
   ];
   gui = [
     _1password-gui
