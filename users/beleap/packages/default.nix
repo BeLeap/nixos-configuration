@@ -26,7 +26,6 @@ in
     playerctl
     _1password
     wally-cli
-    mpv
   ];
   gui = [
     _1password-gui
@@ -42,6 +41,7 @@ in
     tridactyl-native
     ((import ../../../pkgs/firefox-profile-switcher-connector.nix) { inherit lib pkgs; })
     cliphist
+    vlc
   ];
   db = [
     postgresql_15
