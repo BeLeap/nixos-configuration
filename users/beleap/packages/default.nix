@@ -105,5 +105,6 @@ in
     pretendard
   ];
   others = [
+    (helpers.nixGLWrap anytype)
   ];
 }
