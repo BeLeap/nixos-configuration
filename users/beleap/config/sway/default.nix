@@ -8,7 +8,7 @@ let
 in
 rec {
   enable = true;
-  package = (helpers.nixGLWrap pkgs.sway);
+  package = (helpers.nixGLIntelWrap pkgs.sway);
 
   systemd = {
     enable = true;
@@ -78,7 +78,7 @@ rec {
  
   extraConfig = ''
     input type:keyboard {
-      xkb_options ctrl:nocaps
+      xkb_options "ctrl:nocaps,korean:ralt_hangul"
     }
 
     input type:touchpad {

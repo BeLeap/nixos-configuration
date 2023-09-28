@@ -57,6 +57,8 @@ in
             addons = {
               "sebolesik-3-90" = [
                 "FlexibleComposeOrder"
+                "ComposeChoseongSsang"
+                "ComposeJongseongSsang"
               ];
             };
           };

@@ -1,7 +1,4 @@
-{ pkgs, lib }: with pkgs;
-let
-  helpers = import ../helpers.nix { inherit pkgs lib; };
-in
+{ pkgs, lib }: with pkgs; let helpers = import ../helpers.nix { inherit pkgs lib; }; in
 {
   tui = [
     nix-prefetch-git
@@ -105,6 +102,6 @@ in
     pretendard
   ];
   others = [
-    (helpers.nixGLWrap anytype)
+    (helpers.nixGLIntelWrap anytype)
   ];
 }
