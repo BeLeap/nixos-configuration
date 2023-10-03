@@ -100,5 +100,6 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  security.pam.services.swaylock = {};
 }
 
