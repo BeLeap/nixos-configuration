@@ -23,6 +23,7 @@
     playerctl
     _1password
     wally-cli
+    greetd.tuigreet
   ];
   gui = [
     _1password-gui

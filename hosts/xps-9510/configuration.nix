@@ -102,6 +102,16 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   security.pam.services.swaylock = {};
-  services.blueman.enable = true;
+  services = {
+    blueman.enable = true;
+    greetd = {
+      enable = true;
+      settings = {
+        default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+        };
+      };
+    };
+  };
 }
 
