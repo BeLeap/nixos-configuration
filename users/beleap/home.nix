@@ -109,6 +109,11 @@ in
         exec = "swaymsg exit";
         terminal = false;
       };
+      lock = {
+        name = "Lock";
+        exec = "swaylock";
+        terminal = false;
+      };
       vlc = {
         name = "VLC Music";
         exec = "vlc -LZ /home/beleap/Music";
