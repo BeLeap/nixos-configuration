@@ -39,6 +39,7 @@
     ((import ../../../pkgs/firefox-profile-switcher-connector.nix) { inherit lib pkgs; })
     cliphist
     vlc
+    polkit_gnome
   ];
   db = [
     postgresql_15
