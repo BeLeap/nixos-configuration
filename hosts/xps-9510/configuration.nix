@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  nixpkgs.config.allowUnfree = true;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -60,7 +62,9 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
-    packages = with pkgs; [];
+    packages = with pkgs; [
+      _1password-gui
+    ];
   };
 
   # List packages installed in system profile. To search, run:
@@ -101,7 +105,10 @@
   system.stateVersion = "23.05"; # Did you read the comment?
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  security.pam.services.swaylock = {};
+  security = {
+    polkit.enable = true;
+    pam.services.swaylock = {};
+  };
   services = {
     blueman.enable = true;
     greetd = {
