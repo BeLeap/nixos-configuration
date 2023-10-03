@@ -50,6 +50,7 @@
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  hardware.bluetooth.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -101,5 +102,6 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   security.pam.services.swaylock = {};
+  services.blueman.enable = true;
 }
 

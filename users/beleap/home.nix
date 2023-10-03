@@ -38,6 +38,7 @@ in
     mako = (import ./config/sway/mako);
     kanshi = (import ./config/sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
+    blueman-applet = { enable = true; };
   };
  
   wayland = {
