@@ -54,8 +54,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  programs.fish.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.beleap = {
     isNormalUser = true;
@@ -75,11 +73,7 @@
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.fish.enable = true;
 
   # List services that you want to enable:
 
