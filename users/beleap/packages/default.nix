@@ -26,7 +26,7 @@
     greetd.tuigreet
   ];
   gui = [
-    _1password-gui
+    (_1password-gui.overrideAttrs { polkitPolicyOwners = [ "wheel" ]; })
     swaybg
     blueman
     pavucontrol

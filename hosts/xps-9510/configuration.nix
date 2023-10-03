@@ -62,9 +62,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
-    packages = with pkgs; [
-      _1password-gui
-    ];
+    packages = with pkgs; [];
   };
 
   # List packages installed in system profile. To search, run:
