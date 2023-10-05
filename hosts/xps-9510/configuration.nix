@@ -11,9 +11,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   system.stateVersion = "23.05";
 
-  environment.systemPackages = with pkgs; [
-    cudatoolkit
-  ];
+  environment.systemPackages = with pkgs; [];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
