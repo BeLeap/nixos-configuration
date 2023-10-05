@@ -105,6 +105,12 @@
     pam.services.swaylock = {};
   };
   services = {
+    printing.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns = true;
+    };
+
     blueman.enable = true;
     greetd = {
       enable = true;
