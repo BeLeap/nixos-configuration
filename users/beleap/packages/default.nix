@@ -45,6 +45,7 @@
     polkit_gnome
     wireplumber
     wl-mirror
+    youtube-music
   ];
   db = [
     postgresql_15
