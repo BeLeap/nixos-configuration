@@ -43,7 +43,7 @@
     vlc
     polkit_gnome
     wireplumber
-    youtube-music
+    ((import ../../../pkgs/audiotube.nix) { inherit lib pkgs; })
   ];
   db = [
     postgresql_15
