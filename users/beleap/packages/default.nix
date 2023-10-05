@@ -42,6 +42,7 @@
     cliphist
     vlc
     polkit_gnome
+    wireplumber
   ];
   db = [
     postgresql_15
