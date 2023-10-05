@@ -37,20 +37,20 @@ in
     wofi = (import ./config/sway/wofi);
     swaylock = (import ./config/sway/swaylock);
   } ((import ./programs) { inherit pkgs lib; });
- 
+
   services = {
     mako = (import ./config/sway/mako);
     kanshi = (import ./config/sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
   };
- 
+
   wayland = {
     windowManager = {
       sway = (import ./config/sway) { inherit pkgs lib; };
     };
   };
- 
+
   i18n = {
     inputMethod = {
       enabled = "kime";
@@ -76,15 +76,15 @@ in
 
   xdg = {
     enable = true;
+    #
+    # portal = {
+    #   enable = true;
+    #   extraPortals = with pkgs; [
+    #     xdg-desktop-portal-wlr
+    #     xdg-desktop-portal-gtk
+    #   ];
+    # };
 
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
-      ];
-    };
- 
     systemDirs = {
       data = [
         "/usr/share"
