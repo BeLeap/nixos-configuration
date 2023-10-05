@@ -56,7 +56,7 @@ in
           hangul = {
             layout = "sebeolsik-3-90";
             addons = {
-              "sebolesik-3-90" = [
+              "sebeolsik-3-90" = [
                 "FlexibleComposeOrder"
                 "ComposeChoseongSsang"
                 "ComposeJongseongSsang"
