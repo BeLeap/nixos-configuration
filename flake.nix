@@ -34,6 +34,10 @@
         xps-9510 = import ./hosts/xps-9510 {
           inherit nixpkgs inputs overlays;
         };
+        
+        thinkpad = import ./hosts/thinkpad {
+          inherit nixpkgs inputs overlays;
+        };
       };
 
       homeConfigurations = {
