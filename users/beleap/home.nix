@@ -22,6 +22,7 @@ in
   home = {
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
+      XDG_CURRENT_DESKTOP = "sway"; 
       EDITOR = "nvim";
     };
     packages = lib.lists.flatten (lib.attrsets.attrValues ((import ./packages){ inherit pkgs lib; })) ;
@@ -72,9 +73,17 @@ in
   };
 
   fonts.fontconfig.enable = true;
- 
+
   xdg = {
     enable = true;
+
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
+      ];
+    };
  
     systemDirs = {
       data = [
