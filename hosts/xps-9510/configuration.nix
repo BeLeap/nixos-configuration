@@ -11,7 +11,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   system.stateVersion = "23.05";
 
-  environment.systemPackages = with pkgs; [];
+  environment.systemPackages = with pkgs; [
+    nvidia-docker
+  ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -37,6 +39,16 @@
     };
   }; 
   services.xserver.videoDrivers = ["nvidia"];
-  hardware.opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+  virtualisation.docker = {
+      enable = true;
+
+      enableNvidia = true;
+  };
 }
 

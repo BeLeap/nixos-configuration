@@ -9,7 +9,7 @@
 
   users.users.beleap = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
@@ -20,7 +20,9 @@
     sudo
     git
     pciutils
+    docker
   ];
+  virtualisation.docker.enable = true;
 
   programs.fish.enable = true;
 
