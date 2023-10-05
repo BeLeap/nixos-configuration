@@ -32,6 +32,7 @@ rec {
     menu = "wofi --show drun -p 'Select application...' | xargs swaymsg exec -- ";
     keybindings = lib.mkOptionDefault {
       "${config.modifier}+r" = "exec ${config.menu}";
+      "${config.modifier}+q" = "exec swaylock";
       "${config.modifier}+Shift+r" = "mode resize";
       "${config.modifier}+e" = "exec nautilus";
       "${config.modifier}+Ctrl+s" = "exec grim - | wl-copy";
