@@ -18,6 +18,7 @@
     wget
     sudo
     git
+    pciutils
   ];
 
   programs.fish.enable = true;
