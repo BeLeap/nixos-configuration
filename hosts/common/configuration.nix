@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  nixpkgs.config.allowUnfree = true;
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   time.timeZone = "Asia/Seoul";

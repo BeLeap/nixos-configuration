@@ -11,6 +11,10 @@
   boot.loader.efi.canTouchEfiVariables = true;
   system.stateVersion = "23.05";
 
+  environment.systemPackages = with pkgs; [
+    cudatoolkit
+  ];
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   hardware.nvidia = {
