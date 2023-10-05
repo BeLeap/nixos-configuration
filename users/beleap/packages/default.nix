@@ -43,6 +43,7 @@
     vlc
     polkit_gnome
     wireplumber
+    youtube-music
   ];
   db = [
     postgresql_15
