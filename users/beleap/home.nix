@@ -76,14 +76,6 @@ in
 
   xdg = {
     enable = true;
-    #
-    # portal = {
-    #   enable = true;
-    #   extraPortals = with pkgs; [
-    #     xdg-desktop-portal-wlr
-    #     xdg-desktop-portal-gtk
-    #   ];
-    # };
 
     systemDirs = {
       data = [
