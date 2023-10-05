@@ -12,5 +12,17 @@
   system.stateVersion = "23.05";
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+
+    open = true;
+
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 }
 
