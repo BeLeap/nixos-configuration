@@ -106,22 +106,14 @@ return {
           end,
           post_open = function(bufnr, winnr, ft, is_blocking)
             if is_blocking and saved_terminal then
-              -- Hide the terminal while it's blocking
               saved_terminal:close()
             else
-              -- If it's a normal file, just switch to its window
-              -- vim.api.nvim_set_current_win(winnr)
-
-              -- If we're in a different wezterm pane/tab, switch to the current one
-              -- Requires willothy/wezterm.nvim
               require("wezterm").switch_pane.id(
                 tonumber(os.getenv("WEZTERM_PANE"))
               )
             end
             vim.api.nvim_set_current_win(winnr)
 
-            -- If the file is a git commit, create one-shot autocmd to delete its buffer on write
-            -- If you just want the toggleable terminal integration, ignore this bit
             if ft == "gitcommit" or ft == "gitrebase" then
               vim.api.nvim_create_autocmd("BufWritePost", {
                 buffer = bufnr,
