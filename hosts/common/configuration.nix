@@ -24,8 +24,11 @@
 
   sound.enable = true;
   hardware.bluetooth.enable = true;
-  
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    trusted-users = [ "root" "beleap" ];
+  };
 
   security = {
     polkit.enable = true;
