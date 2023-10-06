@@ -49,8 +49,6 @@ vim.o.scrolloff = 999
 
 vim.o.autochdir = false
 
-vim.o.virtualedit = "all"
-
 vim.o.pumblend = 0
 vim.o.winblend = 0
 
