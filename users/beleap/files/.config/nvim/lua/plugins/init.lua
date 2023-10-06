@@ -159,7 +159,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		keys = {
-			{ "n", "<leader>f", "<cmd>NvimTreeToggle<cr>" },
+			{ "<leader>f", "<cmd>NvimTreeToggle<cr>" },
 		},
 		config = function()
 			vim.g.loaded_netrw = 1
