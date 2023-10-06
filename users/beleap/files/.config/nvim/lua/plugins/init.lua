@@ -23,6 +23,7 @@ return {
 				show_hidden = true,
 				excluder_dirs = {
 					"*/node_modules/*",
+					"/tmp/*",
 				},
 			})
 			require("telescope").load_extension("projects")
