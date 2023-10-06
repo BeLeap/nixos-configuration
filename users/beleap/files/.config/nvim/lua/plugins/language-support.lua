@@ -288,4 +288,57 @@ return {
       autocmd = { enabled = true },
     },
   },
+  {
+    "jay-babu/mason-null-ls.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+      {
+        "nvimtools/none-ls.nvim"
+        dependencies = { "nvim-lua/plenary.nvim" },
+      },
+    },
+    config = function()
+      require("mason-null-ls").setup({
+        ensure_installed = {
+          "stylua",
+          "ansible-lint",
+          "codespell",
+          "misspell",
+          "editorconfig-checker",
+          "proselint",
+          "vale",
+          "rustfmt",
+        },
+        automatic_installation = false,
+        handlers = {},
+      })
+      require("null-ls").setup({
+        sources = {
+          null_ls.builtins.code_actions.gitrebase,
+          null_ls.builtins.code_actions.gitsigns,
+          null_ls.builtins.completion.luasnip,
+          null_ls.builtins.completion.vsnip,
+          null_ls.builtins.diagnostics.fish,
+          null_ls.builtins.diagnostics.terraform_validate,
+          null_ls.builtins.formatting.terraform_fmt,
+          null_ls.builtins.hover.dictionary,
+          null_ls.builtins.hover.printenv,
+        },
+        on_attach = function(client, bufnr)
+          if client.supports_method("textDocument/formatting") then
+            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+              group = augroup,
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format({
+                  bufnr = bufnr,
+                })
+              end,
+            })
+          end
+        end,
+      })
+    end,
+  },
 }
