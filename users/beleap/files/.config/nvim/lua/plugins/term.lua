@@ -110,7 +110,7 @@ return {
               saved_terminal:close()
             else
               -- If it's a normal file, just switch to its window
-              vim.api.nvim_set_current_win(winnr)
+              -- vim.api.nvim_set_current_win(winnr)
 
               -- If we're in a different wezterm pane/tab, switch to the current one
               -- Requires willothy/wezterm.nvim
@@ -118,6 +118,7 @@ return {
                 tonumber(os.getenv("WEZTERM_PANE"))
               )
             end
+            vim.api.nvim_set_current_win(winnr)
 
             -- If the file is a git commit, create one-shot autocmd to delete its buffer on write
             -- If you just want the toggleable terminal integration, ignore this bit
