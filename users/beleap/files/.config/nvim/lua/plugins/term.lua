@@ -92,7 +92,7 @@ return {
 
       return {
         window = {
-          open = "alternate",
+          open = "tab",
         },
         callbacks = {
           should_block = function(argv)
