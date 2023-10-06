@@ -69,6 +69,7 @@
         sidebery
         i-dont-care-about-cookies
         auto-tab-discard
+        ((import ../../../../../pkgs/pwas-for-firefox.nix) { inherit pkgs; }).extension
       ];
       search = {
         force = true;

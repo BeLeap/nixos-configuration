@@ -12,6 +12,9 @@ in
           url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
         }) {
           inherit pkgs;
+          repoOverrides = {
+            rycee = import (builtins.fetchTarball "https://gitlab.com/BeLeap/nur-expressions/-/archive/firefox-addons/add-pwas-for-firefox/nur-expressions-firefox-addons-add-pwas-for-firefox.tar.gz") { inherit pkgs; };
+          };
         };
       };
     };
