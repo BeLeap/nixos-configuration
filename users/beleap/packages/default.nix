@@ -44,6 +44,7 @@
     vlc
     polkit_gnome
     wireplumber
+    wl-mirror
   ];
   db = [
     postgresql_15
