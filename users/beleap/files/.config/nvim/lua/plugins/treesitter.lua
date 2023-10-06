@@ -5,8 +5,6 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context",
 			"nvim-treesitter/nvim-treesitter-textobjects",
-			"HiPhish/nvim-ts-rainbow2",
-			"rcarriga/nvim-notify",
 		},
 		config = function()
 			require("nvim-treesitter.install").compilers = { "gcc" }
