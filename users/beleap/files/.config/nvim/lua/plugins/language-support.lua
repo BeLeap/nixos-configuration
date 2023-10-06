@@ -108,7 +108,6 @@ return {
       "hrsh7th/cmp-nvim-lsp",
       "someone-stole-my-name/yaml-companion.nvim",
       "lukas-reineke/lsp-format.nvim",
-      "creativenull/efmls-configs-nvim",
     },
     config = function()
       -- Mappings.
@@ -169,7 +168,7 @@ return {
       end
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "yamlls", "efm" },
+        ensure_installed = { "lua_ls", "yamlls" },
         automatic_installation = true,
       })
 
@@ -228,36 +227,6 @@ return {
             },
           })
         end,
-        ["efm"] = function()
-          local languages = require("efmls-configs.defaults").languages()
-          languages = vim.tbl_extend("force", languages, {
-            terraform = {
-              require("efmls-configs.formatters.terraform_fmt"),
-            },
-          })
-          for k, v in pairs(languages) do
-            languages[k] = vim.tbl_extend("force", v, {
-              require("efmls-configs.linters.codespell"),
-            })
-          end
-
-          local efmls_config = {
-            filetypes = vim.tbl_keys(languages),
-            settings = {
-              rootMarkers = { ".git/" },
-              languages = languages,
-            },
-            init_options = {
-              documentFormatting = true,
-              documentRangeFormatting = true,
-            },
-          }
-
-          lspconfig["efm"].setup(vim.tbl_extend("force", efmls_config, {
-            on_attach = on_attach,
-            capabilities = capabilities,
-          }))
-        end,
       })
     end,
   },
@@ -311,10 +280,6 @@ return {
     "nmac427/guess-indent.nvim",
     event = "InsertEnter",
     config = true,
-  },
-  {
-    "creativenull/efmls-configs-nvim",
-    version = "v1.x.x", -- version is optional, but recommended
   },
   {
     "kosayoda/nvim-lightbulb",
