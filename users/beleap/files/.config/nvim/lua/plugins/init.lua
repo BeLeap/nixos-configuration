@@ -158,10 +158,12 @@ return {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
+		keys = {
+			{ "n", "<leader>f", "<cmd>NvimTreeToggle<cr>" },
+		},
 		config = function()
 			vim.g.loaded_netrw = 1
 			vim.g.loaded_netrwPlugin = 1
-			vim.keymap.set("n", "<leader>f", "<cmd>NvimTreeToggle<cr>")
 
 			require("nvim-tree").setup({
 				sync_root_with_cwd = true,
