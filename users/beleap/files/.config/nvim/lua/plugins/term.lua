@@ -96,6 +96,7 @@ return {
         },
         callbacks = {
           should_block = function(argv)
+            vim.print(argv)
             return vim.tbl_contains(argv, "-b")
           end,
           pre_open = function()

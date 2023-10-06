@@ -12,7 +12,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    event = "VeryLazy",
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "L3MON4D3/LuaSnip",
@@ -101,7 +101,7 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "VeryLazy" },
     dependencies = {
       "williamboman/mason.nvim",
       "neovim/nvim-lspconfig",
