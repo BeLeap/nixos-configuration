@@ -31,11 +31,11 @@
           inherit nixpkgs inputs overlays;
         };
 
-        xps-9510 = import ./hosts/xps-9510 {
+        beleap-xps-9510 = import ./hosts/beleap-xps-9510 {
           inherit nixpkgs inputs overlays;
         };
         
-        thinkpad = import ./hosts/thinkpad {
+        beleap-thinkpad = import ./hosts/beleap-thinkpad {
           inherit nixpkgs inputs overlays;
         };
       };

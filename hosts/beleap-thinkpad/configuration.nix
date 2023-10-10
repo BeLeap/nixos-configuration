@@ -9,6 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   system.stateVersion = "23.05";
+  networking.hostName = "beleap-thinkpad";
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 }
