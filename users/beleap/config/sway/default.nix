@@ -106,28 +106,28 @@ rec {
         border = catppuccin.Lavender;
         background = catppuccin.Base;
         text = catppuccin.Text;
-        indicator = catppuccin.Rosewater;
+        indicator = catppuccin.Lavender;
         childBorder = catppuccin.Lavender;
       };
       focusedInactive = {
         border = catppuccin.Overlay0;
         background = catppuccin.Base;
         text = catppuccin.Text;
-        indicator = catppuccin.Rosewater;
+        indicator = catppuccin.Overlay0;
         childBorder = catppuccin.Overlay0;
       };
       unfocused = {
         border = catppuccin.Overlay0;
         background = catppuccin.Base;
         text = catppuccin.Text;
-        indicator = catppuccin.Rosewater;
+        indicator = catppuccin.Overlay0;
         childBorder = catppuccin.Overlay0;
       };
       urgent = {
         border = catppuccin.Peach;
         background = catppuccin.Base;
         text = catppuccin.Peach;
-        indicator = catppuccin.Overlay0;
+        indicator = catppuccin.Peach;
         childBorder = catppuccin.Peach;
       };
       placeholder = {
