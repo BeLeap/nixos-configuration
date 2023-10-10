@@ -36,14 +36,10 @@ let
 in
 rec {
   enable = true;
-  package = (helpers.nixGLIntelWrap pkgs.sway);
+  package = (helpers.nixGLIntelWrap pkgs.swayfx);
 
   systemd = {
     enable = true;
-  };
-
-  wrapperFeatures = {
-    gtk = true;
   };
 
   config = {
@@ -142,8 +138,13 @@ rec {
         childBorder = catppuccin.Overlay0;
       };
     };
+
+    gaps = {
+      inner = 12;
+      smartGaps = false;
+    };
   };
- 
+
   extraConfig = ''
     input type:keyboard {
       xkb_options "ctrl:nocaps,korean:ralt_hangul"
@@ -154,5 +155,8 @@ rec {
       natural_scroll disabled
       dwt enabled
     }
+
+    corner_radius 10
+    smart_corner_radius on
   '';
 }
