@@ -5,34 +5,7 @@ let
       pkgs
       lib;
   };
-  catppuccin = {
-    Rosewater = "#f5e0dc";
-    Flamingo = "#f2cdcd";
-    Pink = "#f5c2e7";
-    Mauve = "#cba6f7";
-    Red = "#f38ba8";
-    Maroon = "#eba0ac";
-    Peach = "#fab387";
-    Yellow = "#f9e2af";
-    Green = "#a6e3a1";
-    Teal = "#94e2d5";
-    Sky = "#89dceb";
-    Sapphire = "#74c7ec";
-    Blue = "#89b4fa";
-    Lavender = "#b4befe";
-    Text = "#cdd6f4";
-    Subtext1 = "#bac2de";
-    Subtext0 = "#a6adc8";
-    Overlay2 = "#9399b2";
-    Overlay1 = "#7f849c";
-    Overlay0 = "#6c7086";
-    Surface2 = "#585b70";
-    Surface1 = "#45475a";
-    Surface0 = "#313244";
-    Base = "#1e1e2e";
-    Mantle = "#181825";
-    Crust = "#11111b";
-  };
+  catppuccin = import ../../../../const/catppuccin.nix;
 in
 rec {
   enable = true;
@@ -101,41 +74,41 @@ rec {
     ];
 
     colors = {
-      background = catppuccin.Base;
+      background = catppuccin.base;
       focused = {
-        border = catppuccin.Lavender;
-        background = catppuccin.Base;
-        text = catppuccin.Text;
-        indicator = catppuccin.Lavender;
-        childBorder = catppuccin.Lavender;
+        border = catppuccin.lavender;
+        background = catppuccin.base;
+        text = catppuccin.text;
+        indicator = catppuccin.lavender;
+        childBorder = catppuccin.lavender;
       };
       focusedInactive = {
-        border = catppuccin.Overlay0;
-        background = catppuccin.Base;
-        text = catppuccin.Text;
-        indicator = catppuccin.Overlay0;
-        childBorder = catppuccin.Overlay0;
+        border = catppuccin.overlay0;
+        background = catppuccin.base;
+        text = catppuccin.text;
+        indicator = catppuccin.overlay0;
+        childBorder = catppuccin.overlay0;
       };
       unfocused = {
-        border = catppuccin.Overlay0;
-        background = catppuccin.Base;
-        text = catppuccin.Text;
-        indicator = catppuccin.Overlay0;
-        childBorder = catppuccin.Overlay0;
+        border = catppuccin.overlay0;
+        background = catppuccin.base;
+        text = catppuccin.text;
+        indicator = catppuccin.overlay0;
+        childBorder = catppuccin.overlay0;
       };
       urgent = {
-        border = catppuccin.Peach;
-        background = catppuccin.Base;
-        text = catppuccin.Peach;
-        indicator = catppuccin.Peach;
-        childBorder = catppuccin.Peach;
+        border = catppuccin.peach;
+        background = catppuccin.base;
+        text = catppuccin.peach;
+        indicator = catppuccin.peach;
+        childBorder = catppuccin.peach;
       };
       placeholder = {
-        border = catppuccin.Overlay0;
-        background = catppuccin.Base;
-        text = catppuccin.Text;
-        indicator = catppuccin.Overlay0;
-        childBorder = catppuccin.Overlay0;
+        border = catppuccin.overlay0;
+        background = catppuccin.base;
+        text = catppuccin.text;
+        indicator = catppuccin.overlay0;
+        childBorder = catppuccin.overlay0;
       };
     };
 
