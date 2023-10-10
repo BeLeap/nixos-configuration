@@ -39,7 +39,6 @@
     wl-clipboard
     tridactyl-native
     ((import ../../../pkgs/firefox-profile-switcher-connector.nix) { inherit lib pkgs; })
-    ((import ../../../pkgs/pwas-for-firefox.nix) { inherit lib pkgs; }).native
     cliphist
     vlc
     polkit_gnome
