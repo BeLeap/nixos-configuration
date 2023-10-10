@@ -43,6 +43,7 @@ rec {
     };
 
     window = {
+      border = 4;
       commands = [
         {
           command = "resize set 900 500";
