@@ -1,1 +1,1 @@
-sudo nixos-rebuid switch --flake ".#$(hostname)"
+sudo nixos-rebuild switch --flake ".#$(hostname)"
