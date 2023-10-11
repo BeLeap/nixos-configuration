@@ -91,6 +91,7 @@
     vault-bin
 
     azure-cli
+    kubelogin
     saml2aws
     awscli2
     terraform
