@@ -44,7 +44,7 @@
     polkit_gnome
     wireplumber
     wl-mirror
-    youtube-music
+    ((import ../../../pkgs/muzika.nix) { inherit lib pkgs; })
   ];
   db = [
     postgresql_15

@@ -40,6 +40,7 @@ in
     kanshi = (import ./config/sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
+    mpd = { enable = true; };
   };
 
   wayland = {
