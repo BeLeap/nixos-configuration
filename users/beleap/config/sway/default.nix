@@ -113,7 +113,7 @@ rec {
     };
 
     gaps = {
-      inner = 12;
+      inner = 6;
       smartGaps = false;
     };
   };

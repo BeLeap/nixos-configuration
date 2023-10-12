@@ -41,6 +41,8 @@ in
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
     mpd = { enable = true; };
+    keybase = { enable = true; };
+    kbfs = { enable = true; };
   };
 
   wayland = {
