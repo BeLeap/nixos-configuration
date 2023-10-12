@@ -122,6 +122,11 @@ in
         exec = "vlc -LZ /home/beleap/Music";
         terminal = false;
       };
+      spacedrive = {
+        name = "Spacedrive";
+        exec = "spacedrive";
+        terminal = false;
+      };
     };
   };
 
