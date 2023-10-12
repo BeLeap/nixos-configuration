@@ -44,7 +44,7 @@
     polkit_gnome
     wireplumber
     wl-mirror
-    ((import ../../../pkgs/spacedrive.nix) { inherit pkgs; })
+    ((import ../../../pkgs/muzika.nix) { inherit pkgs; })
   ];
   db = [
     postgresql_15
