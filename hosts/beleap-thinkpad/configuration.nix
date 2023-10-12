@@ -1,9 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, overlays, ... }:
 {
   imports =
     [
       ./hardware-configuration.nix
-      (import ../common/configuration.nix { inherit config pkgs; })
+      (import ../common/configuration.nix {
+        inherit config pkgs overlays; 
+        lib = pkgs.lib;
+      })
     ];
 
   boot.loader.systemd-boot.enable = true;

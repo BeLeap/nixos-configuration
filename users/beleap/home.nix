@@ -1,22 +1,12 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, overlays, ... }:
 let
   helpers = import ./helpers.nix { inherit pkgs lib; };
+  username = "beleap";
 in
 {
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (_: true);
-      packageOverrides = pkgs: {
-        nur = import (builtins.fetchTarball {
-          url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-        }) {
-          inherit pkgs;
-        };
-      };
-    };
-  };
   home = {
+    username = "${username}";
+    homeDirectory = "/home/${username}";
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
       XDG_CURRENT_DESKTOP = "sway"; 

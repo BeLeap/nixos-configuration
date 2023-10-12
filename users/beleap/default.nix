@@ -2,21 +2,25 @@
 
 let
   system = "x86_64-linux";
-  username = "beleap";
 in
 home-manager.lib.homeManagerConfiguration {
   modules = [
     {
       nixpkgs = {
         inherit overlays;
-      };
-
-      home = {
-        username = "${username}";
-        homeDirectory = "/home/${username}";
+        config = {
+          allowUnfree = true;
+          allowUnfreePredicate = (_: true);
+          packageOverrides = pkgs: {
+            nur = import (builtins.fetchTarball {
+              url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+            }) {
+              inherit pkgs;
+            };
+          };
+        };
       };
     }
-
     ./home.nix
   ];
 

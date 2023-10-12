@@ -1,6 +1,23 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, overlays, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
+  import = [
+    <home-manager/nixos>
+  ];
+  
+  nixpkgs = {
+    inherit overlays;
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+      packageOverrides = pkgs: {
+        nur = import (builtins.fetchTarball {
+          url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+        }) {
+          inherit pkgs;
+        };
+      };
+    };
+  };
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   time.timeZone = "Asia/Seoul";
@@ -12,6 +29,9 @@
     extraGroups = [ "wheel" "docker" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
+  };
+  home-manager.users.beleap = import ../../users/beleap/home.nix {
+    inherit pkgs lib overlays;
   };
 
   environment.systemPackages = with pkgs; [
