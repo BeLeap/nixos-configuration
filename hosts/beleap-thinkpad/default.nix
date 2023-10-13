@@ -6,4 +6,8 @@ nixpkgs.lib.nixosSystem {
   modules = [
     ./configuration.nix
   ];
+
+  specialArgs = {
+    inherit overlays;
+  };
 }

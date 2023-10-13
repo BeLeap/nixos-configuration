@@ -1,10 +1,11 @@
-{ config, pkgs, overlays, ... }:
+{ config, pkgs, specialArgs, ... }:
 {
   imports =
     [
       ./hardware-configuration.nix
       (import ../common/configuration.nix {
-        inherit config pkgs overlays; 
+        inherit pkgs; 
+        overlays = specialArgs.overlays;
         lib = pkgs.lib;
       })
     ];
@@ -16,4 +17,3 @@
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 }
-

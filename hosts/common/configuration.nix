@@ -1,6 +1,6 @@
-{ config, pkgs, lib, overlays, ... }:
+{ pkgs, lib, overlays, ... }:
 {
-  import = [
+  imports = [
     <home-manager/nixos>
   ];
   
@@ -31,7 +31,7 @@
     packages = with pkgs; [];
   };
   home-manager.users.beleap = import ../../users/beleap/home.nix {
-    inherit pkgs lib overlays;
+    inherit pkgs lib;
   };
 
   environment.systemPackages = with pkgs; [
