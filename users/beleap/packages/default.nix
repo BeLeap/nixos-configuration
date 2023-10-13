@@ -76,6 +76,7 @@
     pip
     huggingface-hub
     jupyterlab
+    bash_kernel
   ];
   network = [
     croc
