@@ -47,7 +47,7 @@
     # ((import ../../../pkgs/muzika.nix) { inherit pkgs; })
     keybase-gui
     discord
-    obsidian
+    logseq
   ];
   db = [
     postgresql_15
