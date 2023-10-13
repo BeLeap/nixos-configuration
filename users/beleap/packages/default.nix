@@ -68,16 +68,15 @@
     evcxr
     ghc
     haskell-language-server
-    python310
+    (python310.withPackages (ps: with ps; [
+      pip
+      huggingface-hub
+      jupyterlab
+      jupyter
+      bash_kernel
+    ]))
     tree-sitter
     jdk
-  ];
-  python-packages = with python310Packages; [
-    pip
-    huggingface-hub
-    jupyterlab
-    jupyter
-    bash_kernel
   ];
   network = [
     croc
