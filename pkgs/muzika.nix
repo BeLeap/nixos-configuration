@@ -9,7 +9,7 @@ stdenv.mkDerivation rec {
     rev = "ecefc88d3e08ec254eb44b1ab73de79d70431054";
     hash = "sha256-WtscshFaGdjqLLOVpzEhW/UyGByaMgPwkUH+2yCuNP4=";
     fetchSubmodules = true;
-    keepDotDir = true;
+    leaveDotGit = true;
   };
   
   nativeBuildInputs = [ 
@@ -19,8 +19,9 @@ stdenv.mkDerivation rec {
     libadwaita
   ];
 
-  unpackPhase = ''
-  '';
+  phases = [
+    "configurePhase"
+  ];
 
   buildPhase = ''
     cd $out/build

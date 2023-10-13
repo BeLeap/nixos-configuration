@@ -47,7 +47,7 @@
     # ((import ../../../pkgs/muzika.nix) { inherit pkgs; })
     keybase-gui
     discord
-    logseq
+    joplin-desktop
   ];
   db = [
     postgresql_15
