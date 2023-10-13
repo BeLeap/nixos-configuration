@@ -76,6 +76,7 @@
     pip
     huggingface-hub
     jupyterlab
+    jupyter
     bash_kernel
   ];
   network = [
