@@ -65,7 +65,7 @@
     cron = {
       enable = true;
       systemCronJobs = [
-        "*/5 * * * *      beleap    onedrive --synchronize >> /tmp/onedrive_cron.log"
+        "*/5 * * * *      beleap    onedrive --synchronize --single-directory Documents/Logseq >> /tmp/onedrive_cron.log"
       ];
     };
     printing.enable = true;

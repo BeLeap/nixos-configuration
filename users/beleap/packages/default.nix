@@ -48,6 +48,7 @@
     keybase-gui
     discord
     joplin-desktop
+    logseq
   ];
   db = [
     postgresql_15
