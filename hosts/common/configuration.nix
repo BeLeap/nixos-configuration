@@ -61,6 +61,13 @@
   };
 
   services = {
+    onedrive = { enable = true; };
+    cron = {
+      enable = true;
+      systemCronJobs = [
+        "*/5 * * * *      beleap    onedrive --synchronize >> /tmp/onedrive_cron.log"
+      ];
+    };
     printing.enable = true;
     avahi = {
       enable = true;
