@@ -14,6 +14,9 @@
           url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
         }) {
           inherit pkgs;
+          repoOverrides = {
+            rycee = import (builtins.fetchTarball "https://gitlab.com/BeLeap/nur-expressions/-/archive/firefox-addons/add-omnivore/nur-expressions-firefox-addons-add-omnivore.tar.gz") { inherit pkgs; };
+          };
         };
       };
     };
