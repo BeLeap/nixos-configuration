@@ -44,7 +44,7 @@
     polkit_gnome
     wireplumber
     wl-mirror
-    # ((import ../../../pkgs/ytmdesktop.nix) { inherit pkgs; })
+    (helpers.nixGLWrap ((import ../../../pkgs/youtube-music.nix) { inherit pkgs; }))
     keybase-gui
     discord
     joplin-desktop
@@ -112,8 +112,5 @@
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
     ((import ../../../pkgs/nanum-gothic-coding.nix) { inherit lib pkgs; })
     pretendard
-  ];
-  others = [
-    (helpers.nixGLIntelWrap anytype)
   ];
 }
