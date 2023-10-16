@@ -44,7 +44,7 @@
     polkit_gnome
     wireplumber
     wl-mirror
-    # ((import ../../../pkgs/muzika.nix) { inherit pkgs; })
+    ((import ../../../pkgs/ytmdesktop.nix) { inherit pkgs; })
     keybase-gui
     discord
     joplin-desktop
