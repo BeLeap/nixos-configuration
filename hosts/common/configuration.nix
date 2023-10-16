@@ -61,13 +61,6 @@
   };
 
   services = {
-    onedrive = { enable = true; };
-    cron = {
-      enable = true;
-      systemCronJobs = [
-        "*/5 * * * *      beleap    onedrive --synchronize --single-directory Documents/Logseq >> /tmp/onedrive_cron.log"
-      ];
-    };
     printing.enable = true;
     avahi = {
       enable = true;
@@ -89,6 +82,13 @@
           command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd 'sway --unsupported-gpu'";
         };
       };
+    };
+
+    syncthing = {
+      enable = true;
+      user = "beleap";
+      dataDir = "/home/beleap/Documents";
+      configDir = "/home/beleap/Documents/.config/syncthing";
     };
   };
 
