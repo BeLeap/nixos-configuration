@@ -8,7 +8,7 @@
         inherit pkgs; 
         overlays = specialArgs.overlays;
         lib = pkgs.lib;
-      });
+      })
     ];
     
   boot.loader.systemd-boot.enable = true;
