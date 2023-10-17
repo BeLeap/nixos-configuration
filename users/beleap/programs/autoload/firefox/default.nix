@@ -46,6 +46,9 @@
         "font.name.sans-serif.ko" = "Pretendard";
         "font.name.serif.ko" = "Noto Serif CJK KR";
         "font.name.monospace.ko" = "NanumGothicCoding";
+        "identity.fxaccounts.enabled" = false;
+        "privacy.webrtc.legacyGlobalIndicator" = false;
+        "app.update.auto" = false;
       };
       userChrome = ''
         #main-window #titlebar {
