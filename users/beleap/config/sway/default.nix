@@ -46,6 +46,22 @@ rec {
           command = "resize set 900 500";
           criteria = { class = "1Password"; };
         }
+        {
+          command = "move scratchpad";
+          criteria = { class = "YouTube Music"; };
+        }
+        {
+          command = "scratchpad show";
+          criteria = { class = "YouTube Music"; };
+        }
+        {
+          command = "move scratchpad";
+          criteria = { class = "discord"; };
+        }
+        {
+          command = "scratchpad show";
+          criteria = { class = "discord"; };
+        }
       ];
     };
 
