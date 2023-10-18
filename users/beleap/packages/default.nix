@@ -101,7 +101,11 @@
     awscli2
     terraform
 
-    kubernetes-helm
+    (wrapHelm kubernetes-helm {
+      plugins = with kubernetes-helmPlugins; [
+        helm-cm-push
+      ];
+    })
     kubectl
     kubectx
     kubectl-node-shell
