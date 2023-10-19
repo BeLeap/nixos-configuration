@@ -100,6 +100,7 @@
     saml2aws
     awscli2
     terraform
+    kdash
 
     (wrapHelm kubernetes-helm {
       plugins = with kubernetes-helmPlugins; [
