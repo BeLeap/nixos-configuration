@@ -2,7 +2,7 @@
 {
   enable = true;
 
-  package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
+  package = pkgs.wrapFirefox pkgs.firefox-bin-unwrapped {
     extraPolicies = {
       CaptivePortal = false;
       DisableFirefoxStudies = true;
