@@ -14,6 +14,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   system.stateVersion = "23.05";
   networking.hostName = "beleap-thinkpad";
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 4 * 1024;
+    } 
+  ];
   
   nix.settings.experimental-features = ["nix-command" "flakes"];
 }
