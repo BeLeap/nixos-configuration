@@ -95,11 +95,23 @@
             updateInterval = 24 * 60 * 60 * 1000;
             definedAliases = ["@nhm"];
           };
+          "My NixOS" = {
+            urls = [{ template = "https://mynixos.com/search?q={searchTerms}"; }];
+            iconUpdateURL = "https://mynixos.com/icon.svg";
+            updateInterval = 24 * 60 * 60 * 1000;
+            definedAliases = ["@nm"];
+          };
           "GitHub" = {
-            urls = [{ template = "https://github.com//search?q={searchTerms}"; }];
+            urls = [{ template = "https://github.com/search?q={searchTerms}"; }];
             iconUpdateURL = "https://github.githubassets.com/favicons/favicon.svg";
             updateInterval = 24 * 60 * 60 * 1000;
             definedAliases = ["@gh"];
+          };
+          "Naver Dictionary" = {
+            urls = [{ template = "https://dict.naver.com/search?query={searchTerms}"; }];
+            iconUpdateURL = "https://ssl.pstatic.net/dicimg/favicons/dict/v7/home/favicon.ico";
+            updateInterval = 24 * 60 * 60 * 1000;
+            definedAliases = ["@nd"];
           };
         };
       };
