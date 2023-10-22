@@ -60,10 +60,11 @@ return {
       lsp_zero.extend_lspconfig()
 
       lsp_zero.on_attach(function(client, bufnr)
-        -- see :help lsp-zero-keybindings
-        -- to learn the available actions
         lsp_zero.default_keymaps({buffer = bufnr})
+        lsp_zero.buffer_autoformat()
       end)
+
+      require('lspconfig').denols.setup({})
 
       require('mason-lspconfig').setup({
         ensure_installed = {},
