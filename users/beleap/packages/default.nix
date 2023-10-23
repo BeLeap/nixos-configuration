@@ -90,6 +90,7 @@
     tcpdump
     istioctl
     ngrok
+    mitmproxy
   ];
   devops = [
     openvpn

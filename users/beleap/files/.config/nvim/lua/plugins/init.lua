@@ -293,7 +293,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			blacklist = {
-				"~/work/.*",
+				"/home/beleap/work/.*",
 			},
 		},
 	},
