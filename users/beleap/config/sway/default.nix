@@ -6,6 +6,11 @@ let
       lib;
   };
   catppuccin = import ../../../../const/catppuccin.nix;
+  assign-to-scratchpad = [
+    { class = "Youtube Music"; }
+    { class = "Discord"; }
+    { class = "Logseq"; }
+  ];
 in
 rec {
   enable = true;
@@ -46,23 +51,7 @@ rec {
           command = "resize set 900 500";
           criteria = { class = "1Password"; };
         }
-        {
-          command = "move scratchpad";
-          criteria = { class = "YouTube Music"; };
-        }
-        {
-          command = "scratchpad show";
-          criteria = { class = "YouTube Music"; };
-        }
-        {
-          command = "move scratchpad";
-          criteria = { class = "discord"; };
-        }
-        {
-          command = "scratchpad show";
-          criteria = { class = "discord"; };
-        }
-      ];
+      ] ++ lib.lists.flatten (builtins.map (it: [ { command = "move scratchpad"; criteria = it; } { command = "scratchpad show"; criteria = it; } ] ) assign-to-scratchpad);
     };
 
     floating = {
