@@ -61,6 +61,9 @@
     polkit.enable = true;
     rtkit.enable = true;
     pam.services.swaylock = {};
+    pki.certificates = [
+      (builtins.readFile "/home/beleap/.mitmproxy/mitmproxy-ca-cert.pem")
+    ];
   };
 
   services = {
