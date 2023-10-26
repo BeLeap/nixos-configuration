@@ -57,7 +57,11 @@ return {
     config = function()
       -- This is where all the LSP shenanigans will live
       local lsp_zero = require('lsp-zero')
+      lsp.preset('recommended')
       lsp_zero.extend_lspconfig()
+      lsp.configure('tsserver', {
+        single_file_support = false
+      })
 
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({buffer = bufnr})
