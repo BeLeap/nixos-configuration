@@ -401,6 +401,12 @@ return {
 							end,
 							"Symbols",
 						},
+						d = {
+							function()
+								require("telescope.builtin").lsp_definitions()
+							end,
+							"Definitons",
+						},
 					},
 					t = {
 						"<cmd>Telescope tasks specs<cr>",
