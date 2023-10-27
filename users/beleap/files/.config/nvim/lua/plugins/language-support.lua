@@ -90,5 +90,14 @@ return {
 
       lsp_zero.setup()
     end
-  }
+  },
+  {
+    "antosha417/nvim-lsp-file-operations",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-tree.lua",
+    },
+    config = true,
+  },
 }
