@@ -76,11 +76,11 @@
       ];
       search = {
         force = true;
-        default = "Phind";
+        default = "DuckDuckGo";
         engines = {
-          "Phind" = {
-            urls = [{ template = "https://www.phind.com/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://www.phind.com/favicon.ico";
+          "DuckDuckGo" = {
+            urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
+            iconUpdateURL = "https://duckduckgo.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000;
           };
           "Nix Packages" = {
