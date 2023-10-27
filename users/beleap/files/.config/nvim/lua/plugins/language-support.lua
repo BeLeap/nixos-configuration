@@ -57,18 +57,24 @@ return {
     config = function()
       -- This is where all the LSP shenanigans will live
       local lsp_zero = require('lsp-zero')
-      lsp.preset('recommended')
+      lsp_zero.preset('recommended')
       lsp_zero.extend_lspconfig()
-      lsp.configure('tsserver', {
-        single_file_support = false
+      lsp_zero.configure('tsserver', {
+        single_file_support = false,
+        root_dir = require('lspconfig.util').root_pattern('package.json'),
+      })
+      lsp_zero.configure('denols', {
+        single_file_support = false,
+        root_dir = require('lspconfig.util').root_pattern('deno.json'),
       })
 
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({buffer = bufnr})
         lsp_zero.buffer_autoformat()
+        
+        vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, {buffer = bufnr})
+        vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end, {buffer = bufnr})
       end)
-
-      require('lspconfig').denols.setup({})
 
       require('mason-lspconfig').setup({
         ensure_installed = {},
@@ -81,6 +87,8 @@ return {
           end,
         }
       })
+
+      lsp_zero.setup()
     end
   }
 }
