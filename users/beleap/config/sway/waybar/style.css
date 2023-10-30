@@ -51,24 +51,18 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-.modules-left {
-  background-color: @sapphire;
+.modules-left .modules-center .modules-right {
   border-radius: 0 0 16px 16px;
   padding: 0px;
+}
+
+.modules-left .modules-right {
+  background-color: @surface2;
+  color: @text;
 }
 
 .modules-center {
   background-color: @lavender;
-  border-radius: 0 0 16px 16px;
-  margin: 4px;
-  padding: 0px;
-}
-
-.modules-right {
-  background-color: @sapphire;
-  border-radius: 0 0 16px 16px;
-  margin: 4px;
-  padding: 0px;
 }
 
 #window {
