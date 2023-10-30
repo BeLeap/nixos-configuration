@@ -46,7 +46,6 @@
     (helpers.nixGLWrap ((import ../../../pkgs/youtube-music.nix) { inherit pkgs; }))
     keybase-gui
     discord
-    joplin-desktop
     logseq
   ];
   db = [
