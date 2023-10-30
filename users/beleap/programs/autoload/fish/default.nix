@@ -25,6 +25,7 @@
 
     k = "kubectl";
     ktx = "kubectx";
+    kns = "kubens";
     tf = "terraform";
   };
 }
