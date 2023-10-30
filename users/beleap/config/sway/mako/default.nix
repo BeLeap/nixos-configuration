@@ -3,8 +3,8 @@
 
   backgroundColor = "#1e1e2e";
   textColor = "#cdd6f4";
-  borderColor = "#89b4fa";
-  borderRadius = 10;
+  borderColor = "#b4befe";
+  borderRadius = 16;
   progressColor = "over #313244";
   defaultTimeout = 60000;
 
