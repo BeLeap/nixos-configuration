@@ -121,7 +121,9 @@
       id = 0;
       name = "personal";
 
-      settings = common.settings;
+      settings = common.settings // {
+        "extensions.activeThemeID" = "firefox-alpenglow@mozilla.org";
+      };
       userChrome = common.userChrome;
       extensions = common.extensions;
       search = common.search;
