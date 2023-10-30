@@ -37,7 +37,6 @@
     slurp
     wl-clipboard
     tridactyl-native
-    ((import ../../../pkgs/firefox-profile-switcher-connector.nix) { inherit lib pkgs; })
     cliphist
     vlc
     polkit_gnome
