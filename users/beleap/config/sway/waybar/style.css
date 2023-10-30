@@ -54,7 +54,6 @@ window#waybar.hidden {
 .modules-left {
   background-color: @lavender;
   border-radius: 16px;
-  margin: 4px;
   padding: 0px;
 }
 
