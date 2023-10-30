@@ -1,16 +1,20 @@
+let
+  catppuccin = import ../../../../../const/catppuccin.nix;
+in
 {
   enable = true;
 
-  backgroundColor = "#1e1e2e";
-  textColor = "#cdd6f4";
-  borderColor = "#89b4fa";
+  backgroundColor = catppuccin.base;
+  textColor = catppuccin.text;
+  borderColor = catppuccin.lavender;
+  borderSize = 4;
   borderRadius = 10;
-  progressColor = "over #313244";
+  progressColor = "over ${catppuccin.surface0}";
   defaultTimeout = 60000;
 
   extraConfig = ''
     [urgency=high]
-    border-color=#fab387
+    border-color=${catppuccin.peach}
     default-timeout=0
   '';
 }
