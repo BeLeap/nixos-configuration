@@ -133,7 +133,7 @@ window#waybar.hidden {
 	margin-top: 4px;
 	margin-left: 4px;
 	margin-right: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 8px;
+	padding-right: 8px;
 	margin-bottom: 4px;
 }
