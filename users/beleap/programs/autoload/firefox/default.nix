@@ -65,7 +65,6 @@
         #main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs { z-index: 0 !important; }
       '';
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        profile-switcher
         onepassword-password-manager
         tridactyl
         refined-github
