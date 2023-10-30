@@ -22,7 +22,7 @@
     };
     kubernetes = {
       disabled = false;
-      format = "\\[[$symbol($context)]($style)\\]";
+      format = "\\[[$symbol($context\\($namespace\\))]($style)\\]";
       symbol = "󰻈 ";
     };
     terraform = {
