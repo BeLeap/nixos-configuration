@@ -1,7 +1,5 @@
 let
-  thisFile = ./.;
-  basePath = builtins.dirOf thisFile;
-  catppuccin = import "${basePath}/const/catppuccin.nix";
+  catppuccin = import ../../../../../const/catppuccin.nix;
 in
 {
   enable = true;
