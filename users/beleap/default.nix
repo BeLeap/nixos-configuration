@@ -11,6 +11,9 @@ home-manager.lib.homeManagerConfiguration {
         config = {
           allowUnfree = true;
           allowUnfreePredicate = (_: true);
+          permittedInsecurePackages = [
+            "electron-24.8.6"
+          ];
           packageOverrides = pkgs: {
             nur = import (builtins.fetchTarball {
               url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
