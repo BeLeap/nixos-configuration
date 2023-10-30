@@ -45,7 +45,6 @@ in
     inputMethod = {
       enabled = "kime";
       kime.config = {
-        indicator.icon_color = "White";
         engine = {
           hangul = {
             layout = "sebeolsik-3-90";
