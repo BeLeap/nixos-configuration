@@ -33,7 +33,8 @@
       threshold = -1;
       format = "\\[$symbol[$ram_pct]($style)\\]";
       symbol = "󰍛 ";
-    };  aws = {
+    };
+    aws = {
       format = "\\[[$symbol($profile)(\\($region\\))(\\[$duration\\])]($style)\\]";
     };
     bun = {
