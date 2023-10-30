@@ -78,9 +78,10 @@ window#waybar.hidden {
 }
 
 #workspaces {
-	margin-top: 8px;
-	margin-left: 12px;
-	margin-bottom: 8px;
+	margin-top: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-bottom: 4px;
 	border-radius: 26px;
 	transition: none;
 }
