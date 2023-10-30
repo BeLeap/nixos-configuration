@@ -21,7 +21,7 @@
   outputs = inputs@{ home-manager, nixpkgs, ... }:
     let
       overlays = [
-        inputs.neovim-nightly-overlay.overlay
+        # inputs.neovim-nightly-overlay.overlay
         inputs.nixgl.overlay
       ];
     in
