@@ -10,7 +10,7 @@ in
   borderSize = 4;
   borderRadius = 10;
   progressColor = "over ${catppuccin.surface0}";
-  defaultTimeout = 60000;
+  defaultTimeout = 30000;
 
   extraConfig = ''
     [urgency=high]
