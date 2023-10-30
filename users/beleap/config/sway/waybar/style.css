@@ -52,7 +52,7 @@ window#waybar.hidden {
 }
 
 .modules-left {
-  background-color: @lavender;
+  background-color: @sapphire;
   border-radius: 0 0 16px 16px;
   padding: 0px;
 }
@@ -65,7 +65,7 @@ window#waybar.hidden {
 }
 
 .modules-right {
-  background-color: @lavender;
+  background-color: @sapphire;
   border-radius: 0 0 16px 16px;
   margin: 4px;
   padding: 0px;
