@@ -53,20 +53,20 @@ window#waybar.hidden {
 
 .modules-left {
   background-color: @lavender;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
   padding: 0px;
 }
 
 .modules-center {
   background-color: @lavender;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
   margin: 4px;
   padding: 0px;
 }
 
 .modules-right {
   background-color: @lavender;
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
   margin: 4px;
   padding: 0px;
 }
