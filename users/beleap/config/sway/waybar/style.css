@@ -43,12 +43,33 @@
 	font-size: 14px;
 	min-height: 24px;
 	padding: .5px;
-	color: @text;
-	background: @base;
+	color: @base;
+	background: transparent;
 }
 
 window#waybar.hidden {
 	opacity: 0.2;
+}
+
+.modules-left {
+  background-color: @lavender;
+  border-radius: 16px;
+  margin: 4px;
+  padding: 0px;
+}
+
+.modules-center {
+  background-color: @lavender;
+  border-radius: 16px;
+  margin: 4px;
+  padding: 0px;
+}
+
+.modules-right {
+  background-color: @lavender;
+  border-radius: 16px;
+  margin: 4px;
+  padding: 0px;
 }
 
 #window {
@@ -92,7 +113,7 @@ window#waybar.hidden {
 	color: @red;
 }
 
-#mipris,
+#mpris,
 #backlight,
 #battery,
 #clock,
