@@ -2,9 +2,6 @@
   description = "BeLeap Personal NixOS Configuration";
 
   inputs = {
-    master.url = "github:NixOS/nixpkgs/master";
-    nixpkgs.follows = "master";
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

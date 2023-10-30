@@ -2,7 +2,6 @@
 {
   tui = [
     nix-prefetch-git
-    neovim-nightly
     hexyl
     sshpass
     man

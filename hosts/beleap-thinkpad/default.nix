@@ -1,4 +1,4 @@
-{ nixpkgs, inputs, overlays }:
+{ nixpkgs, overlays, ... }:
 
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
