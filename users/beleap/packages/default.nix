@@ -20,7 +20,6 @@
     unzip
     gitAndTools.gh
     playerctl
-    _1password
     wally-cli
     greetd.tuigreet
     killall
