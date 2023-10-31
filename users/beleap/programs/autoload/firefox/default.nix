@@ -2,7 +2,7 @@
 {
   enable = true;
 
-  package = pkgs.wrapFirefox pkgs.firefox-bin-unwrapped {
+  package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
     extraPolicies = {
       CaptivePortal = false;
       DisableFirefoxStudies = true;
@@ -25,11 +25,11 @@
         SkipOnboarding = true;
       };
     };
+    cfg = {
+      enableGnomeExtensions = true;
+      enableTridactylNative = true;
+    };
   };
-  
-  nativeMessagingHosts = with pkgs.nur.repos.rycee.firefox-addons; [
-    tridactyl
-  ];
 
   profiles = 
   let
