@@ -20,6 +20,11 @@
           status = "enable";
           scale = 1.5;
         }
+        {
+          criteria = "WAM V28UE demoset-1";
+          status = "enable";
+          scale = 1.5;
+        }
       ];
     };
   };
