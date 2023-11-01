@@ -102,13 +102,15 @@
       configDir = "/home/beleap/Documents/.config/syncthing";
       overrideDevices = true;
       overrideFolders = true;
-      devices = deviceListExceptSelf;    
-      folders = {
-        "Logseq" = {
-          path = "/home/beleap/Documents/Logseq";
-          devices = deviceNameListExceptSelf;
+      settings = {
+        devices = deviceListExceptSelf;    
+        folders = {
+          "Logseq" = {
+            path = "/home/beleap/Documents/Logseq";
+            devices = deviceNameListExceptSelf;
+          };
         };
-    };
+      };
     };
   };
 
