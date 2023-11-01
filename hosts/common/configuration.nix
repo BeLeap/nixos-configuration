@@ -106,6 +106,7 @@
         devices = deviceListExceptSelf;    
         folders = {
           "Logseq" = {
+            id = "mrhmh-rqtyz";
             path = "/home/beleap/Documents/Logseq";
             devices = deviceNameListExceptSelf;
           };
