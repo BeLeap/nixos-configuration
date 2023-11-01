@@ -1,6 +1,5 @@
 { config, pkgs, specialArgs, ... }:
-
-{
+rec {
   imports =
     [
       ./hardware-configuration.nix
@@ -8,6 +7,7 @@
         inherit pkgs; 
         overlays = specialArgs.overlays;
         lib = pkgs.lib;
+        hostname = networking.hostName;
       })
     ];
     
