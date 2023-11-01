@@ -2,7 +2,7 @@
 {
   enable = true;
 
-  package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
+  package = pkgs.firefox.override {
     extraPolicies = {
       CaptivePortal = false;
       DisableFirefoxStudies = true;
@@ -25,9 +25,11 @@
         SkipOnboarding = true;
       };
     };
-    nativeMessagingHosts = with pkgs.nur.repos.rycee.firefox-addons; [
-      tridactyl
-    ];
+    nativeMessagingHosts = {
+      packages = with pkgs; [
+        tridactyl-native
+      ];
+    };
   };
 
   profiles = 
