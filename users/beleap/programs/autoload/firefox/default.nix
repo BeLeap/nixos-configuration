@@ -25,11 +25,11 @@
         SkipOnboarding = true;
       };
     };
-    nativeMessagingHosts = {
-      packages = with pkgs; [
-        tridactyl-native
-      ];
-    };
+    # nativeMessagingHosts = {
+    #   packages = with pkgs; [
+    #     tridactyl-native
+    #   ];
+    # };
   };
 
   profiles = 
