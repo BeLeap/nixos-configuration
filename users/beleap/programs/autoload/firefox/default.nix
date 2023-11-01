@@ -25,10 +25,9 @@
         SkipOnboarding = true;
       };
     };
-    cfg = {
-      enableGnomeExtensions = true;
-      enableTridactylNative = true;
-    };
+    nativeMessagingHosts = with pkgs.nur.repos.rycee.firefox-addons; [
+      tridactyl
+    ];
   };
 
   profiles = 
