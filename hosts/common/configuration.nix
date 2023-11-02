@@ -84,35 +84,6 @@
         };
       };
     };
-
-    syncthing = 
-    let
-      deviceList = {
-        "beleap-xps-9510" = { id = "ZKRXHYB-AD73BRK-E3QVAW7-EZ2ZYGY-RNGVUC3-BW6Y6GB-XNV2QM4-KIBOKAB"; };
-        "beleap-thinkpad" = { id = "ODOR4CS-P4X7FGR-6MRFBH4-DT4O2LE-Q22OTUF-2A2Z7CA-PXVYMZD-WPTZDAY"; };
-        "beleap-z-fold-4" = { id = "SY2FU6D-LRQURM2-EML4HUJ-KBPBPOH-3ENSLPL-2EKRZSU-7YSYCWH-VVBR6QX"; };
-      };
-      deviceListExceptSelf = (lib.attrsets.filterAttrs (n: v: n != hostname) deviceList);
-      deviceNameListExceptSelf = (lib.attrsets.foldlAttrs (acc: k: _: acc ++ [k]) [] deviceListExceptSelf);
-    in
-    {
-      enable = true;
-      user = "beleap";
-      dataDir = "/home/beleap/Documents";
-      configDir = "/home/beleap/Documents/.config/syncthing";
-      overrideDevices = true;
-      overrideFolders = true;
-      settings = {
-        devices = deviceListExceptSelf;    
-        folders = {
-          "Logseq" = {
-            id = "mrhmh-rqtyz";
-            path = "/home/beleap/Documents/Logseq";
-            devices = deviceNameListExceptSelf;
-          };
-        };
-      };
-    };
   };
 
   xdg = {
