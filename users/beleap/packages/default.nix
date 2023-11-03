@@ -12,6 +12,7 @@
     gdb
     file
     yq
+    jq
     lsd
     fd
     ripgrep
