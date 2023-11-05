@@ -61,7 +61,11 @@
     pam.services.swaylock = {};
   };
 
+
+  systemd.services.tailscaled.wantedBy = lib.mkForce [];
   services = {
+    tailscale.enable = true;
+    
     printing.enable = true;
     avahi = {
       enable = true;
