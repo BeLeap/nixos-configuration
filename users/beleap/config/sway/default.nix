@@ -45,6 +45,7 @@ rec {
       "${config.modifier}+t" = "layout stacking";
       "${config.modifier}+s" = null;
       "${config.modifier}+w" = null;
+      "${config.modifier}+Up" = "sticky toggle";
     };
 
     window = {
