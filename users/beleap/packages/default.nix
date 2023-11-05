@@ -46,6 +46,7 @@
     keybase-gui
     discord
     logseq
+    calibre
   ];
   db = [
     postgresql_15
