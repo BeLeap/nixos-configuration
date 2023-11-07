@@ -2,7 +2,7 @@
   enable = true;
   settings = {
     # color = "1e1e2e";
-    image = "/home/beleap/.background.png";
+    image = "/home/beleap/.background";
 
     line-color = "6c7086";
     text-color = "cdd6f4";
