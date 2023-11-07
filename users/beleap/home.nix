@@ -128,7 +128,7 @@ in
           let
             currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
           in
-          lib.trivial.mergeAttrs { "${currRelative}".text = builtins.readFile(curr); } acc
+          lib.trivial.mergeAttrs { "${currRelative}".source = curr; } acc
         );
         initialVal = {};
         root = autoloadRoot;
