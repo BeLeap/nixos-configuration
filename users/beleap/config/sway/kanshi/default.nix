@@ -31,7 +31,7 @@
         {
           criteria = "LG Electronics LG ULTRAFINE 111NTNHBH783";
           status = "enable";
-          scale = 2.0;
+          scale = 1.5;
         }
       ];
     };
