@@ -99,5 +99,11 @@
       ];
     };
   };
+
+  security = {
+    sudo = {
+      wheelNeedsPassword = false;
+    };
+  };
 }
 
