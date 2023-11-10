@@ -71,7 +71,7 @@
         sidebery
         i-dont-care-about-cookies
         auto-tab-discard
-        omnivore
+        # omnivore
       ];
       search = {
         force = true;
