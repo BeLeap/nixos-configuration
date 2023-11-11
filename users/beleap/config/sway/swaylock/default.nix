@@ -1,8 +1,8 @@
 {
   enable = true;
   settings = {
-    # color = "1e1e2e";
     image = "/home/beleap/.background";
+    # color = "1e1e2e";
 
     line-color = "6c7086";
     text-color = "cdd6f4";
