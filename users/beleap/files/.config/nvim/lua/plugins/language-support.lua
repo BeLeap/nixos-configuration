@@ -113,7 +113,9 @@ return {
               command = {"bash"}
             }
           },
-          repl_open_cmd = require("iron.view").bottom(30),
+          repl_open_cmd = require('iron.view').right(function()
+              return vim.o.columns / 2
+          end),
         },
         keymaps = {
           send_motion = "<space>sc",
