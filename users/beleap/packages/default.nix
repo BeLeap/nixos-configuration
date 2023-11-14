@@ -72,6 +72,7 @@
       huggingface-hub
       jupyterlab
       jupyter
+      bash-kernel
     ]))
     tree-sitter
     jdk
