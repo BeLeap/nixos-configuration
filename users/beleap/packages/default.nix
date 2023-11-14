@@ -67,12 +67,11 @@
     evcxr
     ghc
     haskell-language-server
-    (python310.withPackages (ps: with ps; [
+    (python311.withPackages (ps: with ps; [
       pip
       huggingface-hub
       jupyterlab
       jupyter
-      bash_kernel
     ]))
     tree-sitter
     jdk
