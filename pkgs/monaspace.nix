@@ -5,24 +5,20 @@ stdenv.mkDerivation rec {
   name = "Monaspace";
   version = "1.000";
 
-  phases = [ "unpackPhase" "installPhase" ];
+  phases = [ "installPhase" ];
 
   src = (fetchurl {
-    url = "https://raw.githubusercontent.com/githubnext/monaspace/main/fonts/variable/MonaspaceNeonVarVF[wght,wdth,slnt].ttf";
+    url = "https://github.com/githubnext/monaspace/raw/main/fonts/variable/MonaspaceNeonVarVF%5Bwght,wdth,slnt%5D.ttf";
     name = "Monaspce.ttf";
-    sha256 = "";
+    hash = "sha256-jXoi38+3d6MmQU9uQocTdBUiVcLNBJWpxtm2YT1/Da8=";
   });
 
-  unpackPhase = ''
-    cp $src .
-  '';
-
   installPhase = ''
-     install -Dm644 Monaspace.ttf $out/share/fonts/truetype/Monospace.ttf
+     install -Dm644 $src $out/share/fonts/truetype/Monaspace.ttf
   '';
 
   meta = with lib; {
-    description = "Nanum Gothic Coding";
+    description = "Monaspace";
     license = licenses.ofl;
     platforms = platforms.all;
   };
