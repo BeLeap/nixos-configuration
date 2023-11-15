@@ -126,7 +126,7 @@
           "mpv" = "🎵";
         };
         "status-icons" = {
-          "paused" = "⏸";
+          "paused" = " ";
         };
         "on-click" = "playerctl play-pause";
       };
