@@ -9,12 +9,12 @@ stdenv.mkDerivation rec {
 
   src = (fetchurl {
     url = "https://github.com/githubnext/monaspace/raw/main/fonts/variable/MonaspaceNeonVarVF%5Bwght,wdth,slnt%5D.ttf";
-    name = "Monaspce.ttf";
+    name = "MonaspceNeonVar.ttf";
     hash = "sha256-jXoi38+3d6MmQU9uQocTdBUiVcLNBJWpxtm2YT1/Da8=";
   });
 
   installPhase = ''
-     install -Dm644 $src $out/share/fonts/truetype/Monaspace.ttf
+     install -Dm644 $src $out/share/fonts/truetype/MonaspaceNeonVar.ttf
   '';
 
   meta = with lib; {
