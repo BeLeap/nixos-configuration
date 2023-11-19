@@ -9,11 +9,11 @@ vim.keymap.set("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { expr 
 vim.keymap.set("n", "<leader>u", "<esc>:undo<cr>", { silent = true, desc = "Undo" })
 
 vim.keymap.set("n", "<M-h>", "<C-w>h", { desc = "Move focus to left" })
-vim.keymap.set("n", "<M-j>", "<C-w>j", { desc = "Move focus to down" })
-vim.keymap.set("n", "<M-k>", "<C-w>k", { desc = "Move focus to up" })
-vim.keymap.set("n", "<M-l>", "<C-w>l", { desc = "Move focus to right" })
+vim.keymap.set("n", "<M-n>", "<C-w>j", { desc = "Move focus to down" })
+vim.keymap.set("n", "<M-e>", "<C-w>k", { desc = "Move focus to up" })
+vim.keymap.set("n", "<M-i>", "<C-w>l", { desc = "Move focus to right" })
 
-vim.keymap.set("n", "<leader>h", "h")
-vim.keymap.set("n", "<leader>n", "j")
-vim.keymap.set("n", "<leader>e", "k")
-vim.keymap.set("n", "<leader>i", "l")
+vim.keymap.set("n", "H", "h")
+vim.keymap.set("n", "N", "j")
+vim.keymap.set("n", "E", "k")
+vim.keymap.set("n", "I", "l")
