@@ -129,6 +129,8 @@ rec {
 
   extraConfig = ''
     input type:keyboard {
+      xkb_layout us
+      xkb_variant colemak
       xkb_options "ctrl:nocaps,korean:ralt_hangul"
     }
 
