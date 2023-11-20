@@ -276,10 +276,6 @@ return {
 		event = { "BufEnter" },
 	},
 	{
-		"mg979/vim-visual-multi",
-		event = { "BufEnter" },
-	},
-	{
 		"wakatime/vim-wakatime",
 		event = { "BufEnter" },
 	},

@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 return {
-  font = wezterm.font_with_fallback({ "Monaspace NF", "Monaspace Neon Var" }),
+  font = wezterm.font_with_fallback({ "Monaspace Neon Var", "Monaspace Neon Var" }),
   font_size = 14.0,
   color_scheme = "Catppuccin Mocha",
   enable_tab_bar = false,
