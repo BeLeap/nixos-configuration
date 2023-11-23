@@ -64,15 +64,6 @@
         /* Hidden state: Fix z-index of active pinned tabs */
         #main-window[titlepreface*="[Sidebery]"] #tabbrowser-tabs { z-index: 0 !important; }
       '';
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        onepassword-password-manager
-        tridactyl
-        refined-github
-        sidebery
-        i-dont-care-about-cookies
-        auto-tab-discard
-        # omnivore
-      ];
       search = {
         force = true;
         default = "DuckDuckGo";
@@ -125,7 +116,6 @@
         "extensions.activeThemeID" = "firefox-alpenglow@mozilla.org";
       };
       userChrome = common.userChrome;
-      extensions = common.extensions;
       search = common.search;
       isDefault = true;
 
@@ -137,7 +127,6 @@
 
       settings = common.settings;
       userChrome = common.userChrome;
-      extensions = common.extensions;
       search = common.search;
 
       bookmarks = [
