@@ -1,6 +1,9 @@
 local wezterm = require("wezterm")
 return {
-  font = wezterm.font_with_fallback({ "Monaspace Neon Var", "Monaspace Neon Var" }),
+  font = wezterm.font {
+    family = "Monaspace Neon Var",
+    harfbuzz_features = { "calt", "liga", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08" },
+  },
   font_size = 14.0,
   color_scheme = "Catppuccin Mocha",
   enable_tab_bar = false,
