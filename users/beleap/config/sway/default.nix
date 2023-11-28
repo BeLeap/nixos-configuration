@@ -71,7 +71,7 @@ rec {
 
     startup = [
       { command = "wezterm"; }
-      { command = "firefox"; }
+      { command = "firefox -P personal"; }
       { command = "firefox -P work"; }
       { command = "1password &"; }
       { command = "swaybg --color \"#1e1e2e\""; always = true; }
