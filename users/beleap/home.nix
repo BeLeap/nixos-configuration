@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, hostname, ... }:
 let
   helpers = import ./helpers.nix { inherit pkgs lib; };
   username = "beleap";
@@ -23,7 +23,7 @@ in
     waybar = (import ./config/sway/waybar);
     wofi = (import ./config/sway/wofi);
     swaylock = (import ./config/sway/swaylock);
-  } ((import ./programs) { inherit pkgs lib; });
+  } ((import ./programs) { inherit pkgs lib hostname; });
 
   services = {
     mako = (import ./config/sway/mako);
@@ -82,7 +82,7 @@ in
     desktopEntries = {
       firefox = {
         name = "Firefox";
-        exec = "firefox %U";
+        exec = "firefox %U -P personal";
         terminal = false;
       };
       firefox-work = {

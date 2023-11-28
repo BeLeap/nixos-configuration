@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, hostname, ... }:
 {
   enable = true;
 
@@ -34,6 +34,7 @@
 
   profiles = 
   let
+    isWork = hostname == "beleap-thinkpad";
     common = {
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
@@ -117,7 +118,7 @@
       };
       userChrome = common.userChrome;
       search = common.search;
-      isDefault = true;
+      isDefault = !isWork;
 
       bookmarks = [];
     };
@@ -128,6 +129,7 @@
       settings = common.settings;
       userChrome = common.userChrome;
       search = common.search;
+      isDefault = isWork;
 
       bookmarks = [
         {

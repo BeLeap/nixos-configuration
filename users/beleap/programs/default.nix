@@ -1,4 +1,4 @@
-{ pkgs, lib }:
+{ pkgs, lib, hostname }:
 let
   helpers = import ../helpers.nix { inherit pkgs lib; };
   autoloadRoot = (./. + "/autoload");
@@ -16,7 +16,7 @@ let
           let
             currName = builtins.elemAt currComponents (currComponentsLength - 2);
           in
-          lib.trivial.mergeAttrs { "${currName}" = ((import currAbsolute) { inherit pkgs lib; }); } acc
+          lib.trivial.mergeAttrs { "${currName}" = ((import currAbsolute) { inherit pkgs lib hostname; }); } acc
         else
           acc
   );

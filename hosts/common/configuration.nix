@@ -32,7 +32,7 @@
     packages = with pkgs; [];
   };
   home-manager.users.beleap = import ../../users/beleap/home.nix {
-    inherit pkgs lib;
+    inherit pkgs lib hostname;
   };
 
   environment.systemPackages = with pkgs; [
