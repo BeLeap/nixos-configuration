@@ -1,35 +1,29 @@
-{ pkgs, hostname, ... }:
+{ hostname, ... }:
 {
   enable = true;
 
-  package = pkgs.firefox.override {
-    extraPolicies = {
-      CaptivePortal = false;
-      DisableFirefoxStudies = true;
-      DisablePocket = true;
-      DisableTelemetry = true;
-      DisableFirefoxAccounts = false;
-      NoDefaultBookmarks = true;
-      OfferToSaveLogins = false;
-      OfferToSaveLoginsDefault = false;
-      PasswordManagerEnabled = false;
-      FirefoxHome = {
-        Search = true;
-        Pocket = false;
-        Snippets = false;
-        TopSites = false;
-        Highlights = false;
-      };
-      UserMessaging = {
-        ExtensionRecommendations = false;
-        SkipOnboarding = true;
-      };
+  policies = {
+    DontCheckDefaultBrowser = true;
+    CaptivePortal = false;
+    DisableFirefoxStudies = true;
+    DisablePocket = true;
+    DisableTelemetry = true;
+    DisableFirefoxAccounts = false;
+    NoDefaultBookmarks = true;
+    OfferToSaveLogins = false;
+    OfferToSaveLoginsDefault = false;
+    PasswordManagerEnabled = false;
+    FirefoxHome = {
+      Search = true;
+      Pocket = false;
+      Snippets = false;
+      TopSites = false;
+      Highlights = false;
     };
-    # nativeMessagingHosts = {
-    #   packages = with pkgs; [
-    #     tridactyl-native
-    #   ];
-    # };
+    UserMessaging = {
+      ExtensionRecommendations = false;
+      SkipOnboarding = true;
+    };
   };
 
   profiles = 
