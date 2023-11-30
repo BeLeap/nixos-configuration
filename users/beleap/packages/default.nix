@@ -89,6 +89,7 @@
     istioctl
     ngrok
     mitmproxy
+    nmap
   ];
   devops = [
     openvpn
