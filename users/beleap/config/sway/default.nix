@@ -34,7 +34,7 @@ rec {
     menu = "wofi --show drun -p 'Select application...' | xargs swaymsg exec -- ";
     keybindings = lib.mkOptionDefault {
       "${config.modifier}+r" = "exec ${config.menu}";
-      "${config.modifier}+q" = "exec bash ~/.scripts/lock.sh";
+      "${config.modifier}+q" = "exec killall -s SIGUSR1 swayidle && killall -s SIGUSR1 swayidle";
       "${config.modifier}+Shift+r" = "mode resize";
       "${config.modifier}+e" = "exec nautilus";
       "${config.modifier}+Ctrl+s" = "exec grim - | wl-copy";
@@ -80,7 +80,7 @@ rec {
       { command = "sworkstyle"; }
       { command = "kime"; }
       { command = "wl-paste --watch cliphist store"; }
-      { command = "swayidle -w timeout 600 'swaylock -f' timeout 610 'swaymsg \"output \\\"*\\\" power off\"' resume 'swaymsg \"output \\\"*\\\" power on\"'"; }
+      { command = "bash /home/beleap/.scripts/idle.sh"; }
     ];
 
     colors = {
