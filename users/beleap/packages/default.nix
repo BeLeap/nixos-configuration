@@ -28,6 +28,7 @@
   gui = [
     (_1password-gui.overrideAttrs { polkitPolicyOwners = [ "wheel" ]; })
     swaybg
+    swayidle
     blueman
     pavucontrol
     gnome.nautilus

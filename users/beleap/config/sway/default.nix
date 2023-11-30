@@ -80,6 +80,7 @@ rec {
       { command = "sworkstyle"; }
       { command = "kime"; }
       { command = "wl-paste --watch cliphist store"; }
+      { command = "swayidle -w timeout 600 'swaylock -f' timeout 610 'swaymsg \"output \\\"*\\\" power off\"' resume 'swaymsg \"output \\\"*\\\" power on\"'"; }
     ];
 
     colors = {
