@@ -10,7 +10,7 @@ in
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
       XDG_CURRENT_DESKTOP = "sway"; 
-      EDITOR = "nvim";
+      EDITOR = "nvim --cmd 'let g:flatten_wait=1'";
     };
     packages = lib.lists.flatten (lib.attrsets.attrValues ((import ./packages){ inherit pkgs lib; })) ;
 
