@@ -46,7 +46,7 @@
     (helpers.nixGLWrap ((import ../../../pkgs/youtube-music.nix) { inherit pkgs; }))
     keybase-gui
     discord
-    logseq
+    (helpers.nixGLWrap (logseq))
     calibre
   ];
   db = [
