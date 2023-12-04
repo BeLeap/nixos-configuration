@@ -54,12 +54,6 @@ rec {
       commands = [] ++ lib.lists.flatten (builtins.map (it: [ { command = "move scratchpad"; criteria = it; } { command = "scratchpad show"; criteria = it; } ] ) assign-to-scratchpad);
     };
 
-    floating = {
-      criteria = [
-        { class = "1Password"; }
-      ];
-    };
-
     assigns = {
       "number 1" = [{ app_id = "org.wezfurlong.wezterm"; }];
       "number 2" = [{ app_id = "firefox"; }];
