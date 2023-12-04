@@ -9,7 +9,7 @@ let
   assign-to-scratchpad = [
     { class = "1Password"; }
     { class = "Youtube Music"; }
-    { class = "Discord"; }
+    { class = "discord"; }
     { class = "Logseq"; }
   ];
 in
