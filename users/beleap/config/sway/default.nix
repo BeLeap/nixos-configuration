@@ -7,6 +7,7 @@ let
   };
   catppuccin = import ../../../../const/catppuccin.nix;
   assign-to-scratchpad = [
+    { class = "1Password"; }
     { class = "Youtube Music"; }
     { class = "Discord"; }
     { class = "Logseq"; }
@@ -50,12 +51,7 @@ rec {
 
     window = {
       border = 4;
-      commands = [
-        {
-          command = "resize set 900 500";
-          criteria = { class = "1Password"; };
-        }
-      ] ++ lib.lists.flatten (builtins.map (it: [ { command = "move scratchpad"; criteria = it; } { command = "scratchpad show"; criteria = it; } ] ) assign-to-scratchpad);
+      commands = [] ++ lib.lists.flatten (builtins.map (it: [ { command = "move scratchpad"; criteria = it; } { command = "scratchpad show"; criteria = it; } ] ) assign-to-scratchpad);
     };
 
     floating = {
