@@ -118,7 +118,6 @@
     noto-fonts-monochrome-emoji
     (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
     ((import ../../../pkgs/nanum-gothic-coding.nix) { inherit lib pkgs; })
-    ((import ../../../pkgs/monaspace.nix) { inherit lib pkgs; })
     pretendard
   ];
 }

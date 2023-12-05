@@ -119,25 +119,6 @@
   
   fonts.fontconfig = {
     enable = true;
-    localConf = ''
-      <?xml version="1.0"?>
-      <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
-      <fontconfig>
-        <match target="font">
-          <edit name="autohint" mode="assign">
-            <bool>true</bool>
-          </edit>
-        </match>
-        <alias>
-          <family>Monaspace NF</family>
-          <prefer>
-            <family>Monaspace Neon Var</family>
-            <family>Caskaydia Cove Nerd Font</family>
-            <family>Noto Color Emoji</family>
-          </prefer>
-        </alias>
-      </fontconfig>
-    '';
   };
 
 }
