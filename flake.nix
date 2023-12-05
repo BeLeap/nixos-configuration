@@ -12,14 +12,11 @@
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
     nixgl.url = "github:guibou/nixGL";
-
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = inputs@{ home-manager, nixpkgs, ... }:
     let
       overlays = [
-        # inputs.neovim-nightly-overlay.overlay
         inputs.nixgl.overlay
       ];
     in
