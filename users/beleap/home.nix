@@ -115,6 +115,11 @@ in
         exec = "vlc -LZ /home/beleap/Music";
         terminal = false;
       };
+      nextMusic = {
+        name = "Next Music";
+        exec = "playerctl next";
+        terminal = false;
+      };
     };
   };
 
