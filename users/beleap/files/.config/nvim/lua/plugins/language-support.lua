@@ -146,4 +146,14 @@ return {
       -- options
     },
   },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      filetypes = {
+        ["*"] = true,
+      },
+    },
+  },
 }
