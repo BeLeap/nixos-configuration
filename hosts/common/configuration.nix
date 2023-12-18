@@ -3,6 +3,12 @@
   imports = [
     <home-manager/nixos>
   ];
+
+  system = {
+    autoUpgrade = {
+      channel = "https://nixos.org/channels/nixos-unstable";
+    };
+  };
   
   nixpkgs = {
     inherit overlays;
