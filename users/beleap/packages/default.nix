@@ -112,6 +112,8 @@
     kubectx
     kubectl-node-shell
     adoptopenjdk-icedtea-web
+    gnupg
+    pinentry
   ];
   fonts = [
     noto-fonts-cjk-serif
