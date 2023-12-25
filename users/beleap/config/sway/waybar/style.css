@@ -41,8 +41,7 @@
 	border-radius: 0;
 	font-family: Caskaydia Cove Nerd Font, NanumGothicCoding;
 	font-size: 14px;
-	min-height: 24px;
-	padding: .5px;
+	min-height: 14px;
 	background: transparent;
 }
 
@@ -51,19 +50,19 @@ window#waybar.hidden {
 }
 
 .modules-left {
-  border-radius: 0 0 16px 0;
+  border-radius: 0 0 10px 0;
   background-color: @surface0;
   color: @text;
 }
 
 .modules-right {
-  border-radius: 0 0 0 16px;
+  border-radius: 0 0 0 10px;
   background-color: @surface0;
   color: @text;
 }
 
 .modules-center {
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 10px 10px;
   background-color: @lavender;
   color: @base;
 }
@@ -71,8 +70,8 @@ window#waybar.hidden {
 #window {
 	margin-top: 8px;
 	margin-bottom: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
 	transition: none;
 	font-weight: bold;
 }
@@ -92,7 +91,6 @@ window#waybar.hidden {
 	margin-right: 5px;
 	color: @overlay0;
 	background: transparent;
-	font-size: 16px;
 }
 
 #workspaces button.focused {
