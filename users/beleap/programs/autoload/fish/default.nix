@@ -4,6 +4,10 @@
 
   interactiveShellInit = ''
     fish_vi_key_bindings
+
+    if test -f ~/.credentials.fish
+      source ~/.credentials.fish
+    end
   '';
 
   shellAliases = {
