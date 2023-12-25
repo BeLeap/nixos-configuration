@@ -11,7 +11,7 @@ if vim.env.GEMINI_API_KEY then
           command = 'git',
           args = { 'diff', '--cached' },
           on_stdout = function(_, data)
-            diff = diff .. data
+            diff = diff .. "\n" .. data
           end,
         }):sync()
 

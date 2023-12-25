@@ -16,6 +16,7 @@
 
   difftastic = {
     enable = true;
+    display = "inline";
   };
 
   ignores = [
