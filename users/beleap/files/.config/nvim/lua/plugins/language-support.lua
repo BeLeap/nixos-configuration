@@ -75,16 +75,14 @@ return {
         vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, {buffer = bufnr})
         vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end, {buffer = bufnr})
       end)
+    
+      local lua_opts = lsp_zero.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
 
       require('mason-lspconfig').setup({
         ensure_installed = {},
         handlers = {
           lsp_zero.default_setup,
-          lua_ls = function()
-            -- (Optional) Configure lua language server for neovim
-            local lua_opts = lsp_zero.nvim_lua_ls()
-            require('lspconfig').lua_ls.setup(lua_opts)
-          end,
         }
       })
 
