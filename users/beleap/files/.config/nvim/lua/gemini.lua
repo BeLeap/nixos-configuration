@@ -21,7 +21,8 @@ if vim.env.GEMINI_API_KEY then
               {
                 parts = {
                   {
-                    text = "Write commit message in one line for following changes." .. "\n" .. diff
+                    text = "Write a commit message that accurately summarizes the code changes in following diff\n" ..
+                        diff
                   }
                 }
               }
@@ -41,7 +42,7 @@ if vim.env.GEMINI_API_KEY then
         )
 
         local response = vim.json.decode(res.body).candidates[1].content.parts[1].text
-        vim.api.nvim_buf_set_lines(ev.buf, 0, 0, true, { response })
+        vim.api.nvim_buf_set_lines(ev.buf, 0, 0, true, vim.split(response, "\n"))
       end, {})
     end,
   })
