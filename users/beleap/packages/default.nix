@@ -77,6 +77,7 @@
     ]))
     tree-sitter
     jdk
+    lua-language-server
   ];
   network = [
     croc
