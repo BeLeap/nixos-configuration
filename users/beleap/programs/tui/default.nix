@@ -46,6 +46,11 @@
   };
   neovim = { pkgs }:
   {
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter
+      nvim-treesitter.withAllGrammars 
+    ];
+    
     enable = true;
 
     viAlias = true;
