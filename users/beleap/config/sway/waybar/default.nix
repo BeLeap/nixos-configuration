@@ -44,6 +44,10 @@
       "sway/window" = {
         "format" = "{app_id} / {title}";
         "separate-outputs" = true;
+        "rewrite" = {
+          "(.*) \\[Sidebery\\] (.*)" = "$1 $2";
+          "org.wezfurlong.wezterm (.*)" = "wezterm $1";
+        };
       };
       "pulseaudio" = {
         "format" = "{icon} {volume}% {format_source}";
