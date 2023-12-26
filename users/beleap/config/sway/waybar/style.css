@@ -76,14 +76,12 @@ window#waybar.hidden {
 
 #window {
   margin: 8px 0;
-  transition: none;
   font-weight: bold;
 }
 
 #workspaces {
   margin: 4px 0;
   border-radius: 26px;
-  transition: none;
 }
 
 #workspaces button {
@@ -98,7 +96,6 @@ window#waybar.hidden {
 }
 
 #workspaces button:hover {
-  transition: none;
   box-shadow: inherit;
   text-shadow: inherit;
   color: @subtext0;
