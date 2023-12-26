@@ -1,17 +1,48 @@
 [defaults]
-format = "{time}\n"
+format = "{name}: {time}\n"
+loop_on_end = true
 
 [[sessions]]
-id = "work"
-name = "Work"
+id = "work-1"
+name = "Work 1"
 duration = "25m"
 command = "notify-send 'Work Done!'"
 
 [[sessions]]
-id = "rest"
-name = "Rest"
+id = "rest-1"
+name = "Rest 1"
 duration = "5m"
 command = "notify-send 'Rest Done!'"
+
+[[sessions]]
+id = "work-2"
+name = "Work 2"
+duration = "25m"
+command = "notify-send 'Work Done!'"
+
+[[sessions]]
+id = "rest-2"
+name = "Rest 2"
+duration = "5m"
+command = "notify-send 'Rest Done!'"
+
+[[sessions]]
+id = "work-3"
+name = "Work 3"
+duration = "25m"
+command = "notify-send 'Work Done!'"
+
+[[sessions]]
+id = "rest-3"
+name = "Rest 3"
+duration = "5m"
+command = "notify-send 'Rest Done!'"
+
+[[sessions]]
+id = "work-4"
+name = "Work 4"
+duration = "25m"
+command = "notify-send 'Work Done!'"
 
 [[sessions]]
 id = "long-rest"

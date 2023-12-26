@@ -19,6 +19,7 @@
         "battery"
         "backlight"
         "clock"
+        "custom/uair"
         "custom/mako"
         "tray"
       ];
@@ -131,6 +132,13 @@
           "paused" = " ";
         };
         "on-click" = "playerctl play-pause";
+      };
+      "custom/uair" = {
+        "exec-if" = "command -v uair";
+        "exec" = "uair";
+        "format" = "{}";
+        "on-click" = "uairctl toggle";
+        "on-click-right" = "uairctl next";
       };
     };
   };
