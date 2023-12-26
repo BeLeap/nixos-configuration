@@ -52,14 +52,14 @@ window#waybar.hidden {
 }
 
 .modules-left {
-  padding: 2px;
+  padding: 0 8px;
   border-radius: 0 0 10px 0;
   background-color: @surface0;
   color: @text;
 }
 
 .modules-right {
-  padding: 2px;
+  padding: 0 8px;
   border-radius: 0 0 0 10px;
   background-color: @surface0;
   color: @text;
