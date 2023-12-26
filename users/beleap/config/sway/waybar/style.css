@@ -43,6 +43,7 @@
   font-size: 14px;
   margin: 0.5px;
   padding: 0.5px;
+  background-color: transparent;
 }
 
 window#waybar {
@@ -84,7 +85,6 @@ window#waybar {
   transition: none;
   padding: 0 8px;
   color: @overlay0;
-  background: transparent;
 }
 
 #workspaces button.focused {
@@ -126,7 +126,6 @@ tooltip {
 #bluetooth,
 #tray,
 #wireplumber {
-  background: transparent;
   margin: 4px;
   padding: 0 8px;
 }
