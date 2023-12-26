@@ -41,8 +41,8 @@ rec {
       "${config.modifier}+Ctrl+s" = "exec grim - | wl-copy";
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
       "${config.modifier}+v" = "exec cliphist list | wofi --dmenu -p 'Select to copy...' | cliphist decode | wl-copy";
-      "${config.modifier}+n" = "exec makoctl menu wofi --dmenu -p 'Select to execute action...' || makoctl dismiss";
-      "${config.modifier}+Shift+n" = "exec makoctl dismiss";
+      "${config.modifier}+n" = "exec dunstctl action";
+      "${config.modifier}+Shift+n" = "exec dunstctl close";
       "${config.modifier}+t" = "layout stacking";
       "${config.modifier}+s" = null;
       "${config.modifier}+w" = null;
