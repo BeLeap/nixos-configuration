@@ -33,7 +33,6 @@
     pavucontrol
     gnome.nautilus
     wdisplays
-    swayest-workstyle
     grim
     slurp
     wl-clipboard

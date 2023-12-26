@@ -67,7 +67,6 @@ rec {
       { command = "swaybg --color \"#1e1e2e\""; always = true; }
       { command = "systemctl --user restart kanshi.service"; always = true; }
       { command = "/home/beleap/.nix-profile/libexec/polkit-gnome-authentication-agent-1"; always = true; }
-      { command = "sworkstyle"; }
       { command = "kime"; }
       { command = "wl-paste --watch cliphist store"; }
       { command = "bash /home/beleap/.scripts/idle.sh"; }
