@@ -42,6 +42,7 @@
 	font-family: Caskaydia Cove Nerd Font, NanumGothicCoding;
 	font-size: 14px;
 	min-height: 14px;
+  margin: 0.5px;
 	background: transparent;
 }
 
@@ -78,8 +79,8 @@ window#waybar.hidden {
 
 #workspaces {
 	margin-top: 4px;
-	margin-left: 4px;
-	margin-right: 4px;
+	margin-left: 2px;
+	margin-right: 2px;
 	margin-bottom: 4px;
 	border-radius: 26px;
 	transition: none;
