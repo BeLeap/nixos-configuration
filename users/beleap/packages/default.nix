@@ -17,7 +17,6 @@
     fd
     ripgrep
     bat
-    difftastic
     unzip
     gitAndTools.gh
     playerctl

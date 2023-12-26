@@ -14,11 +14,6 @@
     commit.gpgsign = true;
   };
 
-  difftastic = {
-    enable = true;
-    display = "inline";
-  };
-
   ignores = [
     "*.null_ls*"
     "root.md"
