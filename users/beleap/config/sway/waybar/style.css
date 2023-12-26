@@ -107,6 +107,13 @@ window#waybar.hidden {
   color: @red;
 }
 
+tooltip {
+  color: @text;
+  background: @base;
+  border-color: @lavendar;
+  border-radius: 0 0 10px 10px;
+}
+
 #mpris,
 #backlight,
 #battery,
