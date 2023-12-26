@@ -43,6 +43,7 @@
   font-size: 14px;
   min-height: 14px;
   margin: 0.5px;
+  padding: 0.5px;
   background: transparent;
 }
 
@@ -51,18 +52,21 @@ window#waybar.hidden {
 }
 
 .modules-left {
+  padding: 2px;
   border-radius: 0 0 10px 0;
   background-color: @surface0;
   color: @text;
 }
 
 .modules-right {
+  padding: 2px;
   border-radius: 0 0 0 10px;
   background-color: @surface0;
   color: @text;
 }
 
 .modules-center {
+  padding: 0 8px;
   border-radius: 0 0 10px 10px;
   background-color: @lavender;
   color: @base;
@@ -71,16 +75,12 @@ window#waybar.hidden {
 #window {
   margin-top: 8px;
   margin-bottom: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
   transition: none;
   font-weight: bold;
 }
 
 #workspaces {
   margin-top: 4px;
-  margin-left: 2px;
-  margin-right: 2px;
   margin-bottom: 4px;
   border-radius: 26px;
   transition: none;
@@ -88,8 +88,6 @@ window#waybar.hidden {
 
 #workspaces button {
   transition: none;
-  margin-left: 5px;
-  margin-right: 5px;
   color: @overlay0;
   background: transparent;
 }
