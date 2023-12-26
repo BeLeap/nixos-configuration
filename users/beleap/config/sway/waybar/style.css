@@ -44,7 +44,10 @@
   min-height: 14px;
   margin: 0.5px;
   padding: 0.5px;
-  background: transparent;
+}
+
+window#waybar {
+  background-color: @base;
 }
 
 window#waybar.hidden {
@@ -80,14 +83,14 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin: 4px 0;
   border-radius: 26px;
   transition: none;
 }
 
 #workspaces button {
   transition: none;
+  padding: 0 8px;
   color: @overlay0;
   background: transparent;
 }
@@ -132,6 +135,7 @@ tooltip {
 #bluetooth,
 #tray,
 #wireplumber {
+  background: transparent;
   margin-top: 4px;
   margin-left: 4px;
   margin-right: 4px;
