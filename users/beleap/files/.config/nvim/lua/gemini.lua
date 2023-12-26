@@ -9,7 +9,7 @@ if vim.env.GEMINI_API_KEY then
         local diff = ""
         Job:new({
           command = 'git',
-          args = { 'diff', '--cached' },
+          args = { 'diff', '--staged' },
           on_stdout = function(_, data)
             diff = diff .. "\n" .. data
           end,
