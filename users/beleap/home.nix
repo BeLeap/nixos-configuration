@@ -101,11 +101,6 @@ in
         exec = "shutdown -h now";
         terminal = false;
       };
-      exit = {
-        name = "Exit";
-        exec = "swaymsg exit";
-        terminal = false;
-      };
       lock = {
         name = "Lock";
         exec = "swaylock";
