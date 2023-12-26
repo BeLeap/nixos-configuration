@@ -30,12 +30,6 @@
         "format" = "{name}: {icon}";
         "on-click" = "activate";
         "format-icons" = {
-          "1" = "";
-          "2" = "";
-          "3" = "";
-          "11" = "";
-          "12" = "";
-          "13" = "";
           "urgent" = "";
           "focused" = "";
           "default" = "";
