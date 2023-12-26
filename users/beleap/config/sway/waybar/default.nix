@@ -6,6 +6,7 @@
       layer = "top";
       spacing = 8;
       modules-left = [
+        "sway/mode"
         "sway/workspaces"
         "mpris"
       ];
@@ -22,6 +23,9 @@
         "tray"
       ];
 
+      "sway/mode" = {
+        "format" = "{}";
+      };
       "sway/workspaces" = {
         "format" = "{name}: {icon}";
         "on-click" = "activate";
