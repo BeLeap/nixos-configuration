@@ -24,6 +24,8 @@
     greetd.tuigreet
     killall
     uair
+    mpv
+    libnotify
   ];
   gui = [
     (_1password-gui.overrideAttrs { polkitPolicyOwners = [ "wheel" ]; })

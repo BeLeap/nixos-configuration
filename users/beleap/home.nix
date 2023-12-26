@@ -27,7 +27,7 @@ in
   } ((import ./programs) { inherit pkgs lib hostname; });
 
   services = {
-    mako = (import ./config/sway/mako);
+    dunst = (import ./config/sway/dunst) { inherit pkgs; };
     kanshi = (import ./config/sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
