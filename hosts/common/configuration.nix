@@ -127,5 +127,6 @@
     enable = true;
   };
 
+  boot.initrd.kernelModules = [ "pcspkr" ];
 }
 
