@@ -49,10 +49,6 @@ window#waybar {
   background-color: @base;
 }
 
-window#waybar.hidden {
-  opacity: 0.2;
-}
-
 .modules-left {
   padding: 0 8px;
   border-radius: 0 0 10px 0;
