@@ -13,6 +13,7 @@ in
       offset = "0x0";
       corner_radius = 10;
       frame_width = 4;
+      dmenu = "wofi --show dmenu -p dunst";
     };
     urgency_low = {
         timeout = 5;
