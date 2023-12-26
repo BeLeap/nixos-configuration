@@ -23,6 +23,7 @@
     wally-cli
     greetd.tuigreet
     killall
+    uair
   ];
   gui = [
     (_1password-gui.overrideAttrs { polkitPolicyOwners = [ "wheel" ]; })
