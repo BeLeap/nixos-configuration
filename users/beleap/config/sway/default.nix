@@ -48,6 +48,7 @@ rec {
       "${config.modifier}+w" = null;
       "${config.modifier}+Up" = "sticky toggle";
       "${config.modifier}+p" = "exec uairctl 2>&1 | head --lines=12 | tail --lines=11 | awk '{print $1}' | wofi --dmenu -p 'Pomodoro' | xargs uairctl";
+      "${config.modifier}+m" = "exec echo \"play-pause\\nnext\" | wofi --dmenu -p 'Music' | xargs playerctl";
     };
 
     window = {
