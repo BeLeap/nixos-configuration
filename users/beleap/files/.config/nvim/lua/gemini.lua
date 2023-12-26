@@ -9,7 +9,7 @@ if vim.env.GEMINI_API_KEY then
         local diff = ""
         Job:new({
           command = 'git',
-          args = { 'diff', '--staged' },
+          args = { 'diff', '--staged', '--minimal', '--no-color' },
           on_stdout = function(_, data)
             diff = diff .. "\n" .. data
           end,
@@ -21,7 +21,8 @@ if vim.env.GEMINI_API_KEY then
               {
                 parts = {
                   {
-                    text = "Write a commit message that accurately summarizes the code changes in following diff\n" ..
+                    text =
+                        "Write a commit message that accurately summarizes the code changes in following diff. Diff is generate using 'git diff' command.\n" ..
                         diff
                   }
                 }
