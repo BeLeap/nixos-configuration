@@ -46,10 +46,6 @@
   background-color: transparent;
 }
 
-window#waybar {
-  background-color: @base;
-}
-
 .modules-left {
   padding: 0 8px;
   border-radius: 0 0 10px 0;
@@ -82,7 +78,6 @@ window#waybar {
 }
 
 #workspaces button {
-  transition: none;
   padding: 0 8px;
   color: @overlay0;
 }
@@ -92,8 +87,6 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
   color: @subtext0;
 }
 
@@ -103,7 +96,7 @@ window#waybar {
 
 tooltip {
   color: @text;
-  background: @base;
+  background-color: @base;
   border-color: @lavendar;
   border-radius: 0 0 10px 10px;
 }
