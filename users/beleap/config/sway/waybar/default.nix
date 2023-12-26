@@ -42,7 +42,7 @@
         };
       };
       "sway/window" = {
-        "format" = "{}";
+        "format" = "{app_id} / {title}";
         "separate-outputs" = true;
       };
       "pulseaudio" = {
