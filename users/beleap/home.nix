@@ -21,14 +21,14 @@ in
   programs = lib.trivial.mergeAttrs {
     home-manager.enable = true;
 
-    waybar = (import ./config/sway/waybar);
-    wofi = (import ./config/sway/wofi);
-    swaylock = (import ./config/sway/swaylock);
+    waybar = (import ./sway/waybar);
+    wofi = (import ./sway/wofi);
+    swaylock = (import ./sway/swaylock);
   } ((import ./programs) { inherit pkgs lib hostname; });
 
   services = {
-    dunst = (import ./config/sway/dunst) { inherit pkgs; };
-    kanshi = (import ./config/sway/kanshi);
+    dunst = (import ./sway/dunst) { inherit pkgs; };
+    kanshi = (import ./sway/kanshi);
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
     mpd = { enable = true; };
@@ -38,7 +38,7 @@ in
 
   wayland = {
     windowManager = {
-      sway = (import ./config/sway) { inherit pkgs lib; };
+      sway = (import ./sway) { inherit pkgs lib; };
     };
   };
 
