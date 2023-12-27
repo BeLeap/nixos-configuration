@@ -1,26 +1,28 @@
+let
+  catppuccin = import ../../../../const/catppuccin.nix;
+in
 {
   enable = true;
   settings = {
     image = "/home/beleap/.background";
-    # color = "1e1e2e";
 
-    line-color = "6c7086";
-    text-color = "cdd6f4";
-    inside-color = "1e1e2e";
+    line-color = catppuccin.hexify catppuccin.overlay0;
+    text-color = catppuccin.hexify catppuccin.text;
+    inside-color = catppuccin.hexify catppuccin.base;
 
-    ring-color = "94e2d5";
-    key-hl-color = "74c7ec";
+    ring-color = catppuccin.hexify catppuccin.teal;
+    key-hl-color = catppuccin.hexify catppuccin.sapphire;
 
-    line-ver-color = "6c7086";
-    text-ver-color = "cdd6f4";
-    inside-ver-color = "1e1e2e";
+    line-ver-color = catppuccin.hexify catppuccin.overlay0;
+    text-ver-color = catppuccin.hexify catppuccin.text;
+    inside-ver-color = catppuccin.hexify catppuccin.base;
 
-    ring-ver-color = "f9e2af";
+    ring-ver-color = catppuccin.hexify catppuccin.yellow;
 
-    line-wrong-color = "6c7086";
-    text-wrong-color = "cdd6f4";
-    inside-wrong-color = "1e1e2e";
+    line-wrong-color = catppuccin.hexify catppuccin.overlay0;
+    text-wrong-color = catppuccin.hexify catppuccin.text;
+    inside-wrong-color = catppuccin.hexify catppuccin.base;
 
-    ring-wrong-color = "f38ba8";
+    ring-wrong-color = catppuccin.hexify catppuccin.red;
   };
 }
