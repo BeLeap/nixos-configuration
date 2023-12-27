@@ -13,7 +13,9 @@ in
       offset = "0x0";
       corner_radius = 10;
       frame_width = 4;
+      separator_height = 4;
       dmenu = "wofi --show dmenu -p dunst";
+      font = "Monospace 12";
     };
     urgency_low = {
         timeout = 5;
