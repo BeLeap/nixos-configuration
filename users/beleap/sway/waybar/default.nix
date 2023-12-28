@@ -20,7 +20,6 @@
         "backlight"
         "clock"
         "custom/uair"
-        "custom/mako"
         "tray"
       ];
 
@@ -113,13 +112,6 @@
         "tooltip-format-connected" = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
         "tooltip-format-enumerate-connected" = "{device_alias}\t{device_address}";
         "on-click" = "blueman-manager";
-      };
-      "custom/mako" = {
-        "exec-if" = "command -v makoctl";
-        "exec" = "sh /home/beleap/.scripts/mako.sh";
-        "format" = "{}";
-        "on-click" = "makoctl dismiss -a";
-        "interval" = 3;
       };
       "mpris" = {
         "format" = "{player_icon} {dynamic}";
