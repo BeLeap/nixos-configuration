@@ -116,6 +116,7 @@
       "mpris" = {
         "format" = "{player_icon} {dynamic}";
         "format-paused" = "{status_icon} <i>{dynamic}</i>";
+        "max-length" =  "30";
         "player-icons" = {
           "default" = "▶";
           "mpv" = "🎵";
