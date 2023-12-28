@@ -47,7 +47,7 @@ rec {
       "${config.modifier}+s" = null;
       "${config.modifier}+w" = null;
       "${config.modifier}+Up" = "sticky toggle";
-      "${config.modifier}+p" = "exec echo \"toggle\\nnext\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl";
+      "${config.modifier}+p" = "exec echo \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl";
       "${config.modifier}+m" = "exec echo \"play-pause\\nnext\" | wofi --dmenu -p 'Music' | xargs playerctl";
     };
 
