@@ -28,7 +28,7 @@ rec {
     modifier = "Mod4";
     bars = [
       {
-        command = "waybar";
+        command = "${pkgs.waybar}/bin/waybar";
       }
     ];
     terminal = "wezterm";
