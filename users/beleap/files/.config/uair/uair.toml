@@ -1,6 +1,7 @@
+loop_on_end = true
+
 [defaults]
 format = "{name}: {time}\n"
-loop_on_end = true
 
 [[sessions]]
 id = "work-1"
