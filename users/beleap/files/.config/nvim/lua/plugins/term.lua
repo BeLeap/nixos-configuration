@@ -143,25 +143,25 @@ return {
     "aserowy/tmux.nvim",
     keys = {
       {
-        "<leader>wh",
+        "<C-h>",
         function()
           require('tmux').move_left()
         end,
       },
       {
-        "<leader>wl",
+        "<C-l>",
         function()
           require('tmux').move_right()
         end,
       },
       {
-        "<leader>wk",
+        "<C-k>",
         function()
           require('tmux').move_up()
         end,
       },
       {
-        "<leader>wj",
+        "<C-j>",
         function()
           require('tmux').move_down()
         end,
