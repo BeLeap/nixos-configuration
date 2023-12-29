@@ -26,6 +26,30 @@ return {
           require('tmux').move_down()
         end,
       },
+      {
+        "<M-h>",
+        function()
+          require('tmux').resize_left()
+        end,
+      },
+      {
+        "<M-l>",
+        function()
+          require('tmux').resize_right()
+        end,
+      },
+      {
+        "<M-k>",
+        function()
+          require('tmux').resize_up()
+        end,
+      },
+      {
+        "<M-j>",
+        function()
+          require('tmux').resize_down()
+        end,
+      },
     },
     opts = {
       enable_default_keybindings = false,
