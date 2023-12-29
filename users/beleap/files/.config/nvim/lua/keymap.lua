@@ -12,3 +12,5 @@ vim.keymap.set("n", "<M-h>", "<C-w>h", { desc = "Move focus to left" })
 vim.keymap.set("n", "<M-j>", "<C-w>j", { desc = "Move focus to down" })
 vim.keymap.set("n", "<M-k>", "<C-w>k", { desc = "Move focus to up" })
 vim.keymap.set("n", "<M-l>", "<C-w>l", { desc = "Move focus to right" })
+
+vim.keymap.set("v", "<leader>y", "\"*y")
