@@ -34,6 +34,13 @@
       bind  %  split-window -h -c "#{pane_current_path}"
       bind '"' split-window -v -c "#{pane_current_path}"
 
+      # Use v to trigger selection    
+      bind-key -T copy-mode-vi v send-keys -X begin-selection
+
+      # Use y to yank current selection
+      bind-key -T copy-mode-vi y send-keys -X copy-selection
+
+
       is_vim="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?\.?(view|n?vim?x?)(-wrapped)?(diff)?$'"
 
       bind-key -n 'C-h' if-shell "$is_vim" 'send-keys C-h' { if -F '#{pane_at_left}' '''''' 'select-pane -L' }
