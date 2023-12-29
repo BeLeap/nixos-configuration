@@ -167,6 +167,8 @@ return {
         end,
       },
     },
-    config = true,
+    opts = {
+      enable_default_keybindings = false,
+    },
   },
 }
