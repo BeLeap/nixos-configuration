@@ -140,30 +140,30 @@ return {
     priority = 1001,
   },
   {
-    "numToStr/Navigator.nvim",
+    "aserowy/tmux.nvim",
     keys = {
       {
         "<leader>wh",
         function()
-          require('Navigator').left()
+          require('tmux').move_left()
         end,
       },
       {
         "<leader>wl",
         function()
-          require('Navigator').right()
+          require('tmux').move_right()
         end,
       },
       {
         "<leader>wk",
         function()
-          require('Navigator').up()
+          require('tmux').move_up()
         end,
       },
       {
         "<leader>wj",
         function()
-          require('Navigator').down()
+          require('tmux').move_down()
         end,
       },
     },
