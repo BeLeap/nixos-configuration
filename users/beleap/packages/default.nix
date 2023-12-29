@@ -49,6 +49,7 @@
     discord
     (helpers.nixGLWrap (logseq))
     calibre
+    (helpers.nixGLWrap ((import ../../../pkgs/keymapp.nix) { inherit pkgs; }))
   ];
   db = [
     postgresql_15
