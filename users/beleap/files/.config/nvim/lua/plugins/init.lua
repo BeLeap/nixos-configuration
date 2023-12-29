@@ -138,7 +138,7 @@ return {
     },
     config = function()
       vim.o.foldcolumn = "1" -- "0" is not bad
-      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+      vim.o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
       vim.o.foldlevelstart = 99
 
       vim.keymap.set("n", "zR", require("ufo").openAllFolds)
@@ -182,7 +182,8 @@ return {
         callback = function()
           local layout = vim.api.nvim_call_function("winlayout", {})
           if layout[1] == "leaf" and vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(layout[2]), "filetype") == "NvimTree" and layout[3] == nil then
-            vim.cmd("confirm quit") end
+            vim.cmd("confirm quit")
+          end
         end
       })
     end,
@@ -313,97 +314,6 @@ return {
     init = function()
       vim.g.himalaya_folder_picker = "telescope"
       vim.g.himalaya_folder_picker_telescope_preview = 1
-    end,
-  },
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 1000
-      local wk = require("which-key")
-      wk.setup({})
-
-      wk.register({
-        g = {
-          name = "+Git",
-          h = {
-            name = "+Github",
-            p = {
-              name = "+Pull Request",
-              l = { "<cmd>Octo pr list<cr>", "List" },
-              m = { "<cmd>Octo pr merge<cr>", "Merge" },
-              sd = { "<cmd>Octo pr merge squash delete<cr>", "Squash and Delete" },
-              c = { "<cmd>Octo pr create<cr>", "Create" },
-              d = { "<cmd>Octo pr close<cr>", "Close" },
-            },
-            c = {
-              name = "+Comment",
-              a = { "<cmd>Octo comment add<cr>", "Add" },
-              d = { "<cmd>Octo comment delete<cr>", "Delete" },
-            },
-          },
-          n = { "<cmd>Neogit<cr>", "Neogit" },
-        },
-        t = {
-          name = "+Telescope",
-          x = {
-            function()
-              require("telescope.builtin").builtin()
-            end,
-            "Builtin",
-          },
-          f = {
-            function()
-              require("telescope.builtin").find_files()
-            end,
-            "Find Files",
-          },
-          g = {
-            function()
-              require("telescope.builtin").live_grep()
-            end,
-            "Live Grep",
-          },
-          b = {
-            function()
-              require("telescope.builtin").buffers()
-            end,
-            "Buffers",
-          },
-          h = {
-            function()
-              require("telescope.builtin").help_tags()
-            end,
-            "Helps",
-          },
-          c = {
-            function()
-              require("telescope.builtin").git_branches()
-            end,
-            "Git Branches",
-          },
-          l = {
-            name = "+LSP",
-            s = {
-              function()
-                require("telescope.builtin").lsp_document_symbols()
-              end,
-              "Symbols",
-            },
-            d = {
-              function()
-                require("telescope.builtin").lsp_definitions()
-              end,
-              "Definitons",
-            },
-          },
-          t = {
-            "<cmd>Telescope tasks specs<cr>",
-            "Spawn Tasks",
-          },
-        },
-      }, { prefix = "<leader>" })
     end,
   },
 }

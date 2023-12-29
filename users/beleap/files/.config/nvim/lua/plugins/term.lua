@@ -55,7 +55,7 @@ return {
         local powershell_options = {
           shell = vim.fn.executable("pwsh") and "pwsh" or "powershell",
           shellcmdflag =
-            "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+          "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
           shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
           shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
           shellquote = "",
@@ -138,5 +138,35 @@ return {
     end,
     lazy = false,
     priority = 1001,
+  },
+  {
+    "numToStr/Navigator.nvim",
+    keys = {
+      {
+        "<leader>wh",
+        function()
+          require('Navigator').left()
+        end,
+      },
+      {
+        "<leader>wl",
+        function()
+          require('Navigator').right()
+        end,
+      },
+      {
+        "<leader>wk",
+        function()
+          require('Navigator').up()
+        end,
+      },
+      {
+        "<leader>wj",
+        function()
+          require('Navigator').down()
+        end,
+      },
+    },
+    config = true,
   },
 }
