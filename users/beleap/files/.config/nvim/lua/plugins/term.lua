@@ -55,4 +55,27 @@ return {
       enable_default_keybindings = false,
     },
   },
+  {
+    "akinsho/toggleterm.nvim",
+    keys = {
+      { "<leader>st", "<cmd>ToggleTerm<cr>" },
+      {
+        "<leader>sb",
+        function()
+          local path     = vim.fn.expand("%:p:h")
+          local Terminal = require('toggleterm.terminal').Terminal
+          Terminal:new({
+            dir = path,
+          }):toggle()
+        end
+      },
+      { "<leader>sy", "<cmd>ToggleTermSendVisualSelection<cr>", mode = "v" },
+    },
+    version = "*",
+    opts = {},
+  },
+  {
+    "stevearc/overseer.nvim",
+    opts = {},
+  }
 }
