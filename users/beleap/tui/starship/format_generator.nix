@@ -1,4 +1,4 @@
-{ pkgs }:
+{ lib }:
 let
   available = [
     "$username"
@@ -87,6 +87,6 @@ let
     "$character"
   ];
 in
-with pkgs; {
-  remove = { to_remove }: lib.strings.concatStrings (lib.lists.subtractLists to_remove available);
+with lib; {
+  remove = { to_remove }: strings.concatStrings (lib.lists.subtractLists to_remove available);
 }

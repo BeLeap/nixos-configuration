@@ -1,4 +1,3 @@
-{ ... }:
 {
   enable = true;
   enableBashIntegration = true;

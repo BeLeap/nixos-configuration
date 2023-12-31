@@ -1,4 +1,4 @@
-{ hostname, ... }:
+{ hostname }:
 {
   enable = true;
 

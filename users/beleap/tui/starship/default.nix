@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ lib }:
 {
   enable = true;
   settings = {
     nix_shell.symbol = "(nix)";
     format = "$directory\n$character";
-    right_format = (import ./format_generator.nix { inherit pkgs; })
+    right_format = (import ./format_generator.nix { inherit lib; })
       .remove { 
         to_remove = [
           "$directory"

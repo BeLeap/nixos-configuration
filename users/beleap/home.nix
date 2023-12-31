@@ -18,13 +18,21 @@ in
     stateVersion = "22.05";
   };
 
-  programs = lib.trivial.mergeAttrs {
+  programs = {
     home-manager.enable = true;
 
     waybar = (import ./gui/waybar);
     wofi = (import ./gui/wofi);
     swaylock = (import ./gui/swaylock);
-  } ((import ./programs) { inherit pkgs lib hostname; });
+    firefox = (import ./gui/firefox) { inherit hostname; };
+    wezterm = (import ./gui/wezterm);
+
+    carapace = (import ./tui/carapace);
+    fish = (import ./tui/fish);
+    git = (import ./tui/git);
+    starship = (import ./tui/starship) { inherit lib; };
+    k9s = (import ./tui/k9s);
+  };
 
   services = {
     dunst = (import ./gui/dunst) { inherit pkgs; };
@@ -109,11 +117,6 @@ in
       vlc = {
         name = "VLC Music";
         exec = "vlc -LZ /home/beleap/Music";
-        terminal = false;
-      };
-      nextMusic = {
-        name = "Next Music";
-        exec = "playerctl next";
         terminal = false;
       };
     };
