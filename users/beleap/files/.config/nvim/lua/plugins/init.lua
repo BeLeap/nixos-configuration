@@ -81,18 +81,6 @@ return {
     end,
   },
   {
-    "kristijanhusak/vim-dadbod-ui",
-    keys = {
-      { "<leader>d", ":DBUIToggle<cr>", silent = true },
-    },
-    dependencies = {
-      "tpope/vim-dadbod",
-    },
-    config = function()
-      vim.g.db_ui_auto_execute_table_helpers = true
-    end,
-  },
-  {
     "dstein64/vim-startuptime",
     cmd = "StartupTime",
   },

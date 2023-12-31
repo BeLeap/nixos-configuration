@@ -58,7 +58,7 @@ return {
   {
     "akinsho/toggleterm.nvim",
     keys = {
-      { "<leader>st", "<cmd>ToggleTerm<cr>" },
+      { "<leader>st", "<Cmd>exe v:count1 . \"ToggleTerm\"<CR>" },
       {
         "<leader>sb",
         function()
