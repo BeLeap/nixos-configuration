@@ -23,7 +23,7 @@ in
 
     waybar = (import ./gui/waybar/default.nix);
     wofi = (import ./gui/wofi/default.nix);
-    swaylock = (import ./gui/swaylock/default.nix);
+    swaylock = (import ./gui/swaylock.nix);
     firefox = (import ./gui/firefox/default.nix) { inherit hostname; };
     wezterm = (import ./gui/wezterm/default.nix);
 
@@ -40,8 +40,8 @@ in
   };
 
   services = {
-    dunst = (import ./gui/dunst/default.nix) { inherit pkgs; };
-    kanshi = (import ./gui/kanshi/default.nix);
+    dunst = (import ./gui/dunst.nix) { inherit pkgs; };
+    kanshi = (import ./gui/kanshi.nix);
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
     mpd = { enable = true; };
@@ -51,7 +51,7 @@ in
 
   wayland = {
     windowManager = {
-      sway = (import ./gui/sway/default.nix) { inherit pkgs lib; };
+      sway = (import ./gui/sway.nix) { inherit pkgs lib; };
     };
   };
 

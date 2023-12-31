@@ -1,5 +1,5 @@
 let
-  catppuccin = import ../../../../const/catppuccin.nix;
+  catppuccin = import ../../../const/catppuccin.nix;
 in
 {
   enable = true;
