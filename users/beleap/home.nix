@@ -21,22 +21,22 @@ in
   programs = {
     home-manager.enable = true;
 
-    waybar = (import ./gui/waybar);
-    wofi = (import ./gui/wofi);
-    swaylock = (import ./gui/swaylock);
-    firefox = (import ./gui/firefox) { inherit hostname; };
-    wezterm = (import ./gui/wezterm);
+    waybar = (import ./gui/waybar/default.nix);
+    wofi = (import ./gui/wofi/default.nix);
+    swaylock = (import ./gui/swaylock/default.nix);
+    firefox = (import ./gui/firefox/default.nix) { inherit hostname; };
+    wezterm = (import ./gui/wezterm/default.nix);
 
-    carapace = (import ./tui/carapace);
-    fish = (import ./tui/fish);
-    git = (import ./tui/git);
-    starship = (import ./tui/starship) { inherit lib; };
-    k9s = (import ./tui/k9s);
+    carapace = (import ./tui/carapace/default.nix);
+    fish = (import ./tui/fish/default.nix);
+    git = (import ./tui/git/default.nix);
+    starship = (import ./tui/starship/default.nix) { inherit lib; };
+    k9s = (import ./tui/k9s/default.nix);
   };
 
   services = {
-    dunst = (import ./gui/dunst) { inherit pkgs; };
-    kanshi = (import ./gui/kanshi);
+    dunst = (import ./gui/dunst/default.nix) { inherit pkgs; };
+    kanshi = (import ./gui/kanshi/default.nix);
     kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
     mpd = { enable = true; };
@@ -46,7 +46,7 @@ in
 
   wayland = {
     windowManager = {
-      sway = (import ./gui/sway) { inherit pkgs lib; };
+      sway = (import ./gui/sway/default.nix) { inherit pkgs lib; };
     };
   };
 
