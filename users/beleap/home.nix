@@ -27,11 +27,11 @@ in
     firefox = (import ./gui/firefox/default.nix) { inherit hostname; };
     wezterm = (import ./gui/wezterm/default.nix);
 
-    carapace = (import ./tui/carapace/default.nix);
-    fish = (import ./tui/fish/default.nix);
-    git = (import ./tui/git/default.nix);
+    carapace = (import ./tui/carapace.nix);
+    fish = (import ./tui/fish.nix);
+    git = (import ./tui/git.nix);
     starship = (import ./tui/starship/default.nix) { inherit lib; };
-    k9s = (import ./tui/k9s/default.nix);
+    k9s = (import ./tui/k9s.nix);
     neovim = (import ./tui/neovim.nix) { inherit pkgs; };
     direnv = (import ./tui/direnv.nix);
     lsd = (import ./tui/lsd.nix);
