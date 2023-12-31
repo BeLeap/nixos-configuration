@@ -32,6 +32,11 @@ in
     git = (import ./tui/git/default.nix);
     starship = (import ./tui/starship/default.nix) { inherit lib; };
     k9s = (import ./tui/k9s/default.nix);
+    neovim = (import ./tui/neovim.nix) { inherit pkgs; };
+    direnv = (import ./tui/direnv.nix);
+    lsd = (import ./tui/lsd.nix);
+    zoxide = (import ./tui/zoxide.nix);
+    tmux = (import ./tui/tmux.nix) { inherit pkgs; };
   };
 
   services = {
