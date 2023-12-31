@@ -1,11 +1,11 @@
 { pkgs, lib }:
 let
-  helpers = import ../helpers.nix {
+  helpers = import ../../helpers.nix {
     inherit
       pkgs
       lib;
   };
-  catppuccin = import ../../../const/catppuccin.nix;
+  catppuccin = import ../../../../const/catppuccin.nix;
   assign-to-scratchpad = [
     { class = "1Password"; }
     { class = "Youtube Music"; }
