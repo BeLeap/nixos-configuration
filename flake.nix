@@ -25,10 +25,6 @@
     in
     {
       nixosConfigurations = {
-        wsl = import ./hosts/wsl {
-          inherit nixpkgs inputs overlays;
-        };
-
         beleap-xps-9510 = import ./hosts/beleap-xps-9510 {
           inherit nixpkgs inputs overlays;
         };
