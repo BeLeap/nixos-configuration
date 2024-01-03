@@ -105,7 +105,7 @@
       xdgOpenUsePortal = true;
       config = {
         common = {
-          default = ["wlr"];
+          default = ["*"];
         };
       };
     };
