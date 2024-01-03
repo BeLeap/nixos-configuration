@@ -128,7 +128,11 @@
     enable = true;
   };
 
-  boot.initrd.kernelModules = [ "pcspkr" ];
+  boot = {
+    initrd.kernelModules = [ "pcspkr" ];
+
+    plymouth.enable = true;
+  };
 
   programs = {
     _1password.enable = true;
