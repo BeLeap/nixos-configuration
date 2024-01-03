@@ -102,15 +102,12 @@
       wlr = {
         enable = true;
       };
-      # extraPortals = with pkgs; [
-      #   xdg-desktop-portal-wlr
-      # ];
-      # xdgOpenUsePortal = true;
-      # config = {
-      #   common = {
-      #     default = ["wlr"];
-      #   };
-      # };
+      xdgOpenUsePortal = true;
+      config = {
+        common = {
+          default = ["wlr"];
+        };
+      };
     };
   };
 
