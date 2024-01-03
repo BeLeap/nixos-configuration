@@ -42,7 +42,6 @@ in
   services = {
     dunst = (import ./gui/dunst.nix) { inherit pkgs; };
     kanshi = (import ./gui/kanshi.nix);
-    kdeconnect = { enable = true; indicator = true; };
     blueman-applet = { enable = true; };
     mpd = { enable = true; };
     keybase = { enable = true; };
