@@ -117,7 +117,7 @@
       ];
       config = {
         common = {
-          default = ["*"];
+          default = ["wlr"];
         };
       };
     };
