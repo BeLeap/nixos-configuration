@@ -136,9 +136,14 @@
   };
 
   boot = {
-    initrd.kernelModules = [ "pcspkr" ];
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    initrd = {
+      verbose = false;
+      kernelModules = [ "pcspkr" ];
+    };
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
 
     plymouth = {
       enable = true;
@@ -148,9 +153,12 @@
       theme = "breeze";
     };
 
+    consoleLogLevel = 0;
+
     kernelParams = [
       "quiet"
       "splash"
+      "loglevel=3"
     ];
   };
 
