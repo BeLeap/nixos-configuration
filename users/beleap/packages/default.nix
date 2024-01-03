@@ -28,7 +28,6 @@
     libnotify
   ];
   gui = [
-    (_1password-gui.overrideAttrs { polkitPolicyOwners = [ "beleap" ]; })
     swaybg
     swayidle
     blueman

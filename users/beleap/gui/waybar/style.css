@@ -88,7 +88,7 @@
 }
 
 #workspaces button:hover {
-  color: @subtext0;
+  /* color: @subtext0; */
 }
 
 #workspaces button.urgent {

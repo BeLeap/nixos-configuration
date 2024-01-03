@@ -15,6 +15,7 @@ let
 in
 rec {
   enable = true;
+  wrapperFeatures.gtk = true;
   package = (helpers.nixGLIntelWrap pkgs.swayfx);
 
   systemd = {

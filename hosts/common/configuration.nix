@@ -102,16 +102,15 @@
       wlr = {
         enable = true;
       };
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
-      ];
-      xdgOpenUsePortal = true;
-      config = {
-        common = {
-          default = ["wlr"];
-        };
-      };
+      # extraPortals = with pkgs; [
+      #   xdg-desktop-portal-wlr
+      # ];
+      # xdgOpenUsePortal = true;
+      # config = {
+      #   common = {
+      #     default = ["wlr"];
+      #   };
+      # };
     };
   };
 
@@ -133,8 +132,12 @@
 
   boot.initrd.kernelModules = [ "pcspkr" ];
 
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [];
+  programs = {
+    _1password.enable = true;
+    _1password-gui.enable = true;
+
+    nix-ld.enable = true;
+  };
   
   hardware.opengl.enable = true;
 }
