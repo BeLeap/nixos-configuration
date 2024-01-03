@@ -54,7 +54,14 @@
   programs.fish.enable = true;
 
   sound.enable = true;
-  hardware.bluetooth.enable = true;
+
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+    opengl.enable = true;
+  };
 
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
@@ -90,8 +97,8 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd 'sway --unsupported-gpu'";
-          user = "beleap";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd 'sway --unsupported-gpu'";
+          vt = "next";
         };
       };
     };
@@ -130,8 +137,21 @@
 
   boot = {
     initrd.kernelModules = [ "pcspkr" ];
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
 
-    plymouth.enable = true;
+    plymouth = {
+      enable = true;
+      # themePackages = [
+      #   pkgs.catppuccin-plymouth
+      # ];
+      theme = "breeze";
+    };
+
+    kernelParams = [
+      "quiet"
+      "splash"
+    ];
   };
 
   programs = {
@@ -141,7 +161,5 @@
 
     nix-ld.enable = true;
   };
-  
-  hardware.opengl.enable = true;
 }
 
