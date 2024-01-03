@@ -33,7 +33,7 @@
 
   users.users.beleap = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "wheel" "docker" "networkmanager" "video" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
