@@ -102,6 +102,8 @@
         };
       };
     };
+
+    dbus.enable = true;
   };
 
   xdg = {
@@ -113,7 +115,6 @@
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
       ];
-      xdgOpenUsePortal = true;
       config = {
         common = {
           default = ["*"];
