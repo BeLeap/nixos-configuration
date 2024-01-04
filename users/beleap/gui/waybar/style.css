@@ -88,7 +88,10 @@
 }
 
 #workspaces button:hover {
-  /* color: @subtext0; */
+  /* box-shadow: none; */
+  /* text-shadow: none; */
+  background: none;
+  color: @subtext0;
 }
 
 #workspaces button.urgent {
