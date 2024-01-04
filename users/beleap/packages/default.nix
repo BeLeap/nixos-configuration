@@ -11,7 +11,7 @@
     fzf
     gdb
     file
-    yq
+    yq-go
     jq
     lsd
     fd
