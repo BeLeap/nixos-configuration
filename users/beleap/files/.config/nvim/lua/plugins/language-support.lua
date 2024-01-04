@@ -21,7 +21,7 @@ return {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      {'L3MON4D3/LuaSnip'},
+      { 'L3MON4D3/LuaSnip' },
     },
     config = function()
       -- Here is where you configure the autocompletion settings.
@@ -48,11 +48,11 @@ return {
   -- LSP
   {
     'neovim/nvim-lspconfig',
-    cmd = {'LspInfo', 'LspInstall', 'LspStart'},
-    event = {'BufReadPre', 'BufNewFile'},
+    cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      {'hrsh7th/cmp-nvim-lsp'},
-      {'williamboman/mason-lspconfig.nvim'},
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'williamboman/mason-lspconfig.nvim' },
     },
     config = function()
       -- This is where all the LSP shenanigans will live
@@ -69,13 +69,13 @@ return {
       })
 
       lsp_zero.on_attach(function(client, bufnr)
-        lsp_zero.default_keymaps({buffer = bufnr})
+        lsp_zero.default_keymaps({ buffer = bufnr })
         lsp_zero.buffer_autoformat()
-        
-        vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, {buffer = bufnr})
-        vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end, {buffer = bufnr})
+
+        vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, { buffer = bufnr })
+        vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end, { buffer = bufnr })
       end)
-    
+
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
 
@@ -108,11 +108,11 @@ return {
           scratch_repl = true,
           repl_definition = {
             sh = {
-              command = {"bash"}
+              command = { "bash" }
             }
           },
           repl_open_cmd = require('iron.view').right(function()
-              return vim.o.columns / 2
+            return vim.o.columns / 2
           end),
         },
         keymaps = {
@@ -175,5 +175,9 @@ return {
         },
       },
     },
+  },
+  {
+    "elkowar/yuck.vim",
+    event = "VeryLazy",
   },
 }
