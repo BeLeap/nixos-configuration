@@ -140,43 +140,6 @@ return {
     end,
   },
   {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    keys = {
-      { "<leader>f", "<cmd>NvimTreeToggle<cr>" },
-    },
-    config = function()
-      vim.g.loaded_netrw = 1
-      vim.g.loaded_netrwPlugin = 1
-
-      require("nvim-tree").setup({
-        sync_root_with_cwd = true,
-        update_focused_file = {
-          enable = true,
-          update_root = true,
-        },
-        filters = {
-          git_ignored = false,
-        },
-      })
-
-      vim.api.nvim_create_autocmd("BufEnter", {
-        group = vim.api.nvim_create_augroup("NvimTreeClose", { clear = true }),
-        pattern = "NvimTree_*",
-        callback = function()
-          local layout = vim.api.nvim_call_function("winlayout", {})
-          if layout[1] == "leaf" and vim.api.nvim_buf_get_option(vim.api.nvim_win_get_buf(layout[2]), "filetype") == "NvimTree" and layout[3] == nil then
-            vim.cmd("confirm quit")
-          end
-        end
-      })
-    end,
-  },
-  {
     "hiphish/rainbow-delimiters.nvim",
     event = "VeryLazy",
     config = function()
@@ -303,5 +266,26 @@ return {
       vim.g.himalaya_folder_picker = "telescope"
       vim.g.himalaya_folder_picker_telescope_preview = 1
     end,
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    keys = {
+      { "<leader>f", "<cmd>Neotree<cr>" },
+    },
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+      "3rd/image.nvim",
+    },
+    opts = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+      },
+    },
   },
 }
