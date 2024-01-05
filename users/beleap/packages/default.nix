@@ -43,7 +43,7 @@
     polkit_gnome
     wireplumber
     wl-mirror
-    (helpers.nixGLWrap ((import ../../../pkgs/youtube-music.nix) { inherit pkgs; }))
+    youtube-music
     keybase-gui
     discord
     (helpers.nixGLWrap (logseq))
