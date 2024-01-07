@@ -202,14 +202,6 @@ return {
     event = { "BufEnter *.java", "BufEnter *.kt" },
   },
   {
-    "fatih/vim-go",
-    event = {
-      "BufEnter *.go",
-      "BufEnter go.mod",
-      "BufEnter go.sum",
-    },
-  },
-  {
     "udalov/kotlin-vim",
     event = { "BufEnter *.kt" },
   },
