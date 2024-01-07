@@ -59,6 +59,13 @@ return {
       local lsp_zero = require('lsp-zero')
       lsp_zero.preset('recommended')
       lsp_zero.extend_lspconfig()
+
+      require('mason-lspconfig').setup({
+        ensure_installed = {},
+        handlers = {
+          lsp_zero.default_setup,
+        }
+      })
       lsp_zero.configure('tsserver', {
         single_file_support = false,
         root_dir = require('lspconfig.util').root_pattern('package.json'),
@@ -79,13 +86,6 @@ return {
 
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
-
-      require('mason-lspconfig').setup({
-        ensure_installed = {},
-        handlers = {
-          lsp_zero.default_setup,
-        }
-      })
 
       lsp_zero.setup()
     end
