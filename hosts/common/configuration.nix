@@ -1,4 +1,4 @@
-{ pkgs, lib, hostname, ... }:
+{ pkgs, lib, ... }:
 {
   system = {
     autoUpgrade = {
