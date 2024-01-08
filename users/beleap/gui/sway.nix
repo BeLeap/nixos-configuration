@@ -11,6 +11,7 @@ let
     { class = "Youtube Music"; }
     { class = "discord"; }
     { class = "Logseq"; }
+    { app_id = "ColinDuquesnoy.gitlab.com."; }
   ];
 in
 rec {
