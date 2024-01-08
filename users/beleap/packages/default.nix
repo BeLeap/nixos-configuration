@@ -46,9 +46,9 @@
     wl-mirror
     keybase-gui
     discord
-    (helpers.nixGLWrap (logseq))
+    logseq
     calibre
-    (helpers.nixGLWrap ((import ../../../pkgs/keymapp.nix) { inherit pkgs; }))
+    ((import ../../../pkgs/keymapp.nix) { inherit pkgs; })
   ];
   db = [
     postgresql_15

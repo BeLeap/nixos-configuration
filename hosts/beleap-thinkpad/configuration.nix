@@ -1,11 +1,10 @@
-{ pkgs, specialArgs, ... }:
+{ pkgs, ... }:
 rec {
   imports =
     [
       ./hardware-configuration.nix
       (import ../common/configuration.nix {
         inherit pkgs; 
-        overlays = specialArgs.overlays;
         lib = pkgs.lib;
         hostname = networking.hostName;
       })

@@ -2,7 +2,7 @@
   description = "BeLeap Personal NixOS Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,6 +22,14 @@
         inputs.nixgl.overlay
         inputs.neovim-nightly-overlay.overlay
       ];
+      homemanagerConfiguration = { pkgs, lib, ... }: {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.users.beleap = import ./users/beleap/home.nix {
+          inherit pkgs lib;
+          hostname = "beleap-thinkpad";
+        };
+      };
     in
     {
       nixosConfigurations = {
@@ -29,8 +37,13 @@
           inherit nixpkgs inputs overlays;
         };
         
-        beleap-thinkpad = import ./hosts/beleap-thinkpad {
-          inherit nixpkgs inputs overlays;
+        beleap-thinkpad = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/beleap-thinkpad/configuration.nix
+            home-manager.nixosModules.home-manager
+            homemanagerConfiguration
+          ];
         };
       };
 

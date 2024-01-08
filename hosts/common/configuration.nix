@@ -1,9 +1,5 @@
-{ pkgs, lib, overlays, hostname, ... }:
+{ pkgs, lib, hostname, ... }:
 {
-  imports = [
-    <home-manager/nixos>
-  ];
-
   system = {
     autoUpgrade = {
       channel = "https://nixos.org/channels/nixos-unstable";
@@ -11,7 +7,7 @@
   };
   
   nixpkgs = {
-    inherit overlays;
+    # inherit overlays;
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
@@ -36,9 +32,6 @@
     extraGroups = [ "wheel" "docker" "networkmanager" "video" ];
     shell = pkgs.fish;
     packages = with pkgs; [];
-  };
-  home-manager.users.beleap = import ../../users/beleap/home.nix {
-    inherit pkgs lib hostname;
   };
 
   environment.systemPackages = with pkgs; [
