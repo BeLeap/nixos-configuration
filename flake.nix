@@ -29,23 +29,25 @@
           inherit pkgs lib hostname;
         };
       });
+      commonModules = [
+        { nixpkgs.overlays = overlays; }
+        home-manager.nixosModules.home-manager
+      ];
     in
     {
       nixosConfigurations = {
         beleap-xps-9510 = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          modules = [
+          modules = commonModules ++ [
             ./hosts/beleap-xps-9510/configuration.nix
-            home-manager.nixosModules.home-manager
             (homemanagerConfiguration { hostname = "beleap-xps-9510"; })
           ];
         };
         
         beleap-thinkpad = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          modules = [
+          modules = commonModules ++ [
             ./hosts/beleap-thinkpad/configuration.nix
-            home-manager.nixosModules.home-manager
             (homemanagerConfiguration { hostname = "beleap-thinkpad"; })
           ];
         };
