@@ -26,10 +26,7 @@
     uair
     mpv
     libnotify
-    libsForQt5.audiotube
-    libsForQt5.kpurpose
-    libsForQt5.kirigami2
-    libsForQt5.kirigami-addons
+    mellowplayer
   ];
   gui = [
     swaybg
