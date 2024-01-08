@@ -43,7 +43,6 @@
     polkit_gnome
     wireplumber
     wl-mirror
-    youtube-music
     keybase-gui
     discord
     (helpers.nixGLWrap (logseq))
