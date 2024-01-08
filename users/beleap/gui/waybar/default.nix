@@ -10,7 +10,7 @@
         "sway/workspaces"
         "mpris"
       ];
-      modules-center = ["sway/window"];
+      modules-center = [ "sway/window" ];
       modules-right = [
         "custom/github"
         "pulseaudio"
@@ -57,7 +57,7 @@
           "phone" = "";
           "portable" = "";
           "car" = "";
-          "default" = ["" "" ""];
+          "default" = [ "" "" "" ];
         };
         "on-click" = "pavucontrol";
       };
@@ -83,7 +83,7 @@
       "backlight" = {
         "device" = "intel_backlight";
         "format" = "{icon} {percent}%";
-        "format-icons" = ["" ""];
+        "format-icons" = [ "" "" ];
       };
       "battery" = {
         "states" = {
@@ -95,7 +95,7 @@
         "format-charging" = "Charging {capacity}%";
         "format-plugged" = "Plugged {capacity}%";
         "format-alt" = "{icon} {time}";
-        "format-icons" = [" " " " " " " " " "];
+        "format-icons" = [ " " " " " " " " " " ];
       };
       "clock" = {
         "tooltip-format" = "<tt><small>{calendar}</small></tt>";
@@ -116,7 +116,7 @@
       "mpris" = {
         "format" = "{player_icon} {dynamic}";
         "format-paused" = "{status_icon} <i>{dynamic}</i>";
-        "max-length" =  "30";
+        "max-length" = "30";
         "player-icons" = {
           "default" = "▶";
           "mpv" = "🎵";
@@ -135,5 +135,5 @@
       };
     };
   };
-  style = builtins.readFile(./. + "/style.css");
+  style = builtins.readFile (./. + "/style.css");
 }

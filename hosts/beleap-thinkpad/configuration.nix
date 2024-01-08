@@ -4,7 +4,7 @@ rec {
     [
       ./hardware-configuration.nix
       (import ../common/configuration.nix {
-        inherit pkgs; 
+        inherit pkgs;
         lib = pkgs.lib;
         hostname = networking.hostName;
       })
@@ -18,8 +18,8 @@ rec {
     {
       device = "/var/lib/swapfile";
       size = 4 * 1024;
-    } 
+    }
   ];
-  
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

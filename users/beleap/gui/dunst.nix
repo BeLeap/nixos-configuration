@@ -18,7 +18,7 @@ in
       font = "Monospace 12";
     };
     urgency_low = {
-        timeout = 5;
+      timeout = 5;
     };
     urgency_normal = {
       timeout = 10;

@@ -1,7 +1,7 @@
 {
   enable = true;
 
-  style = builtins.readFile(./. + "/style.css");
+  style = builtins.readFile (./. + "/style.css");
   settings = {
     width = "30%";
     matching = "fuzzy";

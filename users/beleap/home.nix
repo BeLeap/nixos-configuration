@@ -9,11 +9,11 @@ in
     homeDirectory = "/home/${username}";
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
-      XDG_CURRENT_DESKTOP = "sway"; 
+      XDG_CURRENT_DESKTOP = "sway";
       EDITOR = "nvim --cmd 'let g:flatten_wait=1'";
       LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
     };
-    packages = lib.lists.flatten (lib.attrsets.attrValues ((import ./packages){ inherit pkgs lib; })) ;
+    packages = lib.lists.flatten (lib.attrsets.attrValues ((import ./packages) { inherit pkgs lib; }));
 
     stateVersion = "22.05";
   };
@@ -127,19 +127,19 @@ in
   };
 
   home = {
-    file = lib.trivial.mergeAttrs {} (
+    file = lib.trivial.mergeAttrs { } (
       let
         autoloadRoot = ./. + "/files";
       in
       helpers.autoloader {
         fn = (
           acc: curr:
-          let
-            currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
-          in
-          lib.trivial.mergeAttrs { "${currRelative}".source = curr; } acc
+            let
+              currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
+            in
+            lib.trivial.mergeAttrs { "${currRelative}".source = curr; } acc
         );
-        initialVal = {};
+        initialVal = { };
         root = autoloadRoot;
       }
     );

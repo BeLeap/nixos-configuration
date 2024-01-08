@@ -55,7 +55,7 @@ rec {
 
     window = {
       border = 4;
-      commands = [] ++ lib.lists.flatten (builtins.map (it: [ { command = "move scratchpad"; criteria = it; } { command = "scratchpad show"; criteria = it; } ] ) assign-to-scratchpad);
+      commands = [ ] ++ lib.lists.flatten (builtins.map (it: [{ command = "move scratchpad"; criteria = it; } { command = "scratchpad show"; criteria = it; }]) assign-to-scratchpad);
     };
 
     assigns = {

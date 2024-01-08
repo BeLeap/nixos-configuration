@@ -4,13 +4,13 @@ rec {
     [
       ./hardware-configuration.nix
       (import ../common/configuration.nix {
-        inherit pkgs; 
+        inherit pkgs;
         overlays = specialArgs.overlays;
         lib = pkgs.lib;
         hostname = networking.hostName;
       })
     ];
-    
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   system.stateVersion = "23.05";
@@ -20,7 +20,7 @@ rec {
     nvidia-docker
   ];
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
@@ -42,8 +42,8 @@ rec {
       intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
     };
-  }; 
-  services.xserver.videoDrivers = ["nvidia"];
+  };
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl = {
     enable = true;
     driSupport = true;
@@ -51,9 +51,9 @@ rec {
   };
 
   virtualisation.docker = {
-      enable = true;
+    enable = true;
 
-      enableNvidia = true;
+    enableNvidia = true;
   };
 
   programs = {

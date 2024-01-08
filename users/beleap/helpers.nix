@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs>{}, lib ? pkgs.lib, ... }:
+{ pkgs ? import <nixpkgs> { }, lib ? pkgs.lib, ... }:
 let
   # nixGLWrap = pkg:
   #   pkgs.runCommand "${pkg.name}-nixgl-wrapper" { } ''
@@ -31,7 +31,8 @@ let
       listing = lib.filesystem.listFilesRecursive root;
     in
     lib.lists.foldl fn initialVal listing;
-in {
+in
+{
   # nixGLWrap = nixGLWrap;
   # nixGLIntelWrap = nixGLIntelWrap;
   autoloader = autoloader;

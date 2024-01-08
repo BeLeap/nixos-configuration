@@ -15,11 +15,13 @@ home-manager.lib.homeManagerConfiguration {
             "electron-24.8.6"
           ];
           packageOverrides = pkgs: {
-            nur = import (builtins.fetchTarball {
-              url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-            }) {
-              inherit pkgs;
-            };
+            nur = import
+              (builtins.fetchTarball {
+                url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
+              })
+              {
+                inherit pkgs;
+              };
           };
         };
       };

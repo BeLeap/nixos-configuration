@@ -2,9 +2,9 @@
 {
   plugins = with pkgs.vimPlugins; [
     nvim-treesitter
-    nvim-treesitter.withAllGrammars 
+    nvim-treesitter.withAllGrammars
   ];
-  
+
   enable = true;
   package = pkgs.neovim-nightly;
 

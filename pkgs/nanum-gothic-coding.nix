@@ -27,8 +27,8 @@ stdenv.mkDerivation rec {
   '';
 
   installPhase = ''
-     install -Dm644 NanumGothicCoding-Regular.ttf $out/share/fonts/truetype/NanumGothicCoding-Regular.ttf
-     install -Dm644 NanumGothicCoding-Bold.ttf $out/share/fonts/truetype/NanumGothicCoding-Bold.ttf
+    install -Dm644 NanumGothicCoding-Regular.ttf $out/share/fonts/truetype/NanumGothicCoding-Regular.ttf
+    install -Dm644 NanumGothicCoding-Bold.ttf $out/share/fonts/truetype/NanumGothicCoding-Bold.ttf
   '';
 
   meta = with lib; {

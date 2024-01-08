@@ -43,7 +43,7 @@
             (homemanagerConfiguration { hostname = "beleap-xps-9510"; })
           ];
         };
-        
+
         beleap-thinkpad = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = commonModules ++ [
@@ -58,5 +58,7 @@
           inherit home-manager nixpkgs inputs overlays;
         };
       };
+
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
     };
 }
