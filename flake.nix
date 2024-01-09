@@ -19,36 +19,30 @@
       overlays = [
         inputs.neovim-nightly-overlay.overlay
       ];
-      homemanagerConfiguration = { hostname }: ({ pkgs, lib, ... }: {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users.beleap = import ./users/beleap/home.nix {
-          inherit pkgs lib hostname;
-        };
-      });
-      commonModules = [
-        { nixpkgs.overlays = overlays; }
-        home-manager.nixosModules.home-manager
-      ];
+
+      fold = fn: acc: list:
+        if (builtins.length list) == 0 then acc
+        else (fn (fold fn acc (builtins.tail list)) (builtins.head list));
     in
     {
-      nixosConfigurations = {
-        beleap-xps-9510 = nixpkgs.lib.nixosSystem {
+      nixosConfigurations = fold
+        (acc: elem: acc // { "${elem}" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
-          modules = commonModules ++ [
-            ./hosts/beleap-xps-9510/configuration.nix
-            (homemanagerConfiguration { hostname = "beleap-xps-9510"; })
+          modules = [
+            { nixpkgs.overlays = overlays; }
+            (./. + "/hosts/${elem}/configuration.nix")
+            home-manager.nixosModules.home-manager
+            ({ pkgs, lib, ... }: {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.beleap = import ./users/beleap/home.nix {
+                inherit pkgs lib;
+                hostname = elem;
+              };
+            })
           ];
-        };
-
-        beleap-thinkpad = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = commonModules ++ [
-            ./hosts/beleap-thinkpad/configuration.nix
-            (homemanagerConfiguration { hostname = "beleap-thinkpad"; })
-          ];
-        };
-      };
+        }; } )
+        {} [ "beleap-xps-9510" "beleap-thinkpad" ];
 
       homeConfigurations = {
         beleap = import ./users/beleap {
