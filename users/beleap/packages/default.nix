@@ -1,4 +1,4 @@
-{ pkgs, lib }: with pkgs; let helpers = import ../helpers.nix { inherit pkgs lib; }; in
+{ pkgs, lib }: with pkgs;
 {
   tui = [
     nix-prefetch-git
