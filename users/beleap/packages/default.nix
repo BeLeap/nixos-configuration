@@ -27,6 +27,7 @@
     mpv
     libnotify
     mellowplayer
+    kdash
   ];
   gui = [
     swaybg
