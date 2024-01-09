@@ -11,15 +11,12 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL";
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixgl.url = "github:guibou/nixGL";
-
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = inputs@{ home-manager, nixpkgs, ... }:
     let
       overlays = [
-        inputs.nixgl.overlay
         inputs.neovim-nightly-overlay.overlay
       ];
       homemanagerConfiguration = { hostname }: ({ pkgs, lib, ... }: {
