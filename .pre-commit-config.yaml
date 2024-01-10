@@ -1,5 +1,6 @@
+files: '.*.nix'
 repos:
--   repo: https://github.com/nix-community/nixpkgs-fmt
+  - repo: https://github.com/nix-community/nixpkgs-fmt
     rev: v1.3.0
     hooks:
-    -   id: nixpkgs-fmt
+      - id: nixpkgs-fmt
