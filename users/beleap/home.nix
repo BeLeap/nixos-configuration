@@ -31,7 +31,7 @@ in
     fish = (import ./tui/fish.nix);
     git = (import ./tui/git.nix);
     starship = (import ./tui/starship/default.nix) { inherit lib; };
-    k9s = (import ./tui/k9s.nix);
+    k9s = (import ./tui/k9s.nix) { inherit pkgs; };
     neovim = (import ./tui/neovim.nix) { inherit pkgs; };
     direnv = (import ./tui/direnv.nix);
     lsd = (import ./tui/lsd.nix);
