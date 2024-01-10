@@ -1,1 +1,1 @@
-sudo nixos-rebuild switch --flake ".#$(hostname)" --impure --show-trace
+sudo nixos-rebuild switch --flake ".#$(hostname)" --impure
