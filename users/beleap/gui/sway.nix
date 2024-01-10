@@ -43,7 +43,7 @@ rec {
       "${config.modifier}+Ctrl+s" = "exec grim - | wl-copy";
       "${config.modifier}+Shift+s" = "exec grim -g \"$(slurp)\" - | wl-copy";
       "${config.modifier}+v" = "exec cliphist list | wofi --dmenu -p 'Select to copy...' | cliphist decode | wl-copy";
-      "${config.modifier}+n" = "exec dunstctl action";
+      "${config.modifier}+n" = "exec dunstctl action && dunstctl close";
       "${config.modifier}+Shift+n" = "exec dunstctl close";
       "${config.modifier}+t" = "layout stacking";
       "${config.modifier}+s" = null;
