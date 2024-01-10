@@ -80,6 +80,7 @@
     tree-sitter
     jdk
     lua-language-server
+    pre-commit
   ];
   network = [
     croc
