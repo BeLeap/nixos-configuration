@@ -31,7 +31,6 @@ require("lazy").setup("plugins", {
 require("keymap")
 require("others")
 require("custom-filetype")
-require("gemini")
 
 if vim.g.neovide then
   require("neovide-conf")
