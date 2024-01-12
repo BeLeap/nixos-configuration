@@ -68,6 +68,8 @@ rec {
       { command = "firefox -P personal"; }
       { command = "firefox -P work"; }
       { command = "1password &"; }
+      { command = "discord &"; }
+      { command = "logseq &"; }
       { command = "swaybg --color \"#1e1e2e\""; always = true; }
       { command = "systemctl --user restart kanshi.service"; always = true; }
       { command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"; always = true; }
