@@ -65,8 +65,8 @@ rec {
 
     startup = [
       { command = "wezterm"; }
-      { command = "firefox -P personal"; }
-      { command = "firefox -P work"; }
+      { command = "firefox -P personal --name firefox-personal"; }
+      { command = "firefox -P work --name firefox-work"; }
       { command = "1password &"; }
       { command = "discord &"; }
       { command = "logseq &"; }

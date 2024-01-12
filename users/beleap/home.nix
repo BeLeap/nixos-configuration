@@ -95,12 +95,12 @@ in
     desktopEntries = {
       firefox = {
         name = "Firefox";
-        exec = "firefox %U -P personal";
+        exec = "firefox %U -P personal --name firefox-personal";
         terminal = false;
       };
       firefox-work = {
         name = "Firefox (Work)";
-        exec = "firefox %U -P work";
+        exec = "firefox %U -P work --name firefox-work";
         terminal = false;
       };
       reboot = {
