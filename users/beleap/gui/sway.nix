@@ -1,10 +1,5 @@
-{ pkgs, lib }:
+{ pkgs, lib, helpers, hostname }:
 let
-  helpers = import ../helpers.nix {
-    inherit
-      pkgs
-      lib;
-  };
   catppuccin = import ../../../const/catppuccin.nix;
   assign-to-scratchpad = [
     { class = "1Password"; }
@@ -60,8 +55,13 @@ rec {
 
     assigns = {
       "number 1" = [{ app_id = "org.wezfurlong.wezterm"; }];
-      "number 2" = [{ app_id = "firefox"; }];
-    };
+    } // (if (helpers.isWork hostname) then {
+      "number 2" = [{ app_id = "firefox-work"; }];
+      "number 3" = [{ app_id = "firefox-personal"; }];
+    } else {
+      "number 2" = [{ app_id = "firefox-personal"; }];
+      "number 3" = [{ app_id = "firefox-work"; }];
+    });
 
     startup = [
       { command = "wezterm"; }

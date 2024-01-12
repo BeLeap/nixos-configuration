@@ -24,7 +24,7 @@ in
     waybar = (import ./gui/waybar/default.nix);
     wofi = (import ./gui/wofi/default.nix);
     swaylock = (import ./gui/swaylock.nix);
-    firefox = (import ./gui/firefox/default.nix) { inherit hostname; };
+    firefox = (import ./gui/firefox/default.nix) { inherit helpers hostname; };
     wezterm = (import ./gui/wezterm/default.nix);
 
     carapace = (import ./tui/carapace.nix);
@@ -50,7 +50,7 @@ in
 
   wayland = {
     windowManager = {
-      sway = (import ./gui/sway.nix) { inherit pkgs lib; };
+      sway = (import ./gui/sway.nix) { inherit pkgs lib helpers hostname; };
     };
   };
 

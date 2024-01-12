@@ -1,4 +1,4 @@
-{ hostname }:
+{ helpers, hostname }:
 {
   enable = true;
 
@@ -28,7 +28,6 @@
 
   profiles =
     let
-      isWork = hostname == "beleap-thinkpad";
       common = {
         settings = {
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
@@ -112,7 +111,7 @@
         };
         userChrome = common.userChrome;
         search = common.search;
-        isDefault = !isWork;
+        isDefault = !(helpers.isWork hostname);
 
         bookmarks = [ ];
       };
@@ -123,7 +122,7 @@
         settings = common.settings;
         userChrome = common.userChrome;
         search = common.search;
-        isDefault = isWork;
+        isDefault = (helpers.isWork hostname);
 
         bookmarks = [
           {
