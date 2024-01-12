@@ -1,6 +1,6 @@
 { pkgs, lib, helpers, hostname }:
 let
-  catppuccin = import ../../../const/catppuccin.nix;
+  nord = import ../../../const/nord.nix;
   assign-to-scratchpad = [
     { class = "1Password"; }
     { class = "Youtube Music"; }
@@ -79,41 +79,41 @@ rec {
     ];
 
     colors = {
-      background = catppuccin.base;
+      background = nord.nord0;
       focused = {
-        border = catppuccin.lavender;
-        background = catppuccin.base;
-        text = catppuccin.text;
-        indicator = catppuccin.lavender;
-        childBorder = catppuccin.lavender;
+        border = nord.nord8;
+        background = nord.nord1;
+        text = nord.nord4;
+        indicator = nord.nord8;
+        childBorder = nord.nord8;
       };
       focusedInactive = {
-        border = catppuccin.overlay0;
-        background = catppuccin.base;
-        text = catppuccin.text;
-        indicator = catppuccin.overlay0;
-        childBorder = catppuccin.overlay0;
+        border = nord.nord1;
+        background = nord.nord1;
+        text = nord.nord4;
+        indicator = nord.nord1;
+        childBorder = nord.nord1;
       };
       unfocused = {
-        border = catppuccin.overlay0;
-        background = catppuccin.base;
-        text = catppuccin.text;
-        indicator = catppuccin.overlay0;
-        childBorder = catppuccin.overlay0;
+        border = nord.nord1;
+        background = nord.nord1;
+        text = nord.nord4;
+        indicator = nord.nord1;
+        childBorder = nord.nord1;
       };
       urgent = {
-        border = catppuccin.peach;
-        background = catppuccin.base;
-        text = catppuccin.peach;
-        indicator = catppuccin.peach;
-        childBorder = catppuccin.peach;
+        border = nord.nord11;
+        background = nord.nord1;
+        text = nord.nord11;
+        indicator = nord.nord11;
+        childBorder = nord.nord11;
       };
       placeholder = {
-        border = catppuccin.overlay0;
-        background = catppuccin.base;
-        text = catppuccin.text;
-        indicator = catppuccin.overlay0;
-        childBorder = catppuccin.overlay0;
+        border = nord.nord1;
+        background = nord.nord1;
+        text = nord.nord4;
+        indicator = nord.nord1;
+        childBorder = nord.nord1;
       };
     };
 
