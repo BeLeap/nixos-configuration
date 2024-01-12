@@ -118,11 +118,6 @@ in
         exec = "swaylock";
         terminal = false;
       };
-      vlc = {
-        name = "VLC Music";
-        exec = "vlc -LZ /home/beleap/Music";
-        terminal = false;
-      };
     };
   };
 
