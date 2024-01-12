@@ -1,40 +1,20 @@
-/*
- *
- * Catppuccin Mocha palette
- * Maintainer: rubyowo
- *
- */
+@define-color nord0 #2e3440;
+@define-color nord1 #3b4252;
+@define-color nord2 #434c5e;
+@define-color nord3 #4c566a;
+@define-color nord4 #d8dee9;
+@define-color nord5 #e5e9f0;
+@define-color nord6 #eceff4;
+@define-color nord7 #8fbcbb;
+@define-color nord8 #88c0d0;
+@define-color nord9 #81a1c1;
+@define-color nord10 #5e81ac;
+@define-color nord11 #bf616a;
+@define-color nord12 #d08770;
+@define-color nord13 #ebcb8b;
+@define-color nord14 #a3be8c;
+@define-color nord15 #b48ead;
 
-@define-color base   #1e1e2e;
-@define-color mantle #181825;
-@define-color crust  #11111b;
-
-@define-color text     #cdd6f4;
-@define-color subtext0 #a6adc8;
-@define-color subtext1 #bac2de;
-
-@define-color surface0 #313244;
-@define-color surface1 #45475a;
-@define-color surface2 #585b70;
-
-@define-color overlay0 #6c7086;
-@define-color overlay1 #7f849c;
-@define-color overlay2 #9399b2;
-
-@define-color blue      #89b4fa;
-@define-color lavender  #b4befe;
-@define-color sapphire  #74c7ec;
-@define-color sky       #89dceb;
-@define-color teal      #94e2d5;
-@define-color green     #a6e3a1;
-@define-color yellow    #f9e2af;
-@define-color peach     #fab387;
-@define-color maroon    #eba0ac;
-@define-color red       #f38ba8;
-@define-color mauve     #cba6f7;
-@define-color pink      #f5c2e7;
-@define-color flamingo  #f2cdcd;
-@define-color rosewater #f5e0dc;
 
 * {
   border: none;
@@ -50,22 +30,22 @@
 .modules-left {
   padding: 0 8px;
   border-radius: 0 0 10px 0;
-  background-color: @surface0;
-  color: @text;
+  background-color: @nord0;
+  color: @nord4;
 }
 
 .modules-right {
   padding: 0 8px;
   border-radius: 0 0 0 10px;
-  background-color: @surface0;
-  color: @text;
+  background-color: @nord0;
+  color: @nord4;
 }
 
 .modules-center {
   padding: 0 8px;
   border-radius: 0 0 10px 10px;
-  background-color: @lavender;
-  color: @base;
+  background-color: @nord4;
+  color: @nord0;
 }
 
 #window {
@@ -80,28 +60,28 @@
 
 #workspaces button {
   padding: 0 8px;
-  color: @overlay0;
+  color: @nord4;
 }
 
 #workspaces button.focused {
-  color: @text;
+  color: @nord6;
 }
 
 #workspaces button:hover {
   box-shadow: none;
   text-shadow: none;
   background: none;
-  color: @subtext0;
+  color: @nord5;
 }
 
 #workspaces button.urgent {
-  color: @red;
+  color: @nord11;
 }
 
 tooltip {
-  color: @text;
-  background-color: @base;
-  border-color: @lavendar;
+  color: @nord4;
+  background-color: @nord0;
+  border-color: @nord1;
   border-radius: 0 0 10px 10px;
 }
 
