@@ -30,14 +30,14 @@
 .modules-left {
   padding: 0 8px;
   border-radius: 0 0 10px 0;
-  background-color: @nord0;
+  background-color: @nord3;
   color: @nord4;
 }
 
 .modules-right {
   padding: 0 8px;
   border-radius: 0 0 0 10px;
-  background-color: @nord0;
+  background-color: @nord3;
   color: @nord4;
 }
 
