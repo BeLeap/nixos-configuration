@@ -8,9 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-wsl.url = "github:nix-community/NixOS-WSL";
-    nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
-
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
