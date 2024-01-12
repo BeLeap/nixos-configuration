@@ -132,7 +132,7 @@ in
             let
               currRelative = lib.path.removePrefix autoloadRoot (/. + curr);
             in
-            lib.trivial.mergeAttrs { "${currRelative}".source = curr; } acc
+            acc // { "${currRelative}".source = curr; }
         );
         initialVal = { };
         root = autoloadRoot;
