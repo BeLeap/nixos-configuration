@@ -70,7 +70,7 @@ rec {
       { command = "1password &"; }
       { command = "swaybg --color \"#1e1e2e\""; always = true; }
       { command = "systemctl --user restart kanshi.service"; always = true; }
-      { command = "/home/beleap/.nix-profile/libexec/polkit-gnome-authentication-agent-1"; always = true; }
+      { command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"; always = true; }
       { command = "kime"; }
       { command = "wl-paste --watch cliphist store"; }
       { command = "bash /home/beleap/.scripts/idle.sh"; }
