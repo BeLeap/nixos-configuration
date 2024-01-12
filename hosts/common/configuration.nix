@@ -144,10 +144,6 @@
 
     plymouth = {
       enable = true;
-      themePackages = [
-        (pkgs.catppuccin-plymouth.override { variant = "mocha"; })
-      ];
-      theme = "catppuccin-mocha";
     };
 
     consoleLogLevel = 0;
