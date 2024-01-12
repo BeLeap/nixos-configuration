@@ -15,4 +15,5 @@
   nord13 = "#ebcb8b";
   nord14 = "#a3be8c";
   nord15 = "#b48ead";
+  hexify = code: builtins.replaceStrings [ "#" ] [ "" ] code;
 }

@@ -1,28 +1,28 @@
 let
-  catppuccin = import ../../../const/catppuccin.nix;
+  nord = import ../../../const/nord.nix;
 in
 {
   enable = true;
   settings = {
     image = "/home/beleap/.background";
 
-    line-color = catppuccin.hexify catppuccin.overlay0;
-    text-color = catppuccin.hexify catppuccin.text;
-    inside-color = catppuccin.hexify catppuccin.base;
+    line-color = nord.hexify nord.nord8;
+    text-color = nord.hexify nord.nord4;
+    inside-color = nord.hexify nord.nord0;
 
-    ring-color = catppuccin.hexify catppuccin.teal;
-    key-hl-color = catppuccin.hexify catppuccin.sapphire;
+    ring-color = nord.hexify nord.nord9;
+    key-hl-color = nord.hexify nord.nord7;
 
-    line-ver-color = catppuccin.hexify catppuccin.overlay0;
-    text-ver-color = catppuccin.hexify catppuccin.text;
-    inside-ver-color = catppuccin.hexify catppuccin.base;
+    line-ver-color = nord.hexify nord.nord8;
+    text-ver-color = nord.hexify nord.nord4;
+    inside-ver-color = nord.hexify nord.nord0;
 
-    ring-ver-color = catppuccin.hexify catppuccin.yellow;
+    ring-ver-color = nord.hexify nord.nord13;
 
-    line-wrong-color = catppuccin.hexify catppuccin.overlay0;
-    text-wrong-color = catppuccin.hexify catppuccin.text;
-    inside-wrong-color = catppuccin.hexify catppuccin.base;
+    line-wrong-color = nord.hexify nord.nord8;
+    text-wrong-color = nord.hexify nord.nord4;
+    inside-wrong-color = nord.hexify nord.nord0;
 
-    ring-wrong-color = catppuccin.hexify catppuccin.red;
+    ring-wrong-color = nord.hexify nord.nord11;
   };
 }
