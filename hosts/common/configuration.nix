@@ -32,7 +32,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "networkmanager" "video" ];
     shell = pkgs.fish;
-    packages = with pkgs; [ ];
   };
 
   environment.systemPackages = with pkgs; [
