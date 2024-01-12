@@ -51,11 +51,6 @@
   };
 
   plugins = with pkgs.tmuxPlugins; [
-    {
-      plugin = catppuccin;
-      extraConfig = ''
-        set -g @catppuccin_window_tabs_enabled on
-      '';
-    }
+    nord
   ];
 }
