@@ -1,69 +1,80 @@
-/* Mocha Red */
-@define-color accent #f38ba8;
-@define-color txt #cad3f5;
-@define-color bg #24273a;
-@define-color bg2 #494d64;
+@define-color nord0 #2e3440;
+@define-color nord1 #3b4252;
+@define-color nord2 #434c5e;
+@define-color nord3 #4c566a;
+@define-color nord4 #d8dee9;
+@define-color nord5 #e5e9f0;
+@define-color nord6 #eceff4;
+@define-color nord7 #8fbcbb;
+@define-color nord8 #88c0d0;
+@define-color nord9 #81a1c1;
+@define-color nord10 #5e81ac;
+@define-color nord11 #bf616a;
+@define-color nord12 #d08770;
+@define-color nord13 #ebcb8b;
+@define-color nord14 #a3be8c;
+@define-color nord15 #b48ead;
 
 * {
-   font-family: 'Caskaydia Cove Nerd Font', 'NanumGothicCoding', monospace;
-   font-size: 14px;
+  font-family: 'Caskaydia Cove Nerd Font', 'NanumGothicCoding', monospace;
+  font-size: 14px;
 }
 
 /* Window */
 window {
-   margin: 0px;
-   padding: 10px;
-   border: 1px solid @accent;
-   border-radius: 7px;
-   background-color: @bg;
+  margin: 0px;
+  padding: 10px;
+  border: 1px solid @nord8;
+  border-radius: 7px;
+  background-color: @nord1;
 }
 
 /* Inner Box */
 #inner-box {
-   margin: 5px;
-   padding: 10px;
-   border: none;
-   background-color: @bg;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @nord1;
 }
 
 /* Outer Box */
 #outer-box {
-   margin: 5px;
-   padding: 10px;
-   border: none;
-   background-color: @bg;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  background-color: @nord1;
 }
 
 /* Scroll */
 #scroll {
-   margin: 0px;
-   padding: 10px;
-   border: none;
+  margin: 0px;
+  padding: 10px;
+  border: none;
 }
 
 /* Input */
 #input {
-   margin: 5px;
-   padding: 10px;
-   border: none;
-   color: @accent;
-   background-color: @bg2;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  color: @nord8;
+  background-color: @nord1;
 }
 
 /* Text */
 #text {
-   margin: 5px;
-   padding: 10px;
-   border: none;
-   color: @txt;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  color: @nord4;
 }
 
 /* Selected Entry */
 #entry:selected {
   border-radius: 7px;
-  background-color: @accent;
+  background-color: @nord8;
 }
 
 #entry:selected #text {
-   color: @bg;
+  color: @nord1;
 }
