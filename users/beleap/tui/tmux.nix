@@ -8,7 +8,8 @@
   extraConfig = ''
     set -g base-index 1
     set-option -g default-terminal "screen-256color"
-    set-option -sa terminal-features 'xterm:RGB'
+    set-option -a terminal-features 'xterm-256color:RGB'
+    set-option -sg escape-time 10
 
     bind  c  new-window      -c "#{pane_current_path}"
     bind  %  split-window -h -c "#{pane_current_path}"
