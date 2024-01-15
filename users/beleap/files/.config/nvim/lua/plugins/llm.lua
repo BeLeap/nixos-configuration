@@ -70,6 +70,22 @@ return {
       require('model').setup(
         {
           prompts = {
+            gemini = {
+              provider = gemini,
+              builder = function(input)
+                return {
+                  contents = {
+                    {
+                      parts = {
+                        {
+                          text = input
+                        }
+                      }
+                    }
+                  }
+                }
+              end
+            },
             commit = {
               provider = gemini,
               mode = require('model').mode.INSERT,
