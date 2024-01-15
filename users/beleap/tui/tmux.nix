@@ -16,6 +16,7 @@
 
   plugins = with pkgs.tmuxPlugins; [
     nord
+    prefix-highlight
   ];
 
   extraConfig = ''
