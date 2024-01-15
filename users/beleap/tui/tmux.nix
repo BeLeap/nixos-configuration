@@ -16,7 +16,14 @@
 
   plugins = with pkgs.tmuxPlugins; [
     nord
-    prefix-highlight
+    {
+      plugin = prefix-highlight;
+      extraConfig = ''
+        set -g @prefix_highlight_prefix_prompt 'Wait'
+        set -g @prefix_highlight_copy_prompt 'Copy'
+        set -g @prefix_highlight_sync_prompt 'Sync'
+      '';
+    }
   ];
 
   extraConfig = ''
