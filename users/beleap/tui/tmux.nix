@@ -10,6 +10,14 @@
   escapeTime = 10;
   aggressiveResize = true;
 
+  tmuxinator = {
+    enable = true;
+  };
+
+  plugins = with pkgs.tmuxPlugins; [
+    nord
+  ];
+
   extraConfig = ''
     set-option -g default-terminal "screen-256color"
     set-option -a terminal-features 'xterm-256color:RGB'
@@ -49,12 +57,4 @@
     bind-key -T copy-mode-vi M-k resize-pane -U 1
     bind-key -T copy-mode-vi M-l resize-pane -R 1
   '';
-
-  tmuxinator = {
-    enable = true;
-  };
-
-  plugins = with pkgs.tmuxPlugins; [
-    nord
-  ];
 }
