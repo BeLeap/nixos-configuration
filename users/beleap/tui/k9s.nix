@@ -4,6 +4,7 @@ let
       url = "https://github.com/nixos/nixpkgs/archive/fd04bea4cbf76f86f244b9e2549fca066db8ddff.tar.gz";
     })
     { };
+  nord = import ../../../const/nord.nix;
 in
 {
   enable = true;
@@ -12,104 +13,95 @@ in
   skin = {
     k9s = {
       body = {
-        fgColor = "#cdd6f4";
-        bgColor = "#1e1e2e";
-        logoColor = "#cba6f7";
-      };
-      prompt = {
-        fgColor = "#cdd6f4";
-        bgColor = "#181825";
-        suggestColor = "#89b4fa";
+        fgColor = nord.nord4;
+        bgColor = nord.nord0;
+        logoColor = nord.nord10;
       };
       info = {
-        fgColor = "#fab387";
-        sectionColor = "#cdd6f4";
+        fgColor = nord.nord8;
+        sectionColor = nord.nord4;
       };
       dialog = {
-        fgColor = "#f9e2af";
-        bgColor = "#9399b2";
-        buttonFgColor = "#1e1e2e";
-        buttonBgColor = "#7f849c";
-        buttonFocusFgColor = "#1e1e2e";
-        buttonFocusBgColor = "#f5c2e7";
-        labelFgColor = "#f5e0dc";
-        fieldFgColor = "#cdd6f4";
+        fgColor = nord.nord4;
+        bgColor = nord.nord0;
+        buttonFgColor = nord.nord4;
+        buttonBgColor = nord.nord1;
+        buttonFocusFgColor = nord.nord4;
+        buttonFocusBgColor = nord.nord1;
+        labelFgColor = nord.nord8;
+        fieldFgColor = nord.nord11;
       };
       frame = {
         border = {
-          fgColor = "#cba6f7";
-          focusColor = "#b4befe";
+          fgColor = nord.nord10;
+          focusColor = nord.nord10;
         };
         menu = {
-          fgColor = "#cdd6f4";
-          keyColor = "#89b4fa";
-          numKeyColor = "#eba0ac";
+          fgColor = nord.nord4;
+          keyColor = nord.nord14;
+          numKeyColor = nord.nord14;
         };
         crumbs = {
-          fgColor = "#1e1e2e";
-          bgColor = "#eba0ac";
-          activeColor = "#f2cdcd";
+          fgColor = nord.nord4;
+          bgColor = nord.nord0;
+          activeColor = nord.nord14;
         };
         status = {
-          newColor = "#89b4fa";
-          modifyColor = "#b4befe";
-          addColor = "#a6e3a1";
-          pendingColor = "#fab387";
-          errorColor = "#f38ba8";
-          highlightColor = "#89dceb";
-          killColor = "#cba6f7";
-          completedColor = "#6c7086";
+          newColor = nord.nord8;
+          modifyColor = nord.nord13;
+          addColor = nord.nord14;
+          pendingColor = nord.nord13;
+          errorColor = nord.nord11;
+          highlightColor = nord.nord8;
+          killColor = nord.nord14;
+          completedColor = nord.nord10;
         };
         title = {
-          fgColor = "#94e2d5";
-          bgColor = "#1e1e2e";
-          highlightColor = "#f5c2e7";
-          counterColor = "#f9e2af";
-          filterColor = "#a6e3a1";
+          fgColor = nord.nord4;
+          bgColor = nord.nord0;
+          highlightColor = nord.nord8;
+          counterColor = nord.nord8;
+          filterColor = nord.nord13;
         };
       };
       views = {
         charts = {
-          bgColor = "#1e1e2e";
-          chartBgColor = "#1e1e2e";
-          dialBgColor = "#1e1e2e";
-          defaultDialColors = [ "#a6e3a1" "#f38ba8" ];
-          defaultChartColors = [ "#a6e3a1" "#f38ba8" ];
-          resourceColors = {
-            cpu = [ "#cba6f7" "#89b4fa" ];
-            mem = [ "#f9e2af" "#fab387" ];
-          };
+          bgColor = nord.nord0;
+          chartBgColor = nord.nord0;
+          dialBgColor = nord.nord0;
+          defaultDialColors = [ nord.nord8 nord.nord11 ];
+          defaultChartColors = [ nord.nord8 nord.nord11 ];
         };
         table = {
-          fgColor = "#cdd6f4";
-          bgColor = "#1e1e2e";
-          cursorFgColor = "#313244";
-          cursorBgColor = "#45475a";
-          markColor = "#f5e0dc";
+          fgColor = nord.nord4;
+          bgColor = nord.nord0;
+          cursorFgColor = nord.nord0;
+          cursorBgColor = nord.nord0;
+          markColor = nord.nord4;
           header = {
-            fgColor = "#f9e2af";
-            bgColor = "#1e1e2e";
-            sorterColor = "#89dceb";
+            fgColor = nord.nord4;
+            bgColor = nord.nord0;
+            sorterColor = nord.nord8;
           };
         };
         xray = {
-          fgColor = "#cdd6f4";
-          bgColor = "#1e1e2e";
-          cursorColor = "#45475a";
-          cursorTextColor = "#1e1e2e";
-          graphicColor = "#f5c2e7";
+          fgColor = nord.nord4;
+          bgColor = nord.nord0;
+          cursorColor = nord.nord8;
+          cursorTextColor = nord.nord4;
+          graphicColor = nord.nord8;
         };
         yaml = {
-          keyColor = "#89b4fa";
-          colonColor = "#a6adc8";
-          valueColor = "#cdd6f4";
+          keyColor = nord.nord8;
+          colonColor = nord.nord8;
+          valueColor = nord.nord4;
         };
         logs = {
-          fgColor = "#cdd6f4";
-          bgColor = "#1e1e2e";
+          fgColor = nord.nord4;
+          bgColor = nord.nord0;
           indicator = {
-            fgColor = "#b4befe";
-            bgColor = "#1e1e2e";
+            fgColor = nord.nord4;
+            bgColor = nord.nord10;
           };
         };
       };
