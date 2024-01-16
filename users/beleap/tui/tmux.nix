@@ -65,6 +65,8 @@
     bind-key -T copy-mode-vi M-k resize-pane -U 1
     bind-key -T copy-mode-vi M-l resize-pane -R 1
 
-    bind f display-popup -E "tmux new-session -A -s scratch"
+    bind f run-shell '~/.scripts/tmux-scratch.sh'
+
+    bind r source-file ~/.config/tmux/tmux.conf
   '';
 }
