@@ -21,5 +21,12 @@ rec {
     }
   ];
 
+  services = {
+    fprintd = {
+      enable = true;
+    };
+  };
+  security.pam.services.swaylock.fprintAuth = true;
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
