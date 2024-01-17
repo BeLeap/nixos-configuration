@@ -33,3 +33,5 @@ vim.o.winblend = 0
 
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldtext = "v:lua.vim.treesitter.foldtext()"
+
+vim.opt.clipboard = "unnamedplus"
