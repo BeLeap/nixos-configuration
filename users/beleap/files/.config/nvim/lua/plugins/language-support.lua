@@ -74,7 +74,6 @@ return {
         single_file_support = false,
         root_dir = require('lspconfig.util').root_pattern('deno.json'),
       })
-      lsp_zero.configure('gopls', {})
 
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({ buffer = bufnr })
@@ -87,6 +86,7 @@ return {
       local lua_opts = lsp_zero.nvim_lua_ls()
       require('lspconfig').lua_ls.setup(lua_opts)
 
+      lsp_zero.setup_servers({ 'gopls', 'dartls' })
       lsp_zero.setup()
     end
   },
