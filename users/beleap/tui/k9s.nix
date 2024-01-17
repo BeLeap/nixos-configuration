@@ -17,6 +17,11 @@ in
         bgColor = nord.nord0;
         logoColor = nord.nord10;
       };
+      prompt = {
+        fgColor = nord.nord4;
+        bgColor = nord.nord0;
+        suggestColor = nord.nord12;
+      };
       info = {
         fgColor = nord.nord8;
         sectionColor = nord.nord4;
@@ -106,11 +111,8 @@ in
         };
       };
       help = {
-        fgColor = "#cdd6f4";
-        bgColor = "#1e1e2e";
-        sectionColor = "#a6e3a1";
-        keyColor = "#89b4fa";
-        numKeyColor = "#eba0ac";
+        fgColor = nord.nord4;
+        bgColor = nord.nord0;
       };
     };
   };
