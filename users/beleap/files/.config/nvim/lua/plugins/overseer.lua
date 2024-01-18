@@ -44,7 +44,7 @@ return {
           local parent = vim.fn.expand("%:p:h")
           return {
             cmd = { "terraform" },
-            args = { "apply" },
+            args = { "apply", "-auto-approve" },
             cwd = parent,
             components = { "default" },
           }
