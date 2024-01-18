@@ -33,7 +33,10 @@ return {
             cwd = parent,
             components = { "default" },
           }
-        end
+        end,
+        condition = {
+          filetype = { "terraform" },
+        },
       })
       overseer.register_template({
         name = "Terraform Apply",
@@ -45,7 +48,10 @@ return {
             cwd = parent,
             components = { "default" },
           }
-        end
+        end,
+        condition = {
+          filetype = { "terraform" },
+        },
       })
     end
   },
