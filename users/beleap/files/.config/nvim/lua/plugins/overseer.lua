@@ -1,6 +1,9 @@
 return {
   {
     "stevearc/overseer.nvim",
+    keys = {
+      { "<leader>tt", "<cmd>OverseerRun<cr>" },
+    },
     event = "VeryLazy",
     config = function()
       local overseer = require("overseer")
