@@ -75,10 +75,6 @@ return {
     opts = {},
   },
   {
-    "stevearc/overseer.nvim",
-    opts = {},
-  },
-  {
     "willothy/flatten.nvim",
     config = true,
     lazy = false,
