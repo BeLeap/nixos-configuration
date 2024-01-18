@@ -1,105 +1,12 @@
 return {
-  -- UI
-  {
-    "ahmedkhalf/project.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-    },
-    keys = {
-      {
-        "<leader>p",
-        function()
-          require("telescope").extensions.projects.projects()
-        end,
-        silent = true,
-      },
-    },
-    config = function()
-      require("project_nvim").setup({
-        detection_methods = { "pattern", "lsp" },
-        pattern = { "root.md", ">projects" },
-        silent_chdir = true,
-        show_hidden = true,
-        excluder_dirs = {
-          "*/node_modules/*",
-          "/tmp/*",
-        },
-      })
-      require("telescope").load_extension("projects")
-    end,
-  },
-  {
-    "GustavoKatel/tasks.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      require("telescope").load_extension("tasks")
-
-      local tasks = require("tasks")
-
-      local source_npm = require("tasks.sources.npm")
-      local source_tasksjson = require("tasks.sources.tasksjson")
-
-      local builtin = require("tasks.sources.builtin")
-
-      tasks.setup({
-        sources = {
-          npm = source_npm,
-          vscode = source_tasksjson,
-          terraform = builtin.new_builtin_source({
-            plan = {
-              fn = function()
-                local Terminal = require("toggleterm.terminal").Terminal
-                local file_dir = vim.fs.dirname(vim.fn.expand("%:p"))
-                local term = Terminal:new({
-                  cmd = "cd " .. file_dir .. "; direnv exec " .. file_dir .. " terraform plan",
-                  cwd = file_dir,
-                  close_on_exit = false,
-                })
-                term:toggle()
-              end,
-            },
-            apply = {
-              fn = function()
-                local Terminal = require("toggleterm.terminal").Terminal
-                local file_dir = vim.fs.dirname(vim.fn.expand("%:p"))
-                local term = Terminal:new({
-                  cmd = "cd " .. file_dir .. "; direnv exec " .. file_dir .. " terraform apply",
-                  cwd = file_dir,
-                  close_on_exit = false,
-                })
-                term:toggle()
-              end,
-            },
-          }),
-        },
-      })
-    end,
-  },
   {
     "dstein64/vim-startuptime",
     cmd = "StartupTime",
   },
   {
-    "folke/todo-comments.nvim",
-    event = { "BufEnter" },
-    config = true,
-  },
-  {
     "stevearc/dressing.nvim",
     event = { "BufEnter" },
     config = true,
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    event = { "BufEnter" },
-    config = function()
-      require("ibl").setup()
-    end,
   },
   {
     "rcarriga/nvim-notify",
@@ -140,94 +47,12 @@ return {
     end,
   },
   {
-    "hiphish/rainbow-delimiters.nvim",
-    event = "VeryLazy",
-    config = function()
-      -- This module contains a number of default definitions
-      local rainbow_delimiters = require("rainbow-delimiters")
-
-      vim.g.rainbow_delimiters = {
-        strategy = {
-          [""] = rainbow_delimiters.strategy["global"],
-          vim = rainbow_delimiters.strategy["local"],
-        },
-        query = {
-          [""] = "rainbow-delimiters",
-          lua = "rainbow-blocks",
-        },
-        highlight = {
-          "RainbowDelimiterRed",
-          "RainbowDelimiterYellow",
-          "RainbowDelimiterBlue",
-          "RainbowDelimiterOrange",
-          "RainbowDelimiterGreen",
-          "RainbowDelimiterViolet",
-          "RainbowDelimiterCyan",
-        },
-      }
-    end,
-  },
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    ---@type Flash.Config
-    opts = {},
-    -- stylua: ignore
-    keys = {
-      { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
-      { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
-      { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
-      { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>", mode = { "c" },           function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
-    },
-  },
-
-  -- Language
-  { "lbrayner/vim-rzip" },
-  { "dmix/elvish.vim" },
-  {
-    "hashivim/vim-terraform",
-    event = { "BufEnter *.tf" },
-  },
-  {
-    "simrat39/rust-tools.nvim",
-    event = { "BufEnter *.rs", "BufEnter *.toml" },
-  },
-  {
-    "mhinz/vim-crates",
-    event = { "BufEnter Cargo.toml" },
-  },
-  {
-    "mfussenegger/nvim-jdtls",
-    event = { "BufEnter *.java", "BufEnter *.kt" },
-  },
-  {
-    "udalov/kotlin-vim",
-    event = { "BufEnter *.kt" },
-  },
-  {
-    "ziglang/zig.vim",
-    event = { "BufEnter *.zig" },
-  },
-  {
-    "numToStr/Comment.nvim",
-    event = { "BufEnter" },
-    config = true,
-  },
-
-  -- Others
-  {
     "tpope/vim-sensible",
     event = { "BufEnter" },
   },
   {
     "wakatime/vim-wakatime",
     event = { "BufEnter" },
-  },
-  {
-    "nacro90/numb.nvim",
-    event = { "BufEnter" },
-    config = true,
   },
   {
     "andweeb/presence.nvim",
@@ -250,38 +75,5 @@ return {
     event = { "BufEnter" },
     version = "*",
     config = true,
-  },
-  {
-    "https://git.sr.ht/~soywod/himalaya-vim",
-    cmd = { "Himalaya" },
-    init = function()
-      vim.g.himalaya_folder_picker = "telescope"
-      vim.g.himalaya_folder_picker_telescope_preview = 1
-    end,
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    keys = {
-      { "<leader>f", "<cmd>Neotree<cr>" },
-    },
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-      "3rd/image.nvim",
-    },
-    opts = {
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-        },
-        use_libuv_file_watcher = true,
-        follow_current_file = {
-          enabled = true,
-        },
-      },
-    },
   },
 }
