@@ -35,6 +35,18 @@ return {
           }
         end
       })
+      overseer.register_template({
+        name = "Terraform Apply",
+        builder = function()
+          local parent = vim.fn.expand("%:p:h")
+          return {
+            cmd = { "terraform" },
+            args = { "apply" },
+            cwd = parent,
+            components = { "default" },
+          }
+        end
+      })
     end
   },
 }
