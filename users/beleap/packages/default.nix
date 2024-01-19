@@ -50,6 +50,7 @@
     logseq
     calibre
     ((import ../../../pkgs/keymapp.nix) { inherit pkgs; })
+    google-chrome
   ];
   db = [
     postgresql_15
