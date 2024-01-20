@@ -21,7 +21,7 @@ return {
         },
         auto_install = true,
         incremental_selection = { enable = true },
-        indent = { enable = true },
+        indent = { enable = true, disable = { "dart" } },
         rainbow = { enable = true },
         textobjects = {
           lsp_interop = {
@@ -134,4 +134,3 @@ return {
     end,
   },
 }
-
