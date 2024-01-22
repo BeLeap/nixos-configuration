@@ -4,6 +4,14 @@ in
 {
   enable = true;
 
+  settings = {
+    k9s = {
+      ui = {
+        skin = "nord";
+      };
+    };
+  };
+
   skins = {
     nord = {
       k9s = {
