@@ -38,7 +38,7 @@ return {
           }
         end,
         condition = {
-          filetype = { "terraform" },
+          filetype = { "terraform", "tfvars" },
         },
       })
       overseer.register_template({
@@ -53,7 +53,7 @@ return {
           }
         end,
         condition = {
-          filetype = { "terraform" },
+          filetype = { "terraform", "tfvars" },
         },
       })
     end
