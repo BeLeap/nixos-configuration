@@ -96,6 +96,10 @@ in
       "col.active_border" = "rgb(${nord.hexify nord.nord8})";
     };
 
+    xwayland = {
+      force_zero_scaling = true;
+    };
+
     windowrule = [
       "float,1Password"
 
