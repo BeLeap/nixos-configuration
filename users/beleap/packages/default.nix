@@ -49,6 +49,7 @@
     logseq
     calibre
     ((import ../../../pkgs/keymapp.nix) { inherit pkgs; })
+    hyprshot
   ];
   db = [
     postgresql_15

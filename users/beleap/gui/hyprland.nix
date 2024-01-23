@@ -29,6 +29,10 @@ in
       "$mod, N, exec, dunstctl action && dunstctl close"
       "$mod SHIFT, N, exec, dunstctl close"
 
+      # Screenshots
+      "$mod SHIFT, S, exec, hyprshot -m region"
+      "$mod CTRL, S, exec, hyprshot -m window"
+
       # Others
       "$mod, P, exec, echo \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl"
       "$mod, M, exec, echo \"play-pause\\nnext\\nprevious\" | wofi --dmenu -p 'Music' | xargs playerctl"
