@@ -49,7 +49,6 @@
     logseq
     calibre
     ((import ../../../pkgs/keymapp.nix) { inherit pkgs; })
-    microsoft-edge
   ];
   db = [
     postgresql_15
