@@ -108,6 +108,7 @@
     (wrapHelm kubernetes-helm {
       plugins = with kubernetes-helmPlugins; [
         helm-cm-push
+        helm-diff
       ];
     })
     kubectl
