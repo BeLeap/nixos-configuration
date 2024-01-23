@@ -26,6 +26,7 @@ in
     swaylock = (import ./gui/swaylock.nix);
     firefox = (import ./gui/firefox/default.nix) { inherit helpers hostname; };
     wezterm = (import ./gui/wezterm/default.nix);
+    foot = (import ./gui/foot.nix);
 
     carapace = (import ./tui/carapace.nix);
     fish = (import ./tui/fish.nix);
