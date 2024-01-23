@@ -25,6 +25,14 @@ in
       "$mod SHIFT, K, movewindow, u"
       "$mod SHIFT, L, movewindow, r"
 
+      # Scratchpad
+      "$mod CTRL, H, exec, pypr show right"
+      "$mod CTRL, L, exec, pypr show left"
+
+      # Minimized
+      "$mod, U, togglespecialworkspace, minimized"
+      "$mod SHIFT, M, exec, pypr toggle_minimized"
+
       # Notifications
       "$mod, N, exec, dunstctl action && dunstctl close"
       "$mod SHIFT, N, exec, dunstctl close"
@@ -70,8 +78,6 @@ in
       "${pkgs.foot}/bin/foot"
       "firefox -P personal --name firefox-personal"
       "firefox -P work --name firefox-work"
-      "1password"
-      "discord"
     ];
 
     exec = [
@@ -113,8 +119,7 @@ in
     ];
 
     windowrule = [
-      "float,1Password"
-      "float,discord"
+      "workspace special:minimized,discord"
 
       "workspace 1,foot"
     ] ++ (
