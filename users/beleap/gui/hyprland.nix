@@ -32,6 +32,7 @@ in
       # Screenshots
       "$mod SHIFT, S, exec, hyprshot -m region"
       "$mod CTRL, S, exec, hyprshot -m window"
+      "$mod SHIFT_CTRL, S, exec, hyprshot -m output"
 
       # Others
       "$mod, P, exec, echo \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl"
