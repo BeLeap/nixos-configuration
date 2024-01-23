@@ -78,6 +78,7 @@ in
       "${pkgs.foot}/bin/foot"
       "firefox -P personal --name firefox-personal"
       "firefox -P work --name firefox-work"
+      "discord"
     ];
 
     exec = [
