@@ -43,8 +43,8 @@ in
       "$mod SHIFT_CTRL, S, exec, hyprshot -m output"
 
       # Others
-      "$mod, P, exec, echo \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl"
-      "$mod, M, exec, echo \"play-pause\\nnext\\nprevious\" | wofi --dmenu -p 'Music' | xargs playerctl"
+      "$mod, P, exec, echo -e \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl"
+      "$mod, M, exec, echo -e \"play-pause\\nnext\\nprevious\" | wofi --dmenu -p 'Music' | xargs playerctl"
       "$mod, Q, exec, killall -s SIGUSR1 swayidle && killall -s SIGUSR1 swayidle"
       "$mod SHIFT, R, resizeactive, 50% 50%"
       "$mod SHIFT_CTRL, Q, exit"
