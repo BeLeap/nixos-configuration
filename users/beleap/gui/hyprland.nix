@@ -66,6 +66,7 @@ in
       "${pkgs.foot}/bin/foot"
       "firefox -P personal --name firefox-personal"
       "firefox -P work --name firefox-work"
+      "1password"
     ];
 
     exec = [
@@ -96,6 +97,8 @@ in
     };
 
     windowrule = [
+      "float,1Password"
+
       "workspace 1,foot"
     ] ++ (
       if isWork then
