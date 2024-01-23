@@ -26,8 +26,8 @@ in
       "$mod SHIFT, L, movewindow, r"
 
       # Scratchpad
-      "$mod CTRL, H, exec, pypr show right"
-      "$mod CTRL, L, exec, pypr show left"
+      "$mod CTRL, H, exec, pypr toggle right"
+      "$mod CTRL, L, exec, pypr toggle left"
 
       # Minimized
       "$mod, U, togglespecialworkspace, minimized"
@@ -121,21 +121,21 @@ in
       "XCURSOR_SIZE,32"
     ];
 
-    windowrule = [
-      "float,1Password"
-      "workspace special:minimized,discord"
+    windowrulev2 = [
+      "float,class:(1Password)"
+      "workspace special:minimized,class:(discord)"
 
-      "workspace 1,foot"
+      "workspace 1,class:(foot)"
     ] ++ (
       if isWork then
         [
-          "workspace 2,firefox-work"
-          "workspace 3,firefox-personal"
+          "workspace 2,class:(firefox-work)"
+          "workspace 3,class:(firefox-personal)"
         ]
       else
         [
-          "workspace 2,firefox-personal"
-          "workspace 3,firefox-work"
+          "workspace 2,class:(firefox-personal)"
+          "workspace 3,class:(firefox-work)"
         ]
     );
   };
