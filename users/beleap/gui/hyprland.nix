@@ -64,6 +64,10 @@ in
       "bash /home/beleap/.scripts/idle.sh"
     ];
 
+    exec = [
+      "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+    ];
+
     input = {
       kb_variant = "colemak";
     };
