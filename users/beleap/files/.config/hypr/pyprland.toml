@@ -1,0 +1,12 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+]
+
+[scratchpads.discord]
+animation = "fromRight"
+command = "discord"
+class = "discord"
+lazy = true
+size = "40% 90%"
+unfocus = "hide"
