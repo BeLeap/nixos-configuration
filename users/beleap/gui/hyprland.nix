@@ -76,6 +76,7 @@ in
 
     exec = [
       "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+      "systemctl --user restart kanshi.service"
     ];
 
     input = {
