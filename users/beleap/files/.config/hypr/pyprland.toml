@@ -10,7 +10,6 @@ command = "MellowPlayer"
 class = "ColinDuquesnoy.gitlab.com."
 lazy = true
 size = "40% 90%"
-unfocus = "hide"
 
 [scratchpads.left]
 animation = "fromLeft"
@@ -18,4 +17,3 @@ command = "1password"
 class = "1password"
 lazy = true
 size = "40% 90%"
-unfocus = "hide"
