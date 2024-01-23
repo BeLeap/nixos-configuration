@@ -11,4 +11,5 @@ return {
   warn_about_missing_glyphs = false,
   use_ime = true,
   default_prog = { "sh", "/home/beleap/.scripts/spawn.sh" },
+  enable_wayland = false,
 }

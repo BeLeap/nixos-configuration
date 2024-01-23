@@ -1,18 +1,16 @@
 {
-  "sway/mode" = {
-    "format" = "{}";
-  };
-  "sway/workspaces" = {
+  "hyprland/workspaces" = {
     "format" = "{name}: {icon}";
+    "format-window-separator" = "\n";
     "on-click" = "activate";
     "format-icons" = {
       "urgent" = "";
-      "focused" = "";
+      "active" = "";
       "default" = "";
     };
   };
-  "sway/window" = {
-    "format" = "{app_id} / {title}";
+  "hyprland/window" = {
+    "format" = "{}";
     "separate-outputs" = true;
     "rewrite" = {
       "(.*) \\[Sidebery\\] (.*)" = "$1 $2";

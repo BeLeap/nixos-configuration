@@ -3,11 +3,10 @@
     layer = "top";
     spacing = 8;
     modules-left = [
-      "sway/mode"
-      "sway/workspaces"
+      "hyprland/workspaces"
       "mpris"
     ];
-    modules-center = [ "sway/window" ];
+    modules-center = [ "hyprland/window" ];
     modules-right = [
       "custom/github"
       "pulseaudio"

@@ -90,7 +90,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --remember --cmd 'sway --unsupported-gpu'";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --asterisks --time --remember --cmd '${pkgs.hyprland}/bin/Hyprland'";
           vt = "next";
         };
       };
@@ -107,6 +107,7 @@
       };
       extraPortals = [
         pkgs.xdg-desktop-portal-gtk
+        pkgs.xdg-desktop-portal-hyprland
       ];
       config = {
         common = {
