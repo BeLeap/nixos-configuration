@@ -64,6 +64,7 @@ in
       "${pkgs.swaybg}/bin/swaybg -c '#${nord.nord0}'"
       "${pkgs.waybar}/bin/waybar"
       "bash /home/beleap/.scripts/idle.sh"
+      "pypr"
       # Tools
       "${pkgs.foot}/bin/foot"
       "firefox -P personal --name firefox-personal"

@@ -50,6 +50,7 @@
     calibre
     ((import ../../../pkgs/keymapp.nix) { inherit pkgs; })
     hyprshot
+    pyprland
   ];
   db = [
     postgresql_15
