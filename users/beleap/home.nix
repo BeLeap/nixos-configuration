@@ -50,7 +50,7 @@ in
 
   wayland = {
     windowManager = {
-      hyprland = (import ./gui/hyprland.nix) { inherit pkgs; };
+      hyprland = (import ./gui/hyprland.nix) { inherit pkgs; isWork = (helpers.isWork hostname); };
     };
   };
 

@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, isWork }:
 let
   nord = import ../../../const/nord.nix;
 in
@@ -94,6 +94,21 @@ in
       "col.inactive_border" = "rgb(${nord.hexify nord.nord1})";
       "col.active_border" = "rgb(${nord.hexify nord.nord8})";
     };
+
+    windowrule = [
+      "workspace 1,foot"
+    ] ++ (
+      if isWork then
+        [
+          "workspace 2,firefox-work"
+          "workspace 3,firefox-personal"
+        ]
+      else
+        [
+          "workspace 2,firefox-personal"
+          "workspace 3,firefox-work"
+        ]
+    );
   };
 
   extraConfig = ''
