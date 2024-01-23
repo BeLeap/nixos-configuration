@@ -50,7 +50,6 @@ in
 
   wayland = {
     windowManager = {
-      sway = (import ./gui/sway.nix) { inherit pkgs lib helpers hostname; };
       hyprland = (import ./gui/hyprland.nix) { inherit pkgs; };
     };
   };
