@@ -101,6 +101,11 @@ in
       force_zero_scaling = true;
     };
 
+    env = [
+      "GDK_SCALE,2"
+      "XCURSOR_SIZE,32"
+    ];
+
     windowrule = [
       "float,1Password"
       "float,discord"
