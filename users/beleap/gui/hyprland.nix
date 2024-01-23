@@ -121,6 +121,7 @@ in
     ];
 
     windowrule = [
+      "float,1Password"
       "workspace special:minimized,discord"
 
       "workspace 1,foot"
