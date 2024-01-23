@@ -67,6 +67,7 @@ in
       "firefox -P personal --name firefox-personal"
       "firefox -P work --name firefox-work"
       "1password"
+      "discord"
     ];
 
     exec = [
@@ -102,6 +103,7 @@ in
 
     windowrule = [
       "float,1Password"
+      "float,discord"
 
       "workspace 1,foot"
     ] ++ (
