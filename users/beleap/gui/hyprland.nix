@@ -36,7 +36,7 @@ in
       # Others
       "$mod, P, exec, echo \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl"
       "$mod, M, exec, echo \"play-pause\\nnext\\nprevious\" | wofi --dmenu -p 'Music' | xargs playerctl"
-
+      "$mod, Q, exec, killall -s SIGUSR1 swayidle && killall -s SIGUSR1 swayidle"
     ] ++ (
       # workspaces
       # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
@@ -61,6 +61,7 @@ in
     exec-once = [
       "${pkgs.swaybg}/bin/swaybg -c '#${nord.nord0}'"
       "${pkgs.waybar}/bin/waybar"
+      "bash /home/beleap/.scripts/idle.sh"
     ];
 
     input = {
