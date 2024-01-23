@@ -76,6 +76,7 @@ in
 
     input = {
       kb_variant = "colemak";
+      kb_options = "ctrl:nocaps";
     };
 
     decoration = {
