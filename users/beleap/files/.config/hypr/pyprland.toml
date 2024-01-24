@@ -15,5 +15,5 @@ size = "40% 90%"
 animation = "fromLeft"
 command = "1password"
 class = "1password"
-lazy = true
+lazy = false
 size = "40% 90%"
