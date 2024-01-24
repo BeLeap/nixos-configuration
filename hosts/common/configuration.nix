@@ -22,12 +22,17 @@
       };
     };
   };
-  networking = {
-    networkmanager = {
-      enable = true;
-      insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
+  networking =
+    let
+      nameservers = [ "1.1.1.1" "1.0.0.1" ];
+    in
+    {
+      networkmanager = {
+        enable = true;
+        insertNameservers = nameservers;
+      };
+      nameservers = nameservers;
     };
-  };
 
   time.timeZone = "Asia/Seoul";
 
