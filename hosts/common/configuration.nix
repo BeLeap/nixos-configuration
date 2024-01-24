@@ -22,7 +22,12 @@
       };
     };
   };
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking = {
+    networkmanager = {
+      enable = true;
+      insertNameservers = [ "1.1.1.1" "1.0.0.1" ];
+    };
+  };
 
   time.timeZone = "Asia/Seoul";
 
