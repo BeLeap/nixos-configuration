@@ -17,10 +17,3 @@ command = "1password"
 class = "1password"
 lazy = false
 size = "40% 90%"
-
-[scratchpads.bottom]
-animation = "fromBottom"
-command = "logseq"
-class = "Logseq"
-lazy = false
-size = "40% 90%"
