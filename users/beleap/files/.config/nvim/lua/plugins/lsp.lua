@@ -74,6 +74,17 @@ return {
         single_file_support = false,
         root_dir = require('lspconfig.util').root_pattern('deno.json'),
       })
+      lsp_zero.configure('nil_ls', {
+        autostart = true,
+        settings = {
+          ['nil'] = {
+            testSetting = 42,
+            formatting = {
+              command = { "nixpkgs-fmt" },
+            },
+          },
+        },
+      })
 
       lsp_zero.on_attach(function(client, bufnr)
         lsp_zero.default_keymaps({ buffer = bufnr })
