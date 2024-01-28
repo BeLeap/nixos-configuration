@@ -61,7 +61,11 @@ return {
       lsp_zero.extend_lspconfig()
 
       require('mason-lspconfig').setup({
-        ensure_installed = {},
+        ensure_installed = {
+          "lua_ls",
+          "tsserver",
+          "nil_ls",
+        },
         handlers = {
           lsp_zero.default_setup,
         }
