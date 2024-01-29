@@ -2,6 +2,7 @@
 {
   tui = [
     nix-prefetch-git
+    nixpkgs-fmt
     hexyl
     sshpass
     man
