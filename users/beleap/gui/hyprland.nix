@@ -31,7 +31,7 @@ in
 
       # Minimized
       "$mod, U, togglespecialworkspace, minimized"
-      "$mod SHIFT, M, exec, pypr toggle_minimized"
+      "$mod SHIFT, U, exec, pypr toggle_minimized"
 
       # Notifications
       "$mod, N, exec, dunstctl action && dunstctl close"
