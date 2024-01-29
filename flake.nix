@@ -43,11 +43,11 @@
         })
         { } [ "beleap-xps-9510" "beleap-thinkpad" ];
 
-      homeConfigurations = {
-        beleap = import ./users/beleap {
-          inherit home-manager nixpkgs inputs overlays;
-        };
-      };
+      # homeConfigurations = {
+      #   beleap = import ./users/beleap {
+      #     inherit home-manager nixpkgs inputs overlays;
+      #   };
+      # };
 
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
     };
