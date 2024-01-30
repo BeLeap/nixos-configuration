@@ -27,7 +27,6 @@ in
 
       # Scratchpad
       "$mod CTRL, H, exec, pypr toggle right"
-      "$mod CTRL, K, exec, pypr toggle bottom"
       "$mod CTRL, L, exec, pypr toggle left"
 
       # Minimized
@@ -82,6 +81,7 @@ in
       "firefox -P work --name firefox-work"
       "discord"
       "logseq"
+      "valent"
     ];
 
     exec = [
@@ -128,6 +128,7 @@ in
       "float,class:(1Password)"
       "workspace special:minimized,class:(discord)"
       "workspace special:minimized,class:(Logseq)"
+      "workspace special:minimized,class:(valent)"
 
       "workspace 1,class:(foot)"
     ] ++ (
