@@ -172,10 +172,6 @@
     _1password-gui.polkitPolicyOwners = [ "beleap" ];
 
     nix-ld.enable = true;
-
-    kdeconnect = {
-      enable = true;
-    };
   };
 }
 
