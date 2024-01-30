@@ -46,13 +46,6 @@ in
     mpd = { enable = true; };
     keybase = { enable = true; };
     kbfs = { enable = true; };
-
-    kdeconnect = {
-      enable = true;
-      indicator = true;
-
-      package = pkgs.gnomeExtensions.gsconnect;
-    };
   };
 
   wayland = {
