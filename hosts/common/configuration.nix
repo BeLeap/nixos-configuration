@@ -122,7 +122,7 @@
       ];
       config = {
         common = {
-          default = [ "wlr" ];
+          default = [ "hyprland" ];
         };
       };
     };
