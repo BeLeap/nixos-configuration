@@ -51,6 +51,7 @@
     git
     pciutils
     docker
+    glib
   ];
   virtualisation.docker.enable = true;
 
