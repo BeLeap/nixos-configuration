@@ -175,7 +175,7 @@
 
     kdeconnect = {
       enable = true;
-      package = pkgs.gnomeExtensions.gsconnect;
+      package = pkgs.valent;
     };
   };
 }
