@@ -17,3 +17,10 @@ command = "1password"
 class = "1password"
 lazy = false
 size = "40% 90%"
+
+[scratchpads.bottom]
+animation = "fromBottom"
+command = "valent"
+class = "valent"
+lazy = false
+size = "40% 90%"

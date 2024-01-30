@@ -27,6 +27,7 @@ in
 
       # Scratchpad
       "$mod CTRL, H, exec, pypr toggle right"
+      "$mod CTRL, K, exec, pypr toggle bottom"
       "$mod CTRL, L, exec, pypr toggle left"
 
       # Minimized
