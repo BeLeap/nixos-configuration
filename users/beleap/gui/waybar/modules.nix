@@ -90,7 +90,6 @@
   "mpris" = {
     "format" = "{player_icon} {dynamic}";
     "format-paused" = "{status_icon} <i>{dynamic}</i>";
-    "max-length" = "10";
     "player-icons" = {
       "default" = "▶";
       "mpv" = "🎵";
@@ -99,6 +98,7 @@
       "paused" = " ";
     };
     "on-click" = "playerctl play-pause";
+    "dynamic-len" = 10;
   };
   "custom/uair" = {
     "exec-if" = "command -v uair";
