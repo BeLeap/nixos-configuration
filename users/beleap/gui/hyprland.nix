@@ -91,7 +91,7 @@ in
 
     input = {
       kb_variant = "colemak";
-      kb_options = "ctrl:nocaps";
+      kb_options = "ctrl:nocaps,korean:ralt_hangul";
     };
 
     decoration = {
