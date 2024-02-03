@@ -98,7 +98,8 @@
       "paused" = " ";
     };
     "on-click" = "playerctl play-pause";
-    "dynamic-len" = 10;
+    "title-len" = 15;
+    "dynamic-len" = 30;
   };
   "custom/uair" = {
     "exec-if" = "command -v uair";
