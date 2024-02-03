@@ -18,6 +18,7 @@
       "custom/uair"
       "tray"
     ];
+    fixed-center = true;
 
   } // (import ./modules.nix);
 }
