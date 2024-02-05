@@ -17,6 +17,7 @@
     column.ui = "auto";
     branch.sort = "-committerdate";
     fetch.writeCommitGraph = true;
+    remote.origin.fetch = "+refs/pull/*:refs/remotes/origin/pull/*";
   };
 
   ignores = [
