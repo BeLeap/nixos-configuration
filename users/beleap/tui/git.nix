@@ -16,6 +16,7 @@
     rerere.enable = true;
     column.ui = "auto";
     branch.sort = "-committerdate";
+    fetch.writeCommitGraph = true;
   };
 
   ignores = [
