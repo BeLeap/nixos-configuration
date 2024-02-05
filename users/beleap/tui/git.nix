@@ -14,6 +14,8 @@
     };
     commit.gpgsign = true;
     rerere.enable = true;
+    column.ui = "auto";
+    branch.sort = "-committerdate";
   };
 
   ignores = [
