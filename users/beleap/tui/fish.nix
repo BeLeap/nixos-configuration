@@ -22,6 +22,7 @@
     gd = "git diff";
     ga = "git add";
     gc = "git commit -v";
+    gac = "git commit -av";
     gp = "git push";
     gf = "git fetch --prune --all";
     gl = "git pull";
