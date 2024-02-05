@@ -26,6 +26,7 @@
     gp = "git push";
     gf = "git fetch --prune --all";
     gl = "git pull";
+    gco = "git checkout";
 
     k = "kubectl";
     ktx = "kubectx";
