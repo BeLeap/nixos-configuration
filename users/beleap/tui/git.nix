@@ -11,6 +11,7 @@
     gpg.format = "ssh";
     gpg.ssh.program = "op-ssh-sign";
     commit.gpgsign = true;
+    rerere.enable = true;
   };
 
   ignores = [
