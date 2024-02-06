@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - env:
+          PRIVATE_KEY: ${{ secrets.SRHT_MIRROR_PRIVATE_KEY }}
+          GIT_SSH_COMMAND: "ssh -i id_ed25519 -o 'StrictHostKeyChecking no'"
+        run: |
+          echo "$PRIVATE_KEY" > id_ed25519
+          chmod 400 id_ed25519
+          git remote add srht git@git.sr.ht:~beleap/nixos-configuration
+          git push --force --mirror srht
