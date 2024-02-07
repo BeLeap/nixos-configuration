@@ -9,6 +9,7 @@ rec {
         lib = pkgs.lib;
         hostname = networking.hostName;
       })
+      ../common/laptop.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
