@@ -115,10 +115,6 @@ in
       "col.active_border" = "rgb(${nord.hexify nord.nord8})";
     };
 
-    xwayland = {
-      force_zero_scaling = true;
-    };
-
     env = [
       "GDK_SCALE,1.5"
       "XCURSOR_SIZE,32"
