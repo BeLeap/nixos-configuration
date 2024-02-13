@@ -21,48 +21,45 @@
       fold = fn: acc: list:
         if (builtins.length list) == 0 then acc
         else (fn (fold fn acc (builtins.tail list)) (builtins.head list));
+
+      commonConfiguration = { hostname, type, extraPreModules ? [] }: nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = extraPreModules ++ [
+          { nixpkgs.overlays = overlays; }
+          (./. + "/hosts/${hostname}/configuration.nix")
+          home-manager.nixosModules.home-manager
+          ({ pkgs, lib, ... }: {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.beleap = import ./users/beleap/home.nix {
+              inherit pkgs lib hostname type;
+            };
+          })
+        ];
+      };
     in
     {
-      nixosConfigurations = (fold
+      nixosConfigurations = fold
         (acc: elem: acc // {
-          "${elem}" = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
-            modules = [
-              { nixpkgs.overlays = overlays; }
-              (./. + "/hosts/${elem}/configuration.nix")
-              home-manager.nixosModules.home-manager
-              ({ pkgs, lib, ... }: {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.beleap = import ./users/beleap/home.nix {
-                  inherit pkgs lib;
-                  hostname = elem;
-                };
-              })
-            ];
-          };
+          "${elem.hostname}" = (commonConfiguration elem);
         })
-        { } [ "beleap-xps-9510" "beleap-thinkpad" ]) // {
-        "beleap-wsl" = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            { nixpkgs.overlays = overlays; }
-            inputs.nixos-wsl.nixosModules.wsl
-            (./hosts/beleap-wsl/configuration.nix)
-            home-manager.nixosModules.home-manager
-            ({ pkgs, lib, ... }: {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.beleap = import ./users/beleap/home.nix {
-                inherit pkgs lib;
-                hostname = "beleap-wsl";
-                isNixOS = false;
-                isWSL = true;
-              };
-            })
-          ];
-        };
-      };
+        { } [ 
+          { 
+            hostname = "beleap-xps-9510"; 
+            type = "nixos";
+          } 
+          { 
+            hostname = "beleap-thinkpad"; 
+            type = "nixos";
+          }
+          {
+            hostname = "beleap-wsl";
+            type = "nixos-wsl";
+            extraPreModules = [
+              inputs.nixos-wsl.nixosModules.wsl
+            ];
+          }
+        ];
 
       # homeConfigurations = {
       #   beleap = import ./users/beleap {

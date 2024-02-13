@@ -1,7 +1,16 @@
-{ pkgs, lib, hostname, isNixOS ? true, isWSL ? false, ... }:
+{ 
+  pkgs, 
+  lib, 
+  hostname, 
+  # Available Types: nixos, nixos-wsl
+  type ? "nixos", 
+  ... 
+}:
 let
   helpers = import ./helpers.nix { inherit pkgs lib; };
   username = "beleap";
+  isNixOS = (type == "nixos");
+  isWSL = (type == "nixos-wsl");
 in
 {
   home = {
