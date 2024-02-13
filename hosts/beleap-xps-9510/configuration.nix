@@ -5,9 +5,11 @@ rec {
       ./hardware-configuration.nix
       (import ../common/configuration.nix {
         inherit pkgs;
-        overlays = specialArgs.overlays;
         lib = pkgs.lib;
-        hostname = networking.hostName;
+      })
+      (import ../common/nixos.nix {
+        inherit pkgs;
+        lib = pkgs.lib;
       })
       ../common/laptop.nix
     ];
