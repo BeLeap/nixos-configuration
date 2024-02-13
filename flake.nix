@@ -55,7 +55,7 @@
                 home-manager.useUserPackages = true;
                 home-manager.users.beleap = import ./users/beleap/home.nix {
                   inherit pkgs lib;
-                  hostname = elem;
+                  hostname = "beleap-wsl";
                   isNixOS = false;
                 };
               })
