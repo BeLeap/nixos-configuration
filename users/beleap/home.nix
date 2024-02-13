@@ -37,89 +37,93 @@ in
     swaylock = (import ./gui/swaylock.nix);
     firefox = (import ./gui/firefox/default.nix) { inherit helpers hostname; };
     foot = (import ./gui/foot.nix);
-  } else {});
+  } else { });
 
-  services = if isNixOS then {
-    dunst = (import ./gui/dunst.nix) { inherit pkgs; };
-    kanshi = (import ./gui/kanshi.nix);
-    blueman-applet = { enable = true; };
-    mpd = { enable = true; };
-    keybase = { enable = true; };
-    kbfs = { enable = true; };
-  } else {};
+  services =
+    if isNixOS then {
+      dunst = (import ./gui/dunst.nix) { inherit pkgs; };
+      kanshi = (import ./gui/kanshi.nix);
+      blueman-applet = { enable = true; };
+      mpd = { enable = true; };
+      keybase = { enable = true; };
+      kbfs = { enable = true; };
+    } else { };
 
-  wayland = if isNixOS then {
-    windowManager = {
-      hyprland = (import ./gui/hyprland.nix) { inherit pkgs; isWork = (helpers.isWork hostname); };
-    };
-  } else {};
+  wayland =
+    if isNixOS then {
+      windowManager = {
+        hyprland = (import ./gui/hyprland.nix) { inherit pkgs; isWork = (helpers.isWork hostname); };
+      };
+    } else { };
 
-  i18n = if isNixOS then {
-    inputMethod = {
-      enabled = "kime";
-      kime.config = {
-        indicator.icon_color = "White";
-        engine = {
-          latin = {
-            layout = "Colemak";
-          };
-          hangul = {
-            layout = "sebeolsik-3-90";
-            addons = {
-              "sebeolsik-3-90" = [
-                "FlexibleComposeOrder"
-                "ComposeChoseongSsang"
-                "ComposeJongseongSsang"
-              ];
+  i18n =
+    if isNixOS then {
+      inputMethod = {
+        enabled = "kime";
+        kime.config = {
+          indicator.icon_color = "White";
+          engine = {
+            latin = {
+              layout = "Colemak";
+            };
+            hangul = {
+              layout = "sebeolsik-3-90";
+              addons = {
+                "sebeolsik-3-90" = [
+                  "FlexibleComposeOrder"
+                  "ComposeChoseongSsang"
+                  "ComposeJongseongSsang"
+                ];
+              };
             };
           };
         };
       };
-    };
-  } else {};
+    } else { };
 
-  xdg = if isNixOS then {
-    enable = true;
+  xdg =
+    if isNixOS then {
+      enable = true;
 
-    systemDirs = {
-      data = [
-        "/usr/share"
-        "/usr/local/share"
-        "/home/beleap/.nix-profile/share"
-      ];
-      config = [
-        "/etc/xdg"
-        "/home/beleap/.nix-profile/etc/xdg"
-      ];
-    };
-    desktopEntries = {
-      firefox = {
-        name = "Firefox";
-        exec = "firefox %U -P personal --name firefox-personal";
-        terminal = false;
+      systemDirs = {
+        data = [
+          "/usr/share"
+          "/usr/local/share"
+          "/home/beleap/.nix-profile/share"
+        ];
+        config = [
+          "/etc/xdg"
+          "/home/beleap/.nix-profile/etc/xdg"
+        ];
       };
-      firefox-work = {
-        name = "Firefox (Work)";
-        exec = "firefox %U -P work --name firefox-work";
-        terminal = false;
+      desktopEntries = {
+        firefox = {
+          name = "Firefox";
+          exec = "firefox %U -P personal --name firefox-personal";
+          terminal = false;
+        };
+        firefox-work = {
+          name = "Firefox (Work)";
+          exec = "firefox %U -P work --name firefox-work";
+          terminal = false;
+        };
+        reboot = {
+          name = "Reboot";
+          exec = "reboot";
+          terminal = false;
+        };
+        shutdown = {
+          name = "Shutdown";
+          exec = "shutdown -h now";
+          terminal = false;
+        };
+        lock = {
+          name = "Lock";
+          exec = "swaylock";
+          terminal = false;
+        };
       };
-      reboot = {
-        name = "Reboot";
-        exec = "reboot";
-        terminal = false;
-      };
-      shutdown = {
-        name = "Shutdown";
-        exec = "shutdown -h now";
-        terminal = false;
-      };
-      lock = {
-        name = "Lock";
-        exec = "swaylock";
-        terminal = false;
-      };
-    };
-  } else {};
+    } else { };
 
   home = {
     file = lib.trivial.mergeAttrs { } (

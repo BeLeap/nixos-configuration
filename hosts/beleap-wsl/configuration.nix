@@ -18,7 +18,7 @@ in
         hostname = hostname;
       })
     ];
-  
+
   wsl.enable = true;
   wsl.defaultUser = "beleap";
   wsl.wslConf.network.hostname = hostname;

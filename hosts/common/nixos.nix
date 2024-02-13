@@ -1,12 +1,12 @@
 { pkgs, lib, ... }:
 {
-	networking =
+  networking =
     {
       networkmanager = {
         enable = true;
       };
     };
-	virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true;
 
   sound.enable = true;
 

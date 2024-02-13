@@ -43,26 +43,26 @@
           };
         })
         { } [ "beleap-xps-9510" "beleap-thinkpad" ]) // {
-          "beleap-wsl" = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
-            modules = [
-              { nixpkgs.overlays = overlays; }
-              inputs.nixos-wsl.nixosModules.wsl
-              (./hosts/beleap-wsl/configuration.nix)
-              home-manager.nixosModules.home-manager
-              ({ pkgs, lib, ... }: {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.beleap = import ./users/beleap/home.nix {
-                  inherit pkgs lib;
-                  hostname = "beleap-wsl";
-                  isNixOS = false;
-                  isWSL = true;
-                };
-              })
-            ];
-          };
+        "beleap-wsl" = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            { nixpkgs.overlays = overlays; }
+            inputs.nixos-wsl.nixosModules.wsl
+            (./hosts/beleap-wsl/configuration.nix)
+            home-manager.nixosModules.home-manager
+            ({ pkgs, lib, ... }: {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.beleap = import ./users/beleap/home.nix {
+                inherit pkgs lib;
+                hostname = "beleap-wsl";
+                isNixOS = false;
+                isWSL = true;
+              };
+            })
+          ];
         };
+      };
 
       # homeConfigurations = {
       #   beleap = import ./users/beleap {
