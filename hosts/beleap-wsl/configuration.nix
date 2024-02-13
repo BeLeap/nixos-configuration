@@ -6,20 +6,22 @@
 # https://github.com/nix-community/NixOS-WSL
 
 { config, lib, pkgs, ... }:
-
-rec {
+let
+  hostname = "beleap-wsl";
+in
+{
   imports =
     [
       (import ../common/configuration.nix {
         inherit pkgs;
         lib = pkgs.lib;
-        hostname = networking.hostName;
+        hostname = hostName;
       })
     ];
   
   wsl.enable = true;
   wsl.defaultUser = "beleap";
-  networking.hostname = "beleap-wsl";
+  wsl.wslConf.network.hostname = hostname;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
