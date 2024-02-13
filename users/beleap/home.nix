@@ -1,4 +1,4 @@
-{ pkgs, lib, hostname, isNixOS ? true ... }:
+{ pkgs, lib, hostname, isNixOS ? true, ... }:
 let
   helpers = import ./helpers.nix { inherit pkgs lib; };
   username = "beleap";
