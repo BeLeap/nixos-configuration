@@ -9,7 +9,7 @@
     };
 
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/2311.5.3";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
   outputs = inputs@{ home-manager, nixpkgs, ... }:
