@@ -23,7 +23,7 @@
         else (fn (fold fn acc (builtins.tail list)) (builtins.head list));
     in
     {
-      nixosConfigurations = fold
+      nixosConfigurations = (fold
         (acc: elem: acc // {
           "${elem}" = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
@@ -42,7 +42,16 @@
             ];
           };
         })
-        { } [ "beleap-xps-9510" "beleap-thinkpad" ];
+        { } [ "beleap-xps-9510" "beleap-thinkpad" ]) // {
+          "beleap-wsl" = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+              { nixpkgs.overlays = overlays; }
+              inputs.nixos-wsl.nixosModules.wsl
+              (./hosts/beleap-wsl/configuration.nix)
+            ];
+          };
+        };
 
       # homeConfigurations = {
       #   beleap = import ./users/beleap {
