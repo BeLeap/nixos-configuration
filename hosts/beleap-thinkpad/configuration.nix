@@ -8,6 +8,10 @@ rec {
         lib = pkgs.lib;
         hostname = networking.hostName;
       })
+      (import ../common/nixos.nix {
+        inherit pkgs;
+        lib = pkgs.lib;
+      })
       ../common/laptop.nix
     ];
 
