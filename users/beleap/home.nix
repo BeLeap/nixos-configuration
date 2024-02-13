@@ -1,10 +1,9 @@
-{ 
-  pkgs, 
-  lib, 
-  hostname, 
-  # Available Types: nixos, nixos-wsl
-  type ? "nixos", 
-  ... 
+{ pkgs
+, lib
+, hostname
+, # Available Types: nixos, nixos-wsl
+  type ? "nixos"
+, ...
 }:
 let
   helpers = import ./helpers.nix { inherit pkgs lib; };

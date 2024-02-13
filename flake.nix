@@ -22,7 +22,7 @@
         if (builtins.length list) == 0 then acc
         else (fn (fold fn acc (builtins.tail list)) (builtins.head list));
 
-      commonConfiguration = { hostname, type, extraPreModules ? [] }: nixpkgs.lib.nixosSystem {
+      commonConfiguration = { hostname, type, extraPreModules ? [ ] }: nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = extraPreModules ++ [
           { nixpkgs.overlays = overlays; }
@@ -43,23 +43,23 @@
         (acc: elem: acc // {
           "${elem.hostname}" = (commonConfiguration elem);
         })
-        { } [ 
-          { 
-            hostname = "beleap-xps-9510"; 
-            type = "nixos";
-          } 
-          { 
-            hostname = "beleap-thinkpad"; 
-            type = "nixos";
-          }
-          {
-            hostname = "beleap-wsl";
-            type = "nixos-wsl";
-            extraPreModules = [
-              inputs.nixos-wsl.nixosModules.wsl
-            ];
-          }
-        ];
+        { } [
+        {
+          hostname = "beleap-xps-9510";
+          type = "nixos";
+        }
+        {
+          hostname = "beleap-thinkpad";
+          type = "nixos";
+        }
+        {
+          hostname = "beleap-wsl";
+          type = "nixos-wsl";
+          extraPreModules = [
+            inputs.nixos-wsl.nixosModules.wsl
+          ];
+        }
+      ];
 
       # homeConfigurations = {
       #   beleap = import ./users/beleap {
