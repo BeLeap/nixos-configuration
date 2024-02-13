@@ -214,6 +214,7 @@
       },
       "original": {
         "owner": "nix-community",
+        "ref": "main",
         "repo": "NixOS-WSL",
         "type": "github"
       }
