@@ -15,7 +15,7 @@ in
       (import ../common/configuration.nix {
         inherit pkgs;
         lib = pkgs.lib;
-        hostname = hostName;
+        hostname = hostname;
       })
     ];
   
