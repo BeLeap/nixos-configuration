@@ -9,7 +9,7 @@
 
 {
   wsl.enable = true;
-  wsl.defaultUser = "nixos";
+  wsl.defaultUser = "beleap";
   
 
   # This value determines the NixOS release from which the default
