@@ -49,6 +49,16 @@
               { nixpkgs.overlays = overlays; }
               inputs.nixos-wsl.nixosModules.wsl
               (./hosts/beleap-wsl/configuration.nix)
+              home-manager.nixosModules.home-manager
+              ({ pkgs, lib, ... }: {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.beleap = import ./users/beleap/home.nix {
+                  inherit pkgs lib;
+                  hostname = elem;
+                  isNixOS = false;
+                };
+              })
             ];
           };
         };

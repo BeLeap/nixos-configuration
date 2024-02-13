@@ -1,4 +1,4 @@
-{ pkgs, lib, hostname, ... }:
+{ pkgs, lib, hostname, isNixOS ? true ... }:
 let
   helpers = import ./helpers.nix { inherit pkgs lib; };
   username = "beleap";
@@ -21,12 +21,6 @@ in
   programs = {
     home-manager.enable = true;
 
-    waybar = (import ./gui/waybar/default.nix);
-    wofi = (import ./gui/wofi/default.nix);
-    swaylock = (import ./gui/swaylock.nix);
-    firefox = (import ./gui/firefox/default.nix) { inherit helpers hostname; };
-    foot = (import ./gui/foot.nix);
-
     carapace = (import ./tui/carapace.nix);
     fish = (import ./tui/fish.nix);
     git = (import ./tui/git.nix);
@@ -37,24 +31,30 @@ in
     lsd = (import ./tui/lsd.nix);
     zoxide = (import ./tui/zoxide.nix);
     tmux = (import ./tui/tmux.nix) { inherit pkgs; };
-  };
+  } // (if isNixOS then {
+    waybar = (import ./gui/waybar/default.nix);
+    wofi = (import ./gui/wofi/default.nix);
+    swaylock = (import ./gui/swaylock.nix);
+    firefox = (import ./gui/firefox/default.nix) { inherit helpers hostname; };
+    foot = (import ./gui/foot.nix);
+  } else {});
 
-  services = {
+  services = if isNixOS then {
     dunst = (import ./gui/dunst.nix) { inherit pkgs; };
     kanshi = (import ./gui/kanshi.nix);
     blueman-applet = { enable = true; };
     mpd = { enable = true; };
     keybase = { enable = true; };
     kbfs = { enable = true; };
-  };
+  } else {};
 
-  wayland = {
+  wayland = if isNixOS then {
     windowManager = {
       hyprland = (import ./gui/hyprland.nix) { inherit pkgs; isWork = (helpers.isWork hostname); };
     };
-  };
+  } else {};
 
-  i18n = {
+  i18n = if isNixOS then {
     inputMethod = {
       enabled = "kime";
       kime.config = {
@@ -76,9 +76,9 @@ in
         };
       };
     };
-  };
+  } else {};
 
-  xdg = {
+  xdg = if isNixOS then {
     enable = true;
 
     systemDirs = {
@@ -119,7 +119,7 @@ in
         terminal = false;
       };
     };
-  };
+  } else {};
 
   home = {
     file = lib.trivial.mergeAttrs { } (
