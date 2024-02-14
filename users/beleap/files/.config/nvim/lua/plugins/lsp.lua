@@ -70,6 +70,7 @@ return {
           lsp_zero.default_setup,
         }
       })
+      lsp_zero.configure('clangd', {})
       lsp_zero.configure('tsserver', {
         single_file_support = false,
         root_dir = require('lspconfig.util').root_pattern('package.json'),
