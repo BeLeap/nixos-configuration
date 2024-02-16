@@ -49,10 +49,6 @@
           type = "nixos";
         }
         {
-          hostname = "beleap-thinkpad";
-          type = "nixos";
-        }
-        {
           hostname = "beleap-wsl";
           type = "nixos-wsl";
           extraPreModules = [
