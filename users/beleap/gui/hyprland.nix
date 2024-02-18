@@ -74,7 +74,7 @@ in
       "${pkgs.waybar}/bin/waybar"
       "bash /home/beleap/.scripts/idle.sh"
       "pypr"
-      "kime"
+      "ibus start"
       # Tools
       "${pkgs.foot}/bin/foot"
       "firefox -P personal --name firefox-personal"
