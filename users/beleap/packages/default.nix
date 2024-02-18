@@ -49,7 +49,7 @@
     discord
     logseq
     calibre
-    ((import ../../../pkgs/keymapp.nix) { inherit pkgs; })
+    keymapp
     hyprshot
     pyprland
   ];
