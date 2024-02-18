@@ -28,7 +28,6 @@
     mpv
     libnotify
     mellowplayer
-    (tmuxinator.overrideAttrs (final: prev: { version = "3.1.2"; }))
   ];
   gui = [
     swaybg
