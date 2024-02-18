@@ -105,7 +105,7 @@ in
     misc = {
       focus_on_activate = true;
       disable_hyprland_logo = true;
-      force_hypr_chan = false;
+      force_default_wallpaper = 0;
     };
 
     general = {
