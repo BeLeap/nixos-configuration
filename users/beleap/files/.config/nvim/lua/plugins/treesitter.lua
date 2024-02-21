@@ -61,17 +61,8 @@ return {
         filetype = "gotmpl",
         used_by = { "gohtmltmpl", "gotexttmpl", "gotmpl", "yaml", "helm" },
       }
-      parser_config.rescript = {
-        install_info = {
-          url = "https://github.com/nkrkv/nvim-treesitter-rescript",
-          files = { "src/parser.c", "src/scanner.c" },
-          location = "tree-sitter-rescript",
-          branch = "main",
-        },
-        filetype = "rescript",
-      }
 
-      vim.treesitter.language.register("python", "helm", "rescript")
+      vim.treesitter.language.register("python", "helm")
     end,
   },
   {
