@@ -5,7 +5,6 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
       "nvim-treesitter/nvim-treesitter-textobjects",
-      "nkrkv/nvim-treesitter-rescript",
     },
     config = function()
       require("nvim-treesitter.install").compilers = { "gcc" }
@@ -61,6 +60,15 @@ return {
         },
         filetype = "gotmpl",
         used_by = { "gohtmltmpl", "gotexttmpl", "gotmpl", "yaml", "helm" },
+      }
+      parser_config.rescript = {
+        install_info = {
+          url = "https://github.com/nkrkv/nvim-treesitter-rescript",
+          files = { "src/parser.c", "src/scanner.c" },
+          location = "tree-sitter-rescript",
+          branch = "main",
+        },
+        filetype = "rescript",
       }
 
       vim.treesitter.language.register("python", "helm")
