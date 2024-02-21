@@ -71,7 +71,7 @@ return {
         filetype = "rescript",
       }
 
-      vim.treesitter.language.register("python", "helm")
+      vim.treesitter.language.register("python", "helm", "rescript")
     end,
   },
   {
