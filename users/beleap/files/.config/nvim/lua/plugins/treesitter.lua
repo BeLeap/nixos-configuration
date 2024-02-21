@@ -5,6 +5,7 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter-context",
       "nvim-treesitter/nvim-treesitter-textobjects",
+      "nkrkv/nvim-treesitter-rescript",
     },
     config = function()
       require("nvim-treesitter.install").compilers = { "gcc" }
