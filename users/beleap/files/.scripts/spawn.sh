@@ -4,7 +4,7 @@ SESSIONS=("config" "personal" "work")
 
 for SESSION in ${SESSIONS[@]}
 do
-  tmuxinator start $SESSION
+  tmuxp load -d $HOME/.tmuxp/${SESSION}.yaml
 done
 
 tmux attach -t config
