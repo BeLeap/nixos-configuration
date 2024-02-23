@@ -39,6 +39,7 @@ in
     lsd = (import ./tui/lsd.nix);
     zoxide = (import ./tui/zoxide.nix);
     tmux = (import ./tui/tmux.nix) { inherit pkgs; };
+    helix = (import ./tui/helix.nix);
   } // (if isNixOS then {
     waybar = (import ./gui/waybar/default.nix);
     wofi = (import ./gui/wofi/default.nix);
