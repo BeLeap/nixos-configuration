@@ -84,6 +84,7 @@
     jdk
     lua-language-server
     pre-commit
+    nodePackages.typescript-language-server
   ];
   network = [
     croc
