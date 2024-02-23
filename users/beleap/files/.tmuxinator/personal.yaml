@@ -1,9 +1,0 @@
-name: personal
-root: ~/
-attach: false
-
-windows:
-  - editor:
-      panes:
-        - nvim
-  - shell:

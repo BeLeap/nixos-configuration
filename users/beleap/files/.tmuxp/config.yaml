@@ -1,0 +1,11 @@
+session_name: config
+start_directory: ~/
+attach: false
+
+windows:
+  - window_name: nixos-configuration
+    start_directory: ~/nixos-configuration
+    panes:
+      - shell_command:
+        - cmd: nvim
+  - window_name: shell
