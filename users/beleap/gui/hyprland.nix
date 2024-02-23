@@ -74,7 +74,6 @@ in
       "${pkgs.waybar}/bin/waybar"
       "bash /home/beleap/.scripts/idle.sh"
       "pypr"
-      "ibus start"
       # Tools
       "${pkgs.foot}/bin/foot"
       "firefox -P personal --name firefox-personal"
@@ -87,6 +86,7 @@ in
     exec = [
       "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       "systemctl --user restart kanshi.service"
+      "ibus start"
     ];
 
     input = {
