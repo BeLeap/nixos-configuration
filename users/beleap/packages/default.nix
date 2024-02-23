@@ -28,6 +28,7 @@
     mpv
     libnotify
     mellowplayer
+    tmuxp
   ];
   gui = [
     swaybg

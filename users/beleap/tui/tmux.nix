@@ -10,10 +10,6 @@
   escapeTime = 10;
   aggressiveResize = true;
 
-  tmuxinator = {
-    enable = true;
-  };
-
   plugins = with pkgs.tmuxPlugins; [
     nord
     {
