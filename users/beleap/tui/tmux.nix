@@ -20,6 +20,7 @@
         set -g @prefix_highlight_sync_prompt 'Sync'
       '';
     }
+    sidebar
   ];
 
   extraConfig = ''
