@@ -23,7 +23,7 @@
     {
       plugin = sidebar;
       extraConfig = ''
-        set -g @sidebar-key-t '${pkgs.vifm}/bin/vifm,left,40,focus'
+        set -g @sidebar-key-t '${pkgs.xplr}/bin/xplr,left,40,focus'
       '';
     }
   ];
