@@ -20,12 +20,6 @@
         set -g @prefix_highlight_sync_prompt 'Sync'
       '';
     }
-    {
-      plugin = sidebar;
-      extraConfig = ''
-        set -g @sidebar-key-t '${pkgs.xplr}/bin/xplr,left,40,focus'
-      '';
-    }
   ];
 
   extraConfig = ''
