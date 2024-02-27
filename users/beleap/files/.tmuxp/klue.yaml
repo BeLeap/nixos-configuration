@@ -1,0 +1,8 @@
+session_name: klue
+start_directory: ~/work/klue
+
+windows:
+  - window_name: editor
+    panes:
+      - hx
+  - window_name: shell
