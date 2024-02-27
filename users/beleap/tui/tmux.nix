@@ -23,8 +23,7 @@
     {
       plugin = sidebar;
       extraConfig = ''
-        set -g @sidebar-tree-command "${pkgs.joshuto}/bin/joshuto"
-        set -g @sidebar-tree-pager ""
+        set -g @sidebar-key-t '${pkgs.joshuto}/bin/joshuto,left,40,focus'
       '';
     }
   ];
