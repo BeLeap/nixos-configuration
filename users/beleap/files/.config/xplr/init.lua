@@ -107,16 +107,10 @@ xplr.config.modes.builtin.default = {
           { SwitchModeBuiltin = "delete" },
         },
       },
-      ["down"] = {
+      ["j"] = {
         help = "down",
         messages = {
           "FocusNext",
-        },
-      },
-      ["enter"] = {
-        help = "quit with result",
-        messages = {
-          "PrintResultAndQuit",
         },
       },
       ["f"] = {
@@ -133,7 +127,7 @@ xplr.config.modes.builtin.default = {
           { SwitchModeBuiltin = "go_to" },
         },
       },
-      ["left"] = {
+      ["h"] = {
         help = "back",
         messages = {
           "Back",
@@ -171,7 +165,7 @@ xplr.config.modes.builtin.default = {
           },
         },
       },
-      ["right"] = {
+      ["l"] = {
         help = "enter",
         messages = {
           "Enter",
@@ -191,7 +185,7 @@ xplr.config.modes.builtin.default = {
           "FocusNext",
         },
       },
-      ["up"] = {
+      ["k"] = {
         help = "up",
         messages = {
           "FocusPrevious",
