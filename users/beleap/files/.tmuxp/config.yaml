@@ -2,8 +2,7 @@ session_name: config
 start_directory: ~/nixos-configuration
 
 windows:
-  - window_name: nixos-configuration
+  - window_name: editor
     panes:
-      - shell_command:
-        - cmd: hx
+      - hx
   - window_name: shell
