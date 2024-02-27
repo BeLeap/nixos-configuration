@@ -210,7 +210,7 @@
               dubeolsik:
               - TreatJongseongAsChoseong
               sebeolsik-3-90:
-              - FlexibleComposOrder
+              - FlexibleComposeOrder
               - ComposeChoseongSsang
               - ComposeJongseongSsang
       '';
