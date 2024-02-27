@@ -10,4 +10,4 @@ windows:
     panes:
       - focus: true
       - yarn workspace @klue/backend start:dev
-      - yarn workspace @klue/backend test -w
+      - yarn workspace @klue/backend test:watch
