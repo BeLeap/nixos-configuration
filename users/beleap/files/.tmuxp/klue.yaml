@@ -4,7 +4,7 @@ start_directory: ~/work/klue
 windows:
   - window_name: editor
     panes:
-      - hx
+      - xplr
   - window_name: shell
     layout: main-vertical
     panes:
