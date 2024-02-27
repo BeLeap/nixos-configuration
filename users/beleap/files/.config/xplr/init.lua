@@ -1,16 +1,16 @@
+version = '0.21.5'
+xplr.config.general.show_hidden = true
 xplr.config.layouts.builtin.default = {
-  Horizontal = {
+  Vertical = {
     config = {
-      margin = 1,
-      horizontal_margin = 1,
-      vertical_margin = 1,
       constraints = {
         { Percentage = 50 },
         { Percentage = 50 },
-      }
+      },
     },
     splits = {
       "Table",
-    }
-  }
+      "Selection",
+    },
+  },
 }
