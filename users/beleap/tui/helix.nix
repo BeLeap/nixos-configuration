@@ -13,6 +13,17 @@ in
         hidden = false;
       };
     };
+
+    keys = {
+      normal = {
+        C-q = ":q";
+      };
+      insert = {
+        "," = {
+          d = "normal_mode";
+        };
+      };
+    };
   };
 
   themes = {
