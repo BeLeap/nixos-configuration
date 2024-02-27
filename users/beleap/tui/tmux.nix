@@ -23,7 +23,7 @@
     {
       plugin = sidebar;
       extraConfig = ''
-        set -g @sidebar-tree-command '${pkgs.lsd}/bin/lsd --tree --color always'
+        set -g @sidebar-tree-command '${pkgs.felix-fm}/bin/fx'
       '';
     }
   ];

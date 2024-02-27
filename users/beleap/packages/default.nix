@@ -29,6 +29,7 @@
     libnotify
     mellowplayer
     tmuxp
+    felix-fm
   ];
   gui = [
     swaybg
