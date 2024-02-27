@@ -125,6 +125,4 @@ in
       }
     );
   };
-
-  i18n.inputMethod = (import ./inputMethod.nix);
 }
