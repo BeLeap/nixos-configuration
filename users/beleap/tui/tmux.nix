@@ -23,7 +23,8 @@
     {
       plugin = sidebar;
       extraConfig = ''
-        set -g @sidebar-tree-command '${pkgs.felix-fm}/bin/fx'
+        set -g @sidebar-tree-command "${pkgs.joshuto}/bin/joshuto"
+        set -g @sidebar-tree-pager ""
       '';
     }
   ];

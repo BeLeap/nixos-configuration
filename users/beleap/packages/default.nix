@@ -29,7 +29,7 @@
     libnotify
     mellowplayer
     tmuxp
-    felix-fm
+    joshuto
   ];
   gui = [
     swaybg
