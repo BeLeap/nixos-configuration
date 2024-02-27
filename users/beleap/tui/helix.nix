@@ -83,7 +83,7 @@ in
       "operator" = nord.nord9;
       "special" = nord.nord9;
       "tag" = nord.nord7;
-      "comment" = { fg = nord.nord3_bright; modifiers = ["italic"]; };
+      "comment" = { fg = nord.nord3_bright; modifiers = [ "italic" ]; };
 
       "ui.background" = { bg = nord.nord0; };
       "ui.text" = nord.nord4;
@@ -111,7 +111,7 @@ in
       "ui.selection" = { bg = nord.nord2; };
       "ui.highlight" = { fg = nord.nord8; bg = nord.nord2; };
 
-      "ui.statusline" = {  bg = nord.nord1; };
+      "ui.statusline" = { bg = nord.nord1; };
       "ui.statusline.inactive" = { fg = nord.nord8; bg = nord.nord1; };
       "ui.statusline.insert" = { fg = nord.nord1; bg = nord.nord6; };
       "ui.statusline.normal" = { fg = nord.nord1; bg = nord.nord8; };
@@ -119,7 +119,7 @@ in
       "ui.statusline.separator" = nord.nord3;
 
       "ui.virtual.indent-guide" = nord.nord3;
-      "ui.virtual.inlay-hint" = { fg = nord.nord3; modifiers = ["italic"]; };
+      "ui.virtual.inlay-hint" = { fg = nord.nord3; modifiers = [ "italic" ]; };
       "ui.virtual.ruler" = { bg = nord.nord1; };
       "ui.virtual.whitespace" = nord.nord3;
       "ui.virtual.wrap" = nord.nord3;
@@ -129,9 +129,9 @@ in
 
       "markup.heading" = nord.nord8;
       "markup.list" = nord.nord9;
-      "markup.bold" = { modifiers = ["bold"]; };
-      "markup.italic" = { modifiers = ["italic"]; };
-      "markup.strikethrough" = { modifiers = ["crossed_out"]; };
+      "markup.bold" = { modifiers = [ "bold" ]; };
+      "markup.italic" = { modifiers = [ "italic" ]; };
+      "markup.strikethrough" = { modifiers = [ "crossed_out" ]; };
       "markup.link.text" = nord.nord8;
       "markup.raw" = nord.nord7;
     };
