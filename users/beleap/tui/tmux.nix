@@ -20,7 +20,12 @@
         set -g @prefix_highlight_sync_prompt 'Sync'
       '';
     }
-    sidebar
+    {
+      plugin = sidebar;
+      extraConfig = ''
+        set -g @sidebar-tree-command '${pkgs.lsd}/bin/lsd --tree'
+      '';
+    }
   ];
 
   extraConfig = ''
