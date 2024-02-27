@@ -4,5 +4,5 @@ start_directory: ~/work
 windows:
   - window_name: editor
     panes:
-      - nvim
+      - hx
   - window_name: shell

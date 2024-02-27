@@ -7,5 +7,5 @@ windows:
     start_directory: ~/nixos-configuration
     panes:
       - shell_command:
-        - cmd: nvim
+        - cmd: hx
   - window_name: shell
