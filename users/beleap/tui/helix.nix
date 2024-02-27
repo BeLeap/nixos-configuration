@@ -7,6 +7,12 @@ in
 
   settings = {
     theme = "nord";
+
+    editor = {
+      file-picker = {
+        hidden = false;
+      };
+    };
   };
 
   themes = {
