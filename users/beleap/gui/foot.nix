@@ -3,7 +3,6 @@
 
   settings = {
     main = {
-      shell = "sh /home/beleap/.scripts/spawn.sh";
       font = "CaskaydiaCove NFM:size=14";
       pad = "4x4";
     };
