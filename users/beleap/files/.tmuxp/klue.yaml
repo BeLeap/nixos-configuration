@@ -8,6 +8,6 @@ windows:
   - window_name: shell
     layout: main-vertical
     panes:
-      - blank
+      - focus: true
       - yarn workspace @klue/backend start:dev
       - yarn workspace @klue/backend test -w
