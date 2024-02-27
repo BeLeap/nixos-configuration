@@ -29,7 +29,7 @@
     libnotify
     mellowplayer
     tmuxp
-    joshuto
+    vifm
   ];
   gui = [
     swaybg
