@@ -3,6 +3,7 @@ let
 in
 {
   enable = true;
+  defaultEditor = true;
 
   settings = {
     theme = "nord";

@@ -17,8 +17,6 @@ in
     homeDirectory = "/home/${username}";
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
-      XDG_CURRENT_DESKTOP = "sway";
-      EDITOR = "nvim --cmd 'let g:flatten_wait=1'";
       LD_LIBRARY_PATH = "${pkgs.stdenv.cc.cc.lib}/lib";
     };
     packages = lib.lists.flatten (lib.attrsets.attrValues ((import ./packages) { inherit pkgs lib; }));
