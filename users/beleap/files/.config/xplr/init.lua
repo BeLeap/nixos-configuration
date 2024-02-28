@@ -157,6 +157,12 @@ xplr.config.modes.builtin.default = {
           "Enter",
         },
       },
+      ["enter"] = {
+        help = "enter",
+        messages = {
+          "Enter",
+        },
+      },
       ["s"] = {
         help = "sort",
         messages = {
