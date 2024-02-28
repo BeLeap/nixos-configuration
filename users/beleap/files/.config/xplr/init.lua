@@ -16,20 +16,6 @@ xplr.config.modes.builtin.default = {
           "PopMode",
         },
       },
-      ["#"] = {
-        messages = {
-          "PrintAppStateAndQuit",
-        },
-      },
-      ["."] = {
-        help = "show hidden",
-        messages = {
-          {
-            ToggleNodeFilter = { filter = "RelativePathDoesNotStartWith", input = "." },
-          },
-          "ExplorePwdAsync",
-        },
-      },
       [":"] = {
         help = "action",
         messages = {
@@ -50,7 +36,7 @@ xplr.config.modes.builtin.default = {
           "ToggleSelectAll",
         },
       },
-      ["ctrl-f"] = {
+      ["/"] = {
         help = "search",
         messages = {
           "PopMode",
