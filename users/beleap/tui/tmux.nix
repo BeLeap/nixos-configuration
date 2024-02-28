@@ -36,6 +36,11 @@
     # Use y to yank current selection
     bind-key -T copy-mode-vi y send-keys -X copy-selection
 
+    bind h select-pane -L
+    bind j select-pane -D
+    bind k select-pane -U
+    bind l select-pane -R
+
     bind f run-shell '~/.scripts/tmux-scratch.sh'
 
     bind r source-file ~/.config/tmux/tmux.conf
