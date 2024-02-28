@@ -119,6 +119,12 @@ xplr.config.modes.builtin.default = {
           "Back",
         },
       },
+      ["esc"] = {
+        help = "back",
+        messages = {
+          "Back",
+        },
+      },
       ["q"] = {
         help = "quit",
         messages = {
