@@ -38,9 +38,9 @@ in
       "$mod SHIFT, N, exec, dunstctl close"
 
       # Screenshots
-      "$mod SHIFT, S, exec, hyprshot -m region"
-      "$mod CTRL, S, exec, hyprshot -m window"
-      "$mod SHIFT_CTRL, S, exec, hyprshot -m output"
+      "$mod SHIFT, S, exec, hyprshot -m region -o ~/Pictures"
+      "$mod CTRL, S, exec, hyprshot -m window -o ~/Pictures"
+      "$mod SHIFT_CTRL, S, exec, hyprshot -m output -o ~/Pictures"
 
       # Others
       "$mod, P, exec, echo -e \"next\\ntoggle\" | wofi --dmenu -p 'Pomodoro' | xargs uairctl"
