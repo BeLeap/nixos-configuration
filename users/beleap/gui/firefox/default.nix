@@ -60,8 +60,13 @@
         '';
         search = {
           force = true;
-          default = "DuckDuckGo";
+          default = "Perplexity";
           engines = {
+            "Perplexity" = {
+              urls = [{ template = "https://www.perplexity.ai/search?s=o&q={searchTerms}"; }];
+              iconUpdateURL = "https://www.perplexity.ai/static/icons/favicon.ico";
+              updateInterval = 24 * 60 * 60 * 1000;
+            };
             "DuckDuckGo" = {
               urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
               iconUpdateURL = "https://duckduckgo.com/favicon.ico";
