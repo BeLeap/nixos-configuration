@@ -32,7 +32,7 @@
           status = "disable";
         }
         {
-          criteria = "LG Electronics LG ULTRAFINE 111NTNHBH783";
+          criteria = "Dell Inc. DELL U2723QE G9CW9P3";
           status = "enable";
           scale = 1.5;
         }
