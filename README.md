@@ -1,7 +1,1 @@
-# nixos-configuration
-
-## Get Started
-
-```sh
-./scripts/init
-```
+Using https://git.sr.ht/~beleap/nix-configuration
