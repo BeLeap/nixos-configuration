@@ -1,1 +1,1 @@
-Using https://git.sr.ht/~beleap/nix-configuration
+Using https://github.com/BeLeap/nix-configuration
